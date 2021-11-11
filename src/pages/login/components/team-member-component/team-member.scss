@@ -1,0 +1,37 @@
+.team-member-card {
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 550px;
+    border-radius: 10px;
+
+    .team-member-grid {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #008dc7;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .content-container {
+            .team-member-name {
+                font-size: 30px;
+                font-weight: 600;
+                color: #008dc7;
+            }
+
+            .team-member-content {
+                padding-left: 10px;
+                margin-left: 10px;
+                color: #008dc7;
+            }
+        }
+    }
+}
+
+.debug {
+    // border: 1px solid black;
+}

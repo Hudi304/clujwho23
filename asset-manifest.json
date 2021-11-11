@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.1263671e.chunk.css",
-    "main.js": "/static/js/main.f7eed749.chunk.js",
-    "main.js.map": "/static/js/main.f7eed749.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.0dce4369.js",
-    "runtime-main.js.map": "/static/js/runtime-main.0dce4369.js.map",
-    "static/js/2.f9f5a39c.chunk.js": "/static/js/2.f9f5a39c.chunk.js",
-    "static/js/2.f9f5a39c.chunk.js.map": "/static/js/2.f9f5a39c.chunk.js.map",
-    "static/js/3.c2a9ad42.chunk.js": "/static/js/3.c2a9ad42.chunk.js",
-    "static/js/3.c2a9ad42.chunk.js.map": "/static/js/3.c2a9ad42.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.1263671e.chunk.css.map": "/static/css/main.1263671e.chunk.css.map",
-    "static/js/2.f9f5a39c.chunk.js.LICENSE.txt": "/static/js/2.f9f5a39c.chunk.js.LICENSE.txt",
-    "static/media/ClujWHOLogo.7e7081ea.png": "/static/media/ClujWHOLogo.7e7081ea.png",
-    "static/media/ClujWHOLogoBar.60b212d8.png": "/static/media/ClujWHOLogoBar.60b212d8.png",
-    "static/media/appy-now.scss": "/static/media/ClujWhoBackground.0ab6fb53.png",
-    "static/media/LEGO_logo.svg.b5b8d714.png": "/static/media/LEGO_logo.svg.b5b8d714.png",
-    "static/media/man.73af59d0.svg": "/static/media/man.73af59d0.svg"
+    "main.css": "/clujwho23/static/css/main.10de9810.chunk.css",
+    "main.js": "/clujwho23/static/js/main.f7eed749.chunk.js",
+    "main.js.map": "/clujwho23/static/js/main.f7eed749.chunk.js.map",
+    "runtime-main.js": "/clujwho23/static/js/runtime-main.fd17bfce.js",
+    "runtime-main.js.map": "/clujwho23/static/js/runtime-main.fd17bfce.js.map",
+    "static/js/2.f9f5a39c.chunk.js": "/clujwho23/static/js/2.f9f5a39c.chunk.js",
+    "static/js/2.f9f5a39c.chunk.js.map": "/clujwho23/static/js/2.f9f5a39c.chunk.js.map",
+    "static/js/3.c2a9ad42.chunk.js": "/clujwho23/static/js/3.c2a9ad42.chunk.js",
+    "static/js/3.c2a9ad42.chunk.js.map": "/clujwho23/static/js/3.c2a9ad42.chunk.js.map",
+    "index.html": "/clujwho23/index.html",
+    "static/css/main.10de9810.chunk.css.map": "/clujwho23/static/css/main.10de9810.chunk.css.map",
+    "static/js/2.f9f5a39c.chunk.js.LICENSE.txt": "/clujwho23/static/js/2.f9f5a39c.chunk.js.LICENSE.txt",
+    "static/media/ClujWHOLogo.7e7081ea.png": "/clujwho23/static/media/ClujWHOLogo.7e7081ea.png",
+    "static/media/ClujWHOLogoBar.60b212d8.png": "/clujwho23/static/media/ClujWHOLogoBar.60b212d8.png",
+    "static/media/appy-now.scss": "/clujwho23/static/media/ClujWhoBackground.0ab6fb53.png",
+    "static/media/LEGO_logo.svg.b5b8d714.png": "/clujwho23/static/media/LEGO_logo.svg.b5b8d714.png",
+    "static/media/man.73af59d0.svg": "/clujwho23/static/media/man.73af59d0.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0dce4369.js",
+    "static/js/runtime-main.fd17bfce.js",
     "static/js/2.f9f5a39c.chunk.js",
-    "static/css/main.1263671e.chunk.css",
+    "static/css/main.10de9810.chunk.css",
     "static/js/main.f7eed749.chunk.js"
   ]
 }

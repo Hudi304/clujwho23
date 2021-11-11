@@ -6,7 +6,7 @@ import { MainPage } from './main/main';
 function App(): JSX.Element {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Route path={'/'} component={MainPage} />
       </BrowserRouter>
     </div>

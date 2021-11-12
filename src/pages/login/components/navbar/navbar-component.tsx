@@ -41,55 +41,55 @@ export function NavBarComponent(props: any): JSX.Element {
                         <NavBarButton
                             text={'Home'}
                             onClick={(e: any) => {
-                                redirect('/home', e)
+                                redirect('/DevClujWho/home', e)
                             }}
                         />
                         <NavBarButton
                             text={'Apply now'}
                             onClick={(e: any) => {
-                                redirect('/apply_now', e)
+                                redirect('/DevClujWho/apply_now', e)
                             }}
                         />
                         <NavBarButton
                             text={'About us'}
                             onClick={(e: any) => {
-                                redirect('/about_us', e)
+                                redirect('/DevClujWho/about_us', e)
                             }}
                         />
                         <NavBarButton
                             text={'Schedule'}
                             onClick={(e: any) => {
-                                redirect('/schedule', e)
+                                redirect('/DevClujWho/schedule', e)
                             }}
                         />
                         <NavBarButton
                             text={'Committees'}
                             onClick={(e: any) => {
-                                redirect('/committees', e)
+                                redirect('/DevClujWho/committees', e)
                             }}
                         />
                         <NavBarButton
                             text={'Our Team'}
                             onClick={(e: any) => {
-                                redirect('/our_team', e)
+                                redirect('/DevClujWho/our_team', e)
                             }}
                         />
                         <NavBarButton
                             text={'Resources'}
                             onClick={(e: any) => {
-                                redirect('/resources', e)
+                                redirect('/DevClujWho/resources', e)
                             }}
                         />
                         <NavBarButton
                             text={'Contact'}
                             onClick={(e: any) => {
-                                redirect('/contact', e)
+                                redirect('/DevClujWho/contact', e)
                             }}
                         />
                         <NavBarButton
                             text={'Sponsors'}
                             onClick={(e: any) => {
-                                redirect('/sponsors',e)
+                                redirect('/DevClujWho/sponsors',e)
                             }}
                         />
                     </div>

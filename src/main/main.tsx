@@ -12,20 +12,38 @@ import { Schedule } from '../pages/schedule/schedule-coponent'
 import { Sponsors } from '../pages/sponsors/sponsors-component'
 
 export function MainPage(): JSX.Element {
+    // return (
+    //     <Switch>
+    //         <Route exact path="/clujwho23" component={HomePage} />
+    //         <Route exact path="/apply_now" component={ApplyNow} />
+    //         <Route exact path="/about_us" component={AboutUs} />
+    //         <Route exact path="/schedule" component={Schedule} />
+    //         <Route exact path="/committees" component={Committees} />
+    //         <Route exact path="/our_team" component={OurTeam} />
+    //         <Route exact path="/resources" component={Resources} />
+    //         <Route exact path="/contact" component={Contact} />
+    //         <Route exact path="/sponsors" component={Sponsors} />
+
+    //         <Route exact path={'*'}>
+    //             <Redirect to="/clujwho23/" />
+    //         </Route>
+    //     </Switch>
+    // )
+
     return (
         <Switch>
-            <Route exact path="/home" component={HomePage} />
-            <Route exact path="/apply_now" component={ApplyNow} />
-            <Route exact path="/about_us" component={AboutUs} />
-            <Route exact path="/schedule" component={Schedule} />
-            <Route exact path="/committees" component={Committees} />
-            <Route exact path="/our_team" component={OurTeam} />
-            <Route exact path="/resources" component={Resources} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/sponsors" component={Sponsors} />
+            <Route exact path="/DevClujWho/home" component={HomePage} />
+            <Route exact path="/DevClujWho/apply_now" component={ApplyNow} />
+            <Route exact path="/DevClujWho/about_us" component={AboutUs} />
+            <Route exact path="/DevClujWho/schedule" component={Schedule} />
+            <Route exact path="/DevClujWho/committees" component={Committees} />
+            <Route exact path="/DevClujWho/our_team" component={OurTeam} />
+            <Route exact path="/DevClujWho/resources" component={Resources} />
+            <Route exact path="/DevClujWho/contact" component={Contact} />
+            <Route exact path="/DevClujWho/sponsors" component={Sponsors} />
 
-            <Route exact path={'/cluj_who'}>
-                <Redirect to="/home" />
+            <Route exact path={'*'}>
+                <Redirect to="/DevClujWho/home" />
             </Route>
         </Switch>
     )

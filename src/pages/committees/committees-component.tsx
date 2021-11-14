@@ -5,6 +5,7 @@ import { NavBarComponent } from '../login/components/navbar/navbar-component'
 import man from '../../assets/map/man.svg'
 
 import './committees.scss'
+import { WorldMap } from './world-map'
 
 export function Committees(props: any): JSX.Element {
     const [ref, inView] = useInView({
@@ -14,9 +15,12 @@ export function Committees(props: any): JSX.Element {
     return (
         <div>
             <div className="apply-now-page-grid-container backgroud-image debug">
-                <CustomPaper width={'1220px'} height={'300vh'}>
-                    Committees
-                    <img className="man" src={man} alt="Kiwi standing on oval" />
+                <CustomPaper width={'1220px'} height={'100vh'}>
+                    <div className="centerPage">
+                        <div className="worldMap">
+                            <WorldMap />
+                        </div>
+                    </div>
                 </CustomPaper>
             </div>
 

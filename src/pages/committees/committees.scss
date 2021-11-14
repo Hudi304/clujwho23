@@ -1,3 +1,20 @@
-.man {
+
+
+.worldMap {
     border: 1px solid black;
+    height: min-content;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.centerPage {
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+
+    width: 1220px;
 }

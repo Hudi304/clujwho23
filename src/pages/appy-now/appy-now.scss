@@ -1,18 +1,9 @@
-
-
-html, body {
-	margin: 0;
-	height: 100%;
-	overflow-x: hidden
-  }
-
-// .background{
-// 	width: 100vw;
-// 	height: 300vh;
-// 	opacity: 0.5;
-// 	overflow-x: hidden;
-// }
-
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
 
 .backgroud-image {
     background-image: url('./../../assets/ClujWhoBackground.png');
@@ -20,11 +11,58 @@ html, body {
     background-size: 50%;
 }
 
+.debug {
+    border: 1px solid black;
+}
 
-.apply-now-page-grid-container{
+.OxCenter {
+    display: flex;
+    justify-content: center;
+}
+.OyCenter {
+    display: flex;
+    align-items: center;
+}
+.xOyCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-	margin-top: 15vh;
-	display: flex;
-	justify-content: center;
+.applyNowPageGrid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 70vh 100vh 100vh;
+    margin-top: 20vh;
+}
 
+.apply-now-page-grid-container {
+    display: flex;
+    justify-content: center;
+}
+
+.countDownContainer {
+}
+
+.counterContainer {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+
+    .counterCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: darkgray;
+        border-radius: 20px;
+        width: 150px;
+        height: 150px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .points {
+        font-size: 100px;
+        margin-bottom: 15px;
+    }
 }

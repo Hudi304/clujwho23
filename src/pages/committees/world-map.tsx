@@ -2,7 +2,7 @@ import './world-map-styles.scss'
 
 export function WorldMap(props: any) {
     return (
-        <svg width="900" height="350" viewBox="0 0 900 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="worldMap" width="900" height="350" viewBox="0 0 900 350" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="CommitteesMap">
                 <g id="EMRO" className="EMROg">
                     <path

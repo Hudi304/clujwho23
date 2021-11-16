@@ -29,40 +29,71 @@ body {
     justify-content: center;
 }
 
-.applyNowPageGrid {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 70vh 100vh 100vh;
-    margin-top: 20vh;
-}
-
-.apply-now-page-grid-container {
+.applyNowPageGridContainer {
     display: flex;
     justify-content: center;
-}
 
-.countDownContainer {
-}
+    .applyNowPageGrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 10vh 30vh 100vh;
+        margin-top: 20vh;
 
-.counterContainer {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+        .titleContainer {
+            font-size: 50px;
+            margin: 0;
+            font-weight: 700;
+            color: #008dc7;
+        }
 
-    .counterCard {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: darkgray;
-        border-radius: 20px;
-        width: 150px;
-        height: 150px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+        .countDownContainer {
+            .counterContainer {
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+                background-color: rgb(173, 216, 230);
+                border-radius: 20px;
 
-    .points {
-        font-size: 100px;
-        margin-bottom: 15px;
+                .cardContainer {
+                    margin-top: 20px;
+                    display: grid;
+                    grid-template-columns: auto;
+                    grid-template-rows: auto auto;
+
+                    .counterCard {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #72c2eb;
+                        border-radius: 20px;
+                        width: 150px;
+                        height: 150px;
+                        margin-left: 20px;
+                        margin-right: 20px;
+
+                        font-size: 100px;
+                        color: white;
+                    }
+
+                    .cardLabel {
+                        color: white;
+                        font-size: 30px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .points {
+                    font-size: 100px;
+                    margin-bottom: 65px;
+                    color: white;
+                }
+            }
+        }
+
+        .paperContainer {
+            .iframeContainer {
+            }
+        }
     }
 }

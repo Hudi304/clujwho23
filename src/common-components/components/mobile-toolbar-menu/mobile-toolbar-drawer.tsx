@@ -1,17 +1,9 @@
 import './navbar-component.scss'
-import Typography from '@mui/material/Typography'
 
-import logo from '../../../../assets/LEGO_logo.svg.png'
-import ClujWhoLogo from '../../../../assets/ClujWHOLogo.png'
 import ClujWhoLogoBar from '../../../../assets/ClujWHOLogoBar.png'
 
 import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router'
-import { Menu } from '@mui/icons-material'
-
-
-
-
 
 export function NavBarComponent(props: any): JSX.Element {
   const { inView } = props
@@ -21,18 +13,10 @@ export function NavBarComponent(props: any): JSX.Element {
 
   useEffect(() => {
     console.log('IN VIEW', inView)
-    if (!props.mobile) {
-      if (inView) {
-        setNavBarClasses('')
-      } else {
-        setNavBarClasses('nav-bar-active')
-      }
+    if (inView) {
+      setNavBarClasses('')
     } else {
-      if (inView) {
-        setNavBarClasses('')
-      } else {
-        setNavBarClasses('nav-bar-active-mobile')
-      }
+      setNavBarClasses('nav-bar-active')
     }
   }, [inView])
 
@@ -40,14 +24,9 @@ export function NavBarComponent(props: any): JSX.Element {
     console.log('REDIRECT TO ', path)
     history.push(path)
   }
+
   if (props.mobile) {
-    return (
-      <div className={`nav-bar-component-mobile ${navBarClasses}`}>
-        <div> asd</div>
-        <Menu />
-      </div>
-    )
-    // return <></>
+    return <div className={`nav-bar-component ${navBarClasses}`}></div>
   } else {
     return (
       <div className={`nav-bar-component ${navBarClasses}`}>

@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/clujwho23/static/css/main.04e85fff.chunk.css",
-    "main.js": "/clujwho23/static/js/main.62934dec.chunk.js",
-    "main.js.map": "/clujwho23/static/js/main.62934dec.chunk.js.map",
+    "main.js": "/clujwho23/static/js/main.cc3a8e14.chunk.js",
+    "main.js.map": "/clujwho23/static/js/main.cc3a8e14.chunk.js.map",
     "runtime-main.js": "/clujwho23/static/js/runtime-main.4a379495.js",
     "runtime-main.js.map": "/clujwho23/static/js/runtime-main.4a379495.js.map",
     "static/js/2.962b3bbe.chunk.js": "/clujwho23/static/js/2.962b3bbe.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.4a379495.js",
     "static/js/2.962b3bbe.chunk.js",
     "static/css/main.04e85fff.chunk.css",
-    "static/js/main.62934dec.chunk.js"
+    "static/js/main.cc3a8e14.chunk.js"
   ]
 }

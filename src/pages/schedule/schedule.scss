@@ -26,11 +26,6 @@
           min-width: 90%;
           border: 1px solid black;
 
-          .scheduleGridBubbleContainer {
-            // border: 1px solid black;
-            // width: min-content;
-            // height: min-content;
-          }
           .scheduleGridHourContainer {
             display: flex;
             align-items: center;
@@ -45,75 +40,284 @@
           }
         }
       }
+
+      .scheduleComponentContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .scheduleOxGrid {
+          margin: 4vw;
+          display: grid;
+          background-color: #5bb3d6;
+          border-radius: 1vw;
+          grid-template-columns: 5vw 3vw 15vw;
+          padding-right: 1vw;
+
+          .scheduleTitle {
+            padding-left: 2vw;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            font-size: 2vw;
+            color: white;
+            font-weight: 600;
+          }
+          .scheduleOyHourGrid {
+            display: grid;
+            grid-template-columns: auto;
+
+            .scheduleHourGridItem {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 5vw;
+              color: white;
+              font-weight: 700;
+            }
+          }
+
+          .scheduleOyBubbleGrid {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 2.5vw;
+            margin-bottom: 2.5vw;
+
+            .scheduleBubbleGridItem {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              border-top: 1px solid white;
+              margin-left: -1vw;
+            }
+          }
+
+          .scheduleOyActivityGrid {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 2.5vw;
+            margin-bottom: 2.5vw;
+
+            .scheduleActivityGridItem {
+              padding-left: 1vw;
+              display: flex;
+              height: 5vw;
+              justify-content: flex-start;
+              align-items: center;
+              color: white;
+              font-weight: 700;
+              border-top: 1px solid white;
+            }
+          }
+        }
+      }
     }
   }
 }
 
-.scheduleComponentContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media only screen and (max-width: 600px) {
+  .schedulePageContainer {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #4a5568;
 
-  .scheduleOxGrid {
-    margin: 4vw;
-    display: grid;
-    background-color: #5bb3d6;
-    border-radius: 1vw;
-    grid-template-columns: 5vw 3vw 15vw;
-    padding-right: 1vw;
-
-    .scheduleTitle {
-      padding-left: 2vw;
-      padding-bottom: 0;
-      margin-bottom: 0;
-      font-size: 2vw;
-      color: white;
-      font-weight: 600;
+    .schedulePageGridContainer {
+      margin-top: 5vh;
+      width: 100vw;
+      height: 95vh;
+      display: flex;
+      justify-content: center;
     }
-    .scheduleOyHourGrid {
-      display: grid;
-      grid-template-columns: auto;
 
-      .scheduleHourGridItem {
+    .swipeContainer {
+      width: 100vw;
+      overflow: visible;
+    }
+  }
+
+  .scheduleComponentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 95vh;
+
+    .scheduleOxGrid {
+      display: grid;
+      grid-template-rows: 10% 90%;
+      background-color: #2d3848;
+      height: 80vh;
+      width: 80vw;
+      border-radius: 2vh;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      pointer-events: none;
+
+      .scheduleTitle {
+        padding: 0;
+        margin: 0;
+        font-size: 4vh;
+        color: #bbc5d1;
+        font-weight: 600;
         display: flex;
         justify-content: center;
+        height: 100%;
+        width: 80vw;
         align-items: center;
-        height: 5vw;
-        color: white;
-        font-weight: 700;
       }
-    }
 
-    .scheduleOyBubbleGrid {
-      display: grid;
-      grid-template-columns: 1fr;
-      margin-top: 2.5vw;
-      margin-bottom: 2.5vw;
+      .scheduleCardBodyContainer {
+        height: 100%;
+        width: 100%;
+        padding-right: 2vw;
 
-      .scheduleBubbleGridItem {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        border-top: 1px solid white;
-        margin-left: -1vw;
+        .schedulerBodyOxGrid {
+          display: grid;
+          grid-template-columns: 20% 20% 55%;
+          grid-template-rows: 100%;
+          width: 100%;
+
+          .scheduleOyHourGrid {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(10, 7vh);
+            margin-top: 0.5vh;
+
+            .scheduleHourGridItem {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #bbc5d1;
+              font-weight: 700;
+              width: 100%;
+              height: 7vh;
+              font-size: 4.5vw;
+            }
+          }
+
+          .scheduleOyBubbleGrid {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: repeat(9, 7vh);
+            margin-top: 3.5vh;
+            margin-bottom: 3.5vh;
+
+            .scheduleBubbleGridItem {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-top: 1px solid #bbc5d1;
+              margin-left: -1vw;
+              width: 100%;
+              height: 7vh;
+            }
+          }
+
+          .scheduleOyActivityGrid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(9, 7vh);
+            margin-top: 3.5vh;
+            margin-bottom: 3.5vh;
+
+            .scheduleActivityGridItem {
+              padding-left: 1vw;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              color: #bbc5d1;
+              font-weight: 700;
+              border-top: 1px solid #bbc5d1;
+              font-size: 4.5vw;
+              position: relative;
+              right: 2vw;
+            }
+          }
+        }
       }
-    }
 
-    .scheduleOyActivityGrid {
-      display: grid;
-      grid-template-columns: 1fr;
-      margin-top: 2.5vw;
-      margin-bottom: 2.5vw;
+      .scheduleCardBodyContainerSaturday {
+        height: 100%;
+        width: 100%;
+        padding-right: 2vw;
 
-      .scheduleActivityGridItem {
-        padding-left: 1vw;
-        display: flex;
-        height: 5vw;
-        justify-content: flex-start;
-        align-items: center;
-        color: white;
-        font-weight: 700;
-        border-top: 1px solid white;
+        .schedulerBodyOxGridSaturday {
+          display: grid;
+          grid-template-columns: 20% 20% 55%;
+          grid-template-rows: 100%;
+          width: 100%;
+
+          .scheduleOyHourGridSaturday {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(10, 6vh);
+            margin-top: 0.5vh;
+
+            .scheduleHourGridItemSaturday {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #bbc5d1;
+              font-weight: 700;
+              width: 100%;
+              height: 6vh;
+              font-size: 4.5vw;
+            }
+          }
+
+          .scheduleOyBubbleGridSaturday {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: repeat(10, 6vh);
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+
+            .scheduleBubbleGridItemSaturday {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-top: 1px solid #bbc5d1;
+              margin-left: -1vw;
+              width: 100%;
+              height: 6vh;
+            }
+          }
+
+          .scheduleOyActivityGridSaturday {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(10, 6vh);
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+
+            .scheduleActivityGridItemSaturday {
+              padding-left: 1vw;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              color: #bbc5d1;
+              font-weight: 700;
+              border-top: 1px solid #bbc5d1;
+              font-size: 4.5vw;
+              position: relative;
+              right: 2vw;
+            }
+
+            
+            .scheduleActivityGridItemSaturdayNoBorder {
+              padding-left: 1vw;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              color: #bbc5d1;
+              font-weight: 700;
+              // border-top: 1px solid #bbc5d1;
+              font-size: 4.5vw;
+              position: relative;
+              right: 2vw;
+            }
+          }
+        }
       }
     }
   }

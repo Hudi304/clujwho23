@@ -76,16 +76,42 @@
 }
 
 .nav-bar-component-mobile {
-  display: flex;
-  align-items: center;
   height: 5vh;
   position: absolute;
   width: 100vw;
   top: -100px;
   transition: top 1s;
   transition-timing-function: ease-out;
-  background-color: white;
+  background-color: #1a202c;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  display: grid;
+  grid-template-columns: 5vh auto 5vh;
+  .nav-bar-mobile-logo {
+  }
+  .nav-bar-mobile-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    font-weight: 600;
+    color: #bbc5d1;
+  }
+
+  .nav-bar-mobile-hamburger-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vh;
+    height: 5vh;
+    .hamburger-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 4vh;
+      width: 4vh;
+    }
+  }
 }
 
 .nav-bar-active-mobile {
@@ -93,5 +119,46 @@
 }
 
 .debug {
-  // border: 1px solid black;
+  border: 1px solid black;
+}
+
+.toggle-drawer-btn {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  background-color: darkgray;
+  position: absolute;
+  top: 47.5vh;
+  left: 4vh;
+}
+
+.menu-drawer {
+  overflow: visible;
+
+  .menu-btn-list {
+    background-color: #718096;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5vh;
+    padding: 0.5vh;
+    .menu-list-item {
+      background-color: #4a5568;
+      border-radius: 1vh;
+      width: 100%;
+      height: 7vh;
+
+      .menu-icon-btn {
+        color: rgb(245, 245, 245);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1vh;
+        padding: 1.5vh;
+        font-weight: 700;
+      }
+    }
+  }
 }

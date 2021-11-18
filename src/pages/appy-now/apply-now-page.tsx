@@ -62,6 +62,20 @@ export function ApplyNow(props: any): JSX.Element {
     threshold: 0.5
   })
 
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  })
+  const [mobile, setMobile] = useState(false)
+
+  useEffect(() => {
+    if (dimensions.width < 600) {
+      setMobile(true)
+    } else {
+      setMobile(false)
+    }
+  }, [dimensions])
+
   const date = new Date()
   const registrationStartDate = new Date()
   registrationStartDate.setMonth(11)
@@ -99,7 +113,9 @@ export function ApplyNow(props: any): JSX.Element {
     <div>
       <div className="applyNowPageGridContainer OxCenter backgroud-image debug">
         <div className="applyNowPageGrid debug">
-          <p className="titleContainer xOyCenter">The experience of your studenthood starts in: </p>
+          <p className="titleContainer xOyCenter">
+            The experience of your studenthood starts in:{' '}
+          </p>
           <div className="countDownContainer xOyCenter">
             <div className="counterContainer">
               <div className="cardContainer">
@@ -141,7 +157,9 @@ export function ApplyNow(props: any): JSX.Element {
         </div>
       </div>
 
-      <NavBarComponent inView={inView} />
+      <div className={`nav-bar-container`}>
+        <NavBarComponent inView={inView} mobile={mobile} />
+      </div>
     </div>
   )
 }

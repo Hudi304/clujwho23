@@ -168,10 +168,7 @@ export function NavBarComponent(props: any): JSX.Element {
                   }}
                   aria-label="delete"
                 >
-                  <Home
-                    menu-icon-btn
-                    sx={{ color: blue[500], fontSize: '4vh' }}
-                  />
+                  <Home sx={{ color: blue[500], fontSize: '4vh' }} />
                   Home
                 </IconButton>
               </div>
@@ -184,10 +181,7 @@ export function NavBarComponent(props: any): JSX.Element {
                   }}
                   aria-label="delete"
                 >
-                  <AppRegistration
-                    menu-icon-btn
-                    sx={{ color: blue[500], fontSize: '4vh' }}
-                  />
+                  <AppRegistration sx={{ color: blue[500], fontSize: '4vh' }} />
                   Apply now
                 </IconButton>
               </div>
@@ -200,10 +194,7 @@ export function NavBarComponent(props: any): JSX.Element {
                   }}
                   aria-label="delete"
                 >
-                  <Info
-                    menu-icon-btn
-                    sx={{ color: blue[500], fontSize: '4vh' }}
-                  />
+                  <Info sx={{ color: blue[500], fontSize: '4vh' }} />
                   About us
                 </IconButton>
               </div>
@@ -216,10 +207,7 @@ export function NavBarComponent(props: any): JSX.Element {
                   }}
                   aria-label="delete"
                 >
-                  <CalendarToday
-                    menu-icon-btn
-                    sx={{ color: blue[500], fontSize: '4vh' }}
-                  />
+                  <CalendarToday sx={{ color: blue[500], fontSize: '4vh' }} />
                   Schedule
                 </IconButton>
               </div>
@@ -232,10 +220,7 @@ export function NavBarComponent(props: any): JSX.Element {
                   }}
                   aria-label="delete"
                 >
-                  <AccountBalance
-                    menu-icon-btn
-                    sx={{ color: blue[500], fontSize: '4vh' }}
-                  />
+                  <AccountBalance sx={{ color: blue[500], fontSize: '4vh' }} />
                   Committees
                 </IconButton>
               </div>
@@ -248,10 +233,7 @@ export function NavBarComponent(props: any): JSX.Element {
                   }}
                   aria-label="delete"
                 >
-                  <Group
-                    menu-icon-btn
-                    sx={{ color: blue[500], fontSize: '4vh' }}
-                  />
+                  <Group sx={{ color: blue[500], fontSize: '4vh' }} />
                   Our Team
                 </IconButton>
               </div>
@@ -264,10 +246,7 @@ export function NavBarComponent(props: any): JSX.Element {
                   }}
                   aria-label="delete"
                 >
-                  <DriveFileMove
-                    menu-icon-btn
-                    sx={{ color: blue[500], fontSize: '4vh' }}
-                  />
+                  <DriveFileMove sx={{ color: blue[500], fontSize: '4vh' }} />
                   Resources
                 </IconButton>
               </div>
@@ -280,10 +259,7 @@ export function NavBarComponent(props: any): JSX.Element {
                   }}
                   aria-label="delete"
                 >
-                  <ContactPage
-                    menu-icon-btn
-                    sx={{ color: blue[500], fontSize: '4vh' }}
-                  />
+                  <ContactPage sx={{ color: blue[500], fontSize: '4vh' }} />
                   Contact
                 </IconButton>
               </div>

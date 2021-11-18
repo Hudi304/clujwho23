@@ -28,7 +28,7 @@ export function Bubble(props: BubbleProps) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g id="Frame 1" clip-path="url(#clip0_1_2)">
+        <g id="Frame 1" clipPath="url(#clip0_1_2)">
           <g id="connectionUP" filter="url(#filter0_d_1_2)">
             <rect x="45" width="10" height="28"   fill={colorHashT} />
           </g>
@@ -47,9 +47,9 @@ export function Bubble(props: BubbleProps) {
             width="18"
             height="36"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -82,9 +82,9 @@ export function Bubble(props: BubbleProps) {
             width="18"
             height="34"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -117,9 +117,9 @@ export function Bubble(props: BubbleProps) {
             width="68"
             height="68"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -162,7 +162,7 @@ export function Bubble(props: BubbleProps) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g id="Frame 1" clip-path="url(#clip0_1_2)">
+        <g id="Frame 1" clipPath="url(#clip0_1_2)">
           <g id="connectionUP" filter="url(#filter0_d_1_2)">
             <rect x="45" width="10" height="28"   fill={colorHashT} />
           </g>
@@ -181,9 +181,9 @@ export function Bubble(props: BubbleProps) {
             width="18"
             height="36"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -216,9 +216,9 @@ export function Bubble(props: BubbleProps) {
             width="18"
             height="34"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -251,9 +251,9 @@ export function Bubble(props: BubbleProps) {
             width="68"
             height="68"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -296,7 +296,7 @@ export function Bubble(props: BubbleProps) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g id="Frame 1" clip-path="url(#clip0_1_2)">
+          <g id="Frame 1" clipPath="url(#clip0_1_2)">
             {/* <g id="connectionUP" filter="url(#filter0_d_1_2)">
               <rect x="45" width="10" height="28"   fill={colorHashT} />
             </g> */}
@@ -315,9 +315,9 @@ export function Bubble(props: BubbleProps) {
               width="18"
               height="36"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -350,9 +350,9 @@ export function Bubble(props: BubbleProps) {
               width="18"
               height="34"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -385,9 +385,9 @@ export function Bubble(props: BubbleProps) {
               width="68"
               height="68"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
@@ -450,7 +450,7 @@ export function Bubble(props: BubbleProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g id="Frame 1" clip-path="url(#clip0_1_2)">
+      <g id="Frame 1" clipPath="url(#clip0_1_2)">
         <g id="connectionUP" filter="url(#filter0_d_1_2)">
           <rect x="45" width="10" height="28" fill="#C4C4C4" />
         </g>
@@ -469,9 +469,9 @@ export function Bubble(props: BubbleProps) {
           width="18"
           height="36"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -504,9 +504,9 @@ export function Bubble(props: BubbleProps) {
           width="18"
           height="34"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -539,9 +539,9 @@ export function Bubble(props: BubbleProps) {
           width="68"
           height="68"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"

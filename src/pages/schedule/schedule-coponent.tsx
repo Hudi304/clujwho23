@@ -8,10 +8,8 @@ import SwipeableViews from 'react-swipeable-views'
 import './schedule.scss'
 import {
   hoursArraySaturday,
-  bubbleOptionsArraySaturday,
   activityArraySaturday,
   hoursArraySunday,
-  bubbleOptionsArraySunday,
   activityArraySunday,
   activityArrayFiday,
   bubbleOptionsArrayFriday,
@@ -80,7 +78,7 @@ export function Schedule(props: any): JSX.Element {
 
           <div className="scheduleOyHourGrid ">
             {hoursArrayFriday.map((hour, index) => {
-              return <div className="scheduleHourGridItem ">{hour}</div>
+              return <div  key={index * 13} className="scheduleHourGridItem ">{hour}</div>
             })}
           </div>
           <div className="scheduleOyBubbleGrid ">
@@ -103,7 +101,11 @@ export function Schedule(props: any): JSX.Element {
           </div>
           <div className="scheduleOyActivityGrid">
             {activityArrayFiday.map((activity, index) => {
-              return <div className="scheduleActivityGridItem">{activity}</div>
+              return (
+                <div key={index * 19} className="scheduleActivityGridItem">
+                  {activity}
+                </div>
+              )
             })}
           </div>
         </div>
@@ -288,7 +290,10 @@ export function Schedule(props: any): JSX.Element {
                     )
                   } else {
                     return (
-                      <div className="scheduleActivityGridItemSaturdayNoBorder">
+                      <div
+                        key={'SundayActivity' + index}
+                        className="scheduleActivityGridItemSaturdayNoBorder"
+                      >
                         {activity}
                       </div>
                     )

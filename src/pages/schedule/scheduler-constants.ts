@@ -69,6 +69,7 @@ export const activityArraySaturday = [
   'Free Time',
   'Party Party Fun Fun '
 ]
+
 export const bubbleOptionsArraySaturday = [
   {
     connectTop: false,
@@ -164,7 +165,7 @@ export const hoursArraySaturday = [
   ''
 ]
 
-export const activityArray = [
+export const activityArrayFiday = [
   'Registration',
   'Opening Ceremony',
   'First regional session',
@@ -176,7 +177,7 @@ export const activityArray = [
   'Party Party Fun Fun '
 ]
 
-export const hoursArray = [
+export const hoursArrayFriday = [
   '12:00',
   '13:00',
   '14:00',
@@ -189,8 +190,7 @@ export const hoursArray = [
   ''
 ]
 
-export 
-const bubbleOptionsArray = [
+export const bubbleOptionsArrayFriday = [
   {
     connectTop: false,
     connectBotomn: true,
@@ -256,74 +256,171 @@ const bubbleOptionsArray = [
   }
 ]
 
-
 export const BUBLE_COLORS = {
   gray: '#D3D3D3',
   green: '#FDB1B1',
   pink: 'FDB1B1'
 }
 
-export function fridayBubbleOptions(bubbleOpt : any){
+export function getSundayBubbleOptions(now : Date) {
+  const bubOptnew = bubbleOptionsArraySunday
+  // const now = new Date()
+  const h = now.getHours()
+  const m = now.getMinutes()
+  const minutes = h * 60 + m
 
-  const bubOptnew = bubbleOpt
-  const now = new Date()
-
-  if (now.getHours() >= 12) {
+  if (minutes >= 9 * 60) {
     bubOptnew[0].colorHashC = BUBLE_COLORS.green
   }
 
-  if (now.getHours() >= 13) {
+  if (minutes >= 10 * 60 + 30) {
     bubOptnew[0].colorHashB = BUBLE_COLORS.green
     bubOptnew[1].colorHashT = BUBLE_COLORS.green
     bubOptnew[1].colorHashC = BUBLE_COLORS.green
   }
 
-  if (now.getHours() >= 14) {
+  if (minutes >= 11 * 60) {
     bubOptnew[1].colorHashB = BUBLE_COLORS.green
     bubOptnew[2].colorHashT = BUBLE_COLORS.green
     bubOptnew[2].colorHashC = BUBLE_COLORS.green
   }
 
-  if (
-    (now.getHours() == 15 && now.getMinutes() >= 30) ||
-    now.getHours() > 15
-  ) {
+  if (minutes >= 13 * 60 + 30) {
+    bubOptnew[2].colorHashB = BUBLE_COLORS.green
+    bubOptnew[3].colorHashT = BUBLE_COLORS.green
+    bubOptnew[3].colorHashC = BUBLE_COLORS.green
+  }
+  return bubOptnew
+}
+
+export function getSaturdayBubbleOptions(now : Date) {
+  const bubOptnew = bubbleOptionsArraySaturday
+  // const now = new Date()
+  const h = now.getHours()
+  const m = now.getMinutes()
+  const minutes = h * 60 + m
+
+  if (minutes >= 9 * 60) {
+    bubOptnew[0].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes >= 10 * 60 + 30) {
+    bubOptnew[0].colorHashB = BUBLE_COLORS.green
+    bubOptnew[1].colorHashT = BUBLE_COLORS.green
+    bubOptnew[1].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes >= 11 * 60) {
+    bubOptnew[1].colorHashB = BUBLE_COLORS.green
+    bubOptnew[2].colorHashT = BUBLE_COLORS.green
+    bubOptnew[2].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes >= 13 * 60 + 30) {
     bubOptnew[2].colorHashB = BUBLE_COLORS.green
     bubOptnew[3].colorHashT = BUBLE_COLORS.green
     bubOptnew[3].colorHashC = BUBLE_COLORS.green
   }
 
-  if (now.getHours() >= 16 && now.getMinutes() >= 4) {
+  if (minutes >= 14 * 60) {
     bubOptnew[3].colorHashB = BUBLE_COLORS.green
     bubOptnew[4].colorHashT = BUBLE_COLORS.green
     bubOptnew[4].colorHashC = BUBLE_COLORS.green
   }
 
-  if (
-    (now.getHours() == 16 && now.getMinutes() >= 45) ||
-    now.getHours() > 16
-  ) {
+  if (minutes >= 14 * 60 + 45) {
     bubOptnew[4].colorHashB = BUBLE_COLORS.green
     bubOptnew[5].colorHashT = BUBLE_COLORS.green
     bubOptnew[5].colorHashC = BUBLE_COLORS.green
   }
 
-  if (now.getHours() >= 17) {
+  if (minutes >= 15 * 60) {
     bubOptnew[5].colorHashB = BUBLE_COLORS.green
     bubOptnew[6].colorHashT = BUBLE_COLORS.green
     bubOptnew[6].colorHashC = BUBLE_COLORS.green
   }
 
-  if (now.getHours() >= 19) {
+  if (minutes >= 17 * 60) {
     bubOptnew[6].colorHashB = BUBLE_COLORS.green
     bubOptnew[7].colorHashT = BUBLE_COLORS.green
     bubOptnew[7].colorHashC = BUBLE_COLORS.green
   }
 
-  if (
-    (now.getHours() == 20 && now.getMinutes() >= 30) ||
-    now.getHours() > 20
-  ) {
+  if (minutes >= 17 * 60 + 30) {
+    bubOptnew[7].colorHashB = BUBLE_COLORS.green
+    bubOptnew[8].colorHashT = BUBLE_COLORS.green
+    bubOptnew[8].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes >= 19 * 60) {
+    bubOptnew[8].colorHashB = BUBLE_COLORS.green
+    bubOptnew[9].colorHashT = BUBLE_COLORS.green
+    bubOptnew[9].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes >= 20 * 60 + 30) {
+    bubOptnew[9].colorHashB = BUBLE_COLORS.green
+    bubOptnew[10].colorHashT = BUBLE_COLORS.green
+    bubOptnew[10].colorHashC = BUBLE_COLORS.green
+  }
+
+  return bubOptnew
+}
+
+export function getFridayBubbleOptions(now : Date) {
+  const bubOptnew = bubbleOptionsArrayFriday
+  // const now = new Date()
+  const h = now.getHours()
+  const m = now.getMinutes()
+  const minutes = h * 60 + m
+
+  if (minutes >= 12 * 60) {
+    bubOptnew[0].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes >= 13 * 60) {
+    bubOptnew[0].colorHashB = BUBLE_COLORS.green
+    bubOptnew[1].colorHashT = BUBLE_COLORS.green
+    bubOptnew[1].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes >= 14 * 60) {
+    bubOptnew[1].colorHashB = BUBLE_COLORS.green
+    bubOptnew[2].colorHashT = BUBLE_COLORS.green
+    bubOptnew[2].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes > 15 * 60 + 30) {
+    bubOptnew[2].colorHashB = BUBLE_COLORS.green
+    bubOptnew[3].colorHashT = BUBLE_COLORS.green
+    bubOptnew[3].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes > 16 * 60) {
+    bubOptnew[3].colorHashB = BUBLE_COLORS.green
+    bubOptnew[4].colorHashT = BUBLE_COLORS.green
+    bubOptnew[4].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes > 16 * 60 + 45) {
+    bubOptnew[4].colorHashB = BUBLE_COLORS.green
+    bubOptnew[5].colorHashT = BUBLE_COLORS.green
+    bubOptnew[5].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes > 17 * 60) {
+    bubOptnew[5].colorHashB = BUBLE_COLORS.green
+    bubOptnew[6].colorHashT = BUBLE_COLORS.green
+    bubOptnew[6].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes > 19 * 60) {
+    bubOptnew[6].colorHashB = BUBLE_COLORS.green
+    bubOptnew[7].colorHashT = BUBLE_COLORS.green
+    bubOptnew[7].colorHashC = BUBLE_COLORS.green
+  }
+
+  if (minutes > 20 * 60 + 30) {
     bubOptnew[7].colorHashB = BUBLE_COLORS.green
     bubOptnew[8].colorHashT = BUBLE_COLORS.green
     bubOptnew[8].colorHashC = BUBLE_COLORS.green
@@ -331,8 +428,3 @@ export function fridayBubbleOptions(bubbleOpt : any){
 
   return bubOptnew
 }
-
-
-
-
-

@@ -7,17 +7,18 @@ import SwipeableViews from 'react-swipeable-views'
 
 import './schedule.scss'
 import {
-  bubbleOptionsArray,
-  BUBLE_COLORS,
-  hoursArray,
-  activityArray,
   hoursArraySaturday,
   bubbleOptionsArraySaturday,
   activityArraySaturday,
   hoursArraySunday,
   bubbleOptionsArraySunday,
   activityArraySunday,
-  fridayBubbleOptions
+  activityArrayFiday,
+  bubbleOptionsArrayFriday,
+  hoursArrayFriday,
+  getFridayBubbleOptions,
+  getSaturdayBubbleOptions,
+  getSundayBubbleOptions
 } from './scheduler-constants'
 /* eslint-disable */
 
@@ -26,9 +27,17 @@ export function Schedule(props: any): JSX.Element {
     threshold: 0.5
   })
 
-  const [bubbleOpt, setBubbleOpt] = useState(bubbleOptionsArray)
-
   const now = new Date()
+
+  const [fridayBubbleOpt, setFridayBubbleOpt] = useState(
+    getFridayBubbleOptions(now)
+  )
+  const [saturdayBubbleOpt, setSaturdayBubbleOpt] = useState(
+    getSaturdayBubbleOptions(now)
+  )
+  const [sundayBubbleOpt, setSundayBubbleOpt] = useState(
+    getSundayBubbleOptions(now)
+  )
 
   const [timeLeft, setTimeLeft] = useState(true)
 
@@ -48,17 +57,20 @@ export function Schedule(props: any): JSX.Element {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      // const timeLeft = false
-      console.log('dsadas')
-      const bubOptnew = bubbleOpt
+      const now = new Date()
+      if (now.getMinutes() % 15 == 0 && now.getSeconds() % 10 == 0) {
+        console.log('dsadas')
+        setSundayBubbleOpt(getSundayBubbleOptions(now))
+        setFridayBubbleOpt(getFridayBubbleOptions(now))
+        setSaturdayBubbleOpt(getSaturdayBubbleOptions(now))
+      }
 
-      setBubbleOpt(fridayBubbleOptions(bubOptnew))
       setTimeLeft(!timeLeft)
     }, 1000)
     return () => clearTimeout(timer)
   })
 
-  function ScheduleComponent() {
+  function ScheduleComponentWeb() {
     return (
       <div className="scheduleComponentContainer ">
         <div className="scheduleOxGrid ">
@@ -67,12 +79,12 @@ export function Schedule(props: any): JSX.Element {
           <p></p>
 
           <div className="scheduleOyHourGrid ">
-            {hoursArray.map((hour, index) => {
+            {hoursArrayFriday.map((hour, index) => {
               return <div className="scheduleHourGridItem ">{hour}</div>
             })}
           </div>
           <div className="scheduleOyBubbleGrid ">
-            {bubbleOpt.map((bubbleOpt, index) => {
+            {bubbleOptionsArrayFriday.map((bubbleOpt, index) => {
               return (
                 <div key={index * 5} className="scheduleBubbleGridItem">
                   <Bubble
@@ -90,7 +102,7 @@ export function Schedule(props: any): JSX.Element {
             })}
           </div>
           <div className="scheduleOyActivityGrid">
-            {activityArray.map((activity, index) => {
+            {activityArrayFiday.map((activity, index) => {
               return <div className="scheduleActivityGridItem">{activity}</div>
             })}
           </div>
@@ -107,15 +119,25 @@ export function Schedule(props: any): JSX.Element {
           <div className="scheduleCardBodyContainer">
             <div className="schedulerBodyOxGrid">
               <div className="scheduleOyHourGrid ">
-                {hoursArray.map((hour, index) => {
-                  return <div className="scheduleHourGridItem ">{hour}</div>
+                {hoursArrayFriday.map((hour, index) => {
+                  return (
+                    <div
+                      key={'FridayHour' + index}
+                      className="scheduleHourGridItem "
+                    >
+                      {hour}
+                    </div>
+                  )
                 })}
               </div>
 
               <div className="scheduleOyBubbleGrid ">
-                {bubbleOpt.map((bubbleOpt, index) => {
+                {fridayBubbleOpt.map((bubbleOpt, index) => {
                   return (
-                    <div key={index * 5} className="scheduleBubbleGridItem ">
+                    <div
+                      key={'FridayBubble' + index}
+                      className="scheduleBubbleGridItem "
+                    >
                       <Bubble
                         key={index * 17}
                         connectTop={bubbleOpt.connectTop}
@@ -132,9 +154,14 @@ export function Schedule(props: any): JSX.Element {
               </div>
 
               <div className="scheduleOyActivityGrid">
-                {activityArray.map((activity, index) => {
+                {activityArrayFiday.map((activity, index) => {
                   return (
-                    <div className="scheduleActivityGridItem">{activity}</div>
+                    <div
+                      key={'FridayActivity' + index}
+                      className="scheduleActivityGridItem"
+                    >
+                      {activity}
+                    </div>
                   )
                 })}
               </div>
@@ -155,16 +182,21 @@ export function Schedule(props: any): JSX.Element {
               <div className="scheduleOyHourGridSaturday ">
                 {hoursArraySaturday.map((hour, index) => {
                   return (
-                    <div className="scheduleHourGridItemSaturday ">{hour}</div>
+                    <div
+                      key={'SaturdayHour' + index}
+                      className="scheduleHourGridItemSaturday "
+                    >
+                      {hour}
+                    </div>
                   )
                 })}
               </div>
 
               <div className="scheduleOyBubbleGridSaturday ">
-                {bubbleOptionsArraySaturday.map((bubbleOpt, index) => {
+                {saturdayBubbleOpt.map((bubbleOpt, index) => {
                   return (
                     <div
-                      key={index * 5}
+                      key={'SaturdayBubble' + index}
                       className="scheduleBubbleGridItemSaturday "
                     >
                       <Bubble
@@ -185,7 +217,10 @@ export function Schedule(props: any): JSX.Element {
               <div className="scheduleOyActivityGridSaturday">
                 {activityArraySaturday.map((activity, index) => {
                   return (
-                    <div className="scheduleActivityGridItemSaturday">
+                    <div
+                      key={'SaturdayActivity' + index}
+                      className="scheduleActivityGridItemSaturday"
+                    >
                       {activity}
                     </div>
                   )
@@ -208,16 +243,21 @@ export function Schedule(props: any): JSX.Element {
               <div className="scheduleOyHourGridSaturday ">
                 {hoursArraySunday.map((hour, index) => {
                   return (
-                    <div className="scheduleHourGridItemSaturday ">{hour}</div>
+                    <div
+                      key={'SundayHour' + index}
+                      className="scheduleHourGridItemSaturday "
+                    >
+                      {hour}
+                    </div>
                   )
                 })}
               </div>
 
               <div className="scheduleOyBubbleGridSaturday ">
-                {bubbleOptionsArraySunday.map((bubbleOpt, index) => {
+                {sundayBubbleOpt.map((bubbleOpt, index) => {
                   return (
                     <div
-                      key={index * 5}
+                      key={'SundayBubble' + index}
                       className="scheduleBubbleGridItemSaturday "
                     >
                       <Bubble
@@ -239,7 +279,10 @@ export function Schedule(props: any): JSX.Element {
                 {activityArraySunday.map((activity, index) => {
                   if (activity != '') {
                     return (
-                      <div className="scheduleActivityGridItemSaturday">
+                      <div
+                        key={'SundayActivity' + index}
+                        className="scheduleActivityGridItemSaturday"
+                      >
                         {activity}
                       </div>
                     )
@@ -272,7 +315,7 @@ export function Schedule(props: any): JSX.Element {
                 width: '100vw'
               }}
               hysteresis={0.3}
-              index={0}
+              index={1}
               resistance
               enableMouseEvents
               springConfig={{
@@ -300,7 +343,7 @@ export function Schedule(props: any): JSX.Element {
           <div className="schedulePageGridContainer">
             <div className="scheduleGridItem">
               <CustomPaper width={'90vw'} height={'auto'}>
-                <ScheduleComponent></ScheduleComponent>
+                <ScheduleComponentWeb />
               </CustomPaper>
             </div>
 

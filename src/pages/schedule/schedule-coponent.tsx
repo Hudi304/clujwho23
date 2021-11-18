@@ -21,12 +21,7 @@ import {
 /* eslint-disable */
 
 export function Schedule(props: any): JSX.Element {
-  const [ref, inView] = useInView({
-    threshold: 0.5
-  })
-
   const now = new Date()
-
   const [fridayBubbleOpt, setFridayBubbleOpt] = useState(
     getFridayBubbleOptions(now)
   )
@@ -36,9 +31,7 @@ export function Schedule(props: any): JSX.Element {
   const [sundayBubbleOpt, setSundayBubbleOpt] = useState(
     getSundayBubbleOptions(now)
   )
-
   const [timeLeft, setTimeLeft] = useState(true)
-
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight
@@ -337,7 +330,7 @@ export function Schedule(props: any): JSX.Element {
         </div>
 
         <div className={`nav-bar-container`}>
-          <NavBarComponent inView={inView} mobile={mobile} />
+          <NavBarComponent inView={true} mobile={mobile} />
         </div>
       </div>
     )

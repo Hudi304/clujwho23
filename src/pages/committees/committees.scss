@@ -1,47 +1,92 @@
 .committeesPageContainer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+
+  .committeesPageGrid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50vh auto auto auto auto auto auto;
+    margin-top: 15vh;
+    border: 1px solid black;
+
+    .centerPage {
+      display: flex;
+      // justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 1220px;
+
+      .worldMapContainer {
+        height: min-content;
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+
+        animation: mapFadeIn 3s ease-in 0s 1 forwards forwards;
+      }
+
+      .contentContainer {
+        margin-top: 100px;
+        border: 1px solid black;
+        width: 1000px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .committeesPageContainerMobile {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    height: auto;
+    background-color: #4a5568;
+    border: 1px solid white;
+  }
 
-    .committeesPageGrid {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 50vh auto auto auto auto auto auto;
-        margin-top: 15vh;
-        border: 1px solid black;
+  .committeesPageGridMobile {
+    display: grid;
+    grid-template-rows: 30vh auto;
+    border: 1px solid white;
 
-        .centerPage {
-            display: flex;
-            // justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            width: 1220px;
-
-            .worldMapContainer {
-                height: min-content;
-                width: max-content;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 50px;
-
-                animation: mapFadeIn 3s ease-in 0s 1 forwards forwards;
-            }
-
-            .contentContainer {
-                margin-top: 100px;
-                border: 1px solid black;
-                width: 1000px;
-            }
-        }
+    .committeesWroldMapContainerMobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      margin-top: 6vh;
+      animation: mapFadeIn 3s ease-in 0s 1 forwards forwards;
+      border: 1px solid white;
     }
+
+    .committeesPageGridMobileItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .mobileTextContainer {
+        margin: 2vw;
+      }
+    }
+
+    @keyframes mapFadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 @keyframes mapFadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

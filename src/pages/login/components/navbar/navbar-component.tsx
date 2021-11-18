@@ -63,11 +63,7 @@ export function NavBarComponent(props: any): JSX.Element {
         setNavBarClasses('nav-bar-active')
       }
     } else {
-      if (inView) {
-        setNavBarClasses('')
-      } else {
-        setNavBarClasses('nav-bar-active-mobile')
-      }
+      setNavBarClasses('nav-bar-active-mobile')
     }
   }, [inView])
 
@@ -90,41 +86,13 @@ export function NavBarComponent(props: any): JSX.Element {
     history.push(path)
   }
 
-  const list = (anchor: Anchor) => (
-    <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <Inbox /> : <Mail />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <Inbox /> : <Mail />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  )
 
   if (props.mobile) {
     return (
       <>
-        <div className={`nav-bar-component-mobile ${navBarClasses} `}>
+        <div
+          className={`nav-bar-component-mobile ${navBarClasses} `}
+        >
           <div className="nav-bar-mobile-hamburger-container ">
             <IconButton
               className="hamburger-menu"
@@ -281,7 +249,6 @@ export function NavBarComponent(props: any): JSX.Element {
         </div>
       </>
     )
-    // return <></>
   } else {
     return (
       <div className={`nav-bar-component ${navBarClasses}`}>

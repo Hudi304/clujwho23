@@ -113,42 +113,42 @@ export function ApplyNow(props: any): JSX.Element {
     return (
       <div>
         <div className="applyNowPageGridContainerMobile OxCenter backgroud-image">
-          <div className="applyNowPageGrid debug">
-            <p className="titleContainer xOyCenter">
+          <div className="applyNowPageGridMobile">
+            <p className="titleContainerMobile xOyCenter">
               The experience of your studenthood
             </p>
-            <p className="titleContainer xOyCenter">starts in:</p>
-            <div className="countDownContainer xOyCenter">
-              <div className="counterContainer">
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.weeks}`}</div>
-                  <p className="cardLabel xOyCenter">Weeks</p>
+            <p className="titleContainerMobile xOyCenter">starts in:</p>
+            <div className="countDownContainerMobile xOyCenter">
+              <div className="counterContainerMobile">
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.weeks}`}</div>
+                  <p className="cardLabelMobile xOyCenter">Weeks</p>
                 </div>
-                <div className="xOyCenter points "> : </div>
+                <div className="xOyCenter pointsMobile "> : </div>
 
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.days}`}</div>
-                  <p className="cardLabel xOyCenter">Days</p>
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.days}`}</div>
+                  <p className="cardLabelMobile xOyCenter">Days</p>
                 </div>
-                <div className="xOyCenter points "> : </div>
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.hours}`}</div>
-                  <p className="cardLabel xOyCenter">Hours</p>
+                <div className="xOyCenter pointsMobile "> : </div>
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.hours}`}</div>
+                  <p className="cardLabelMobile xOyCenter">Hours</p>
                 </div>
-                <div className="xOyCenter points "> : </div>
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.minutes}`}</div>
-                  <p className="cardLabel xOyCenter">Minutes</p>
+                <div className="xOyCenter pointsMobile "> : </div>
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.minutes}`}</div>
+                  <p className="cardLabelMobile xOyCenter">Minutes</p>
                 </div>
-                <div className="xOyCenter points "> : </div>
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.seconds}`}</div>
-                  <p className="cardLabel xOyCenter">Seconds</p>
+                <div className="xOyCenter pointsMobile "> : </div>
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.seconds}`}</div>
+                  <p className="cardLabelMobile xOyCenter">Seconds</p>
                 </div>
               </div>
             </div>
-            <div className="paperContainer OxCenter">
-              <CustomPaper width={'95vw'} height={'80vh'}>
+            <div className="paperContainerMobile OxCenter">
+              <CustomPaper width={'90vw'} height={'80vh'}>
                 <div className="iframeContainer OxCenter">
             {/* <iframe src="https://www.w3schools.com" title="Iframe Example"></iframe> */}
             ... insert formular here ...
@@ -173,29 +173,29 @@ export function ApplyNow(props: any): JSX.Element {
             </p>
             <div className="countDownContainer xOyCenter">
               <div className="counterContainer">
-                <div className="cardContainer">
+                <div className="cardContainerMobile">
                   <div className="counterCard">{`${timeLeft.weeks}`}</div>
                   <p className="cardLabel xOyCenter">Weeks</p>
                 </div>
                 <div className="xOyCenter points "> : </div>
 
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.days}`}</div>
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.days}`}</div>
                   <p className="cardLabel xOyCenter">Days</p>
                 </div>
                 <div className="xOyCenter points "> : </div>
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.hours}`}</div>
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.hours}`}</div>
                   <p className="cardLabel xOyCenter">Hours</p>
                 </div>
                 <div className="xOyCenter points "> : </div>
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.minutes}`}</div>
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.minutes}`}</div>
                   <p className="cardLabel xOyCenter">Minutes</p>
                 </div>
                 <div className="xOyCenter points "> : </div>
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.seconds}`}</div>
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.seconds}`}</div>
                   <p className="cardLabel xOyCenter">Seconds</p>
                 </div>
               </div>

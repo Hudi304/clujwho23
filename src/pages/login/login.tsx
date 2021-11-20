@@ -19,9 +19,6 @@ function Home(props: any): JSX.Element {
     threshold: 0.5
   })
 
-  const [width, setWidth] = useState(window.innerWidth)
-  const [height, setHeight] = useState(window.innerHeight)
-
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight
@@ -47,39 +44,85 @@ function Home(props: any): JSX.Element {
     }
   }, [dimensions])
 
+  if (mobile) {
+    return (
+      <>
+        <div className="homePageGridContainerMobile ">
+          <div className="titleContainer " ref={ref}>
+            <div className="titleGrid">
+              {/* //?IMAGE */}
+              <div className="logoContainer ">
+                <div className="logoBackground">
+                  <img className="logo" src={ClujWhoLogo} />
+                </div>
+              </div>
+              {/* //?TITLE */}
+              <div className="tileGridItem ">
+                <h2 className="title">Cluj World Health Organisation Model</h2>
+              </div>
+              {/* //?MESSAGE */}
+              <div className="tileGridItem ">
+                <div className="message ">
+                  First of its kind in Eastern Europe
+                </div>
+              </div>
+            </div>
+          </div>
 
-  return (
-    <>
-      <div className="homePageGridContainer debug">
-        <div className="titleContainer debug" ref={ref}>
-          <div className="titleGrid">
-            {/* //?IMAGE */}
-            <div className="tileGridItem debug">
-              <img className="logo" src={ClujWhoLogo} />
-            </div>
-            {/* //?TITLE */}
-            <div className="tileGridItem debug">
-              <h2 className="title">Cluj World Health Organisation Model</h2>
-            </div>
-            {/* //?MESSAGE */}
-            <div className="tileGridItem debug">
-              <div className="message debug"> First of its kind in Eastern Europe</div>
+          <div className="page-grid-item ">
+            <div className="paper-flex">
+              <div className="out-paper">
+                <Paper elevation={10}>
+                  <div className="in-paper">
+                    We need a description here!
+                  </div>
+                </Paper>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="page-grid-item debug">
-          <div className="paper-flex">
-            <div className="out-paper">
-              <Paper elevation={10}>
-                <div className="in-paper"></div>
-              </Paper>
+        <div className={`nav-bar-container`}>
+          <NavBarComponent inView={inView} mobile={mobile} />
+        </div>
+      </>
+    )
+  } else {
+    return (
+      <>
+        <div className="homePageGridContainer debug">
+          <div className="titleContainer debug" ref={ref}>
+            <div className="titleGrid">
+              {/* //?IMAGE */}
+              <div className="tileGridItem debug">
+                <img className="logo" src={ClujWhoLogo} />
+              </div>
+              {/* //?TITLE */}
+              <div className="tileGridItem debug">
+                <h2 className="title">Cluj World Health Organisation Model</h2>
+              </div>
+              {/* //?MESSAGE */}
+              <div className="tileGridItem debug">
+                <div className="message debug">
+                  {' '}
+                  First of its kind in Eastern Europe
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="page-grid-item debug">
+            <div className="paper-flex">
+              <div className="out-paper">
+                <Paper elevation={10}>
+                  <div className="in-paper"></div>
+                </Paper>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* <div className="page-grid-container debug">
+        {/* <div className="page-grid-container debug">
         <div ref={ref}>
           <span className="title-tile debug">
             <div className="title-grid-container debug">
@@ -117,18 +160,22 @@ function Home(props: any): JSX.Element {
         <div className="page-grid-item debug"></div>
       </div> */}
 
-      <div className={`nav-bar-container`}>
-        <NavBarComponent inView={inView} mobile={mobile} />
-      </div>
-    </>
-  )
+        <div className={`nav-bar-container`}>
+          <NavBarComponent inView={inView} mobile={mobile} />
+        </div>
+      </>
+    )
+  }
 }
 
 const mapStateToProps = (state: any) => ({
   ...state
 })
 
-const mapDispatchToProps = (dispatch: any) => ({ dispatch, ...bindActionCreators({ login }, dispatch) })
+const mapDispatchToProps = (dispatch: any) => ({
+  dispatch,
+  ...bindActionCreators({ login }, dispatch)
+})
 
 export const HomePage = connect(mapStateToProps, mapDispatchToProps)(Home)
 // conecteaza pagina la store, deci avem access la store

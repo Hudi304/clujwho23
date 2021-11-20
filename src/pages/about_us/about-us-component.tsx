@@ -23,17 +23,35 @@ export function AboutUs(props: any): JSX.Element {
     }
   }, [dimensions])
 
-  return (
-    <div>
-      <div className="apply-now-page-grid-container backgroud-image debug">
-        <CustomPaper width={'1220px'} height={'300vh'}>
-          AboutUs
-        </CustomPaper>
-      </div>
+  if (mobile) {
+    return (
+      <div>
+        <div className="aboutUsPageContainer backgroud-image debug">
+          <div className="aboutUsPageGrid">
+            <CustomPaper width={'90vw'} height={'100vh'}>
+              AboutUs
+            </CustomPaper>
+          </div>
+        </div>
 
-      <div className={`nav-bar-container`}>
-        <NavBarComponent inView={inView} mobile={mobile} />
+        <div className={`nav-bar-container`}>
+          <NavBarComponent inView={inView} mobile={mobile} />
+        </div>
       </div>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div>
+        <div className="apply-now-page-grid-container backgroud-image debug">
+          <CustomPaper width={'1220px'} height={'300vh'}>
+            AboutUs
+          </CustomPaper>
+        </div>
+
+        <div className={`nav-bar-container`}>
+          <NavBarComponent inView={inView} mobile={mobile} />
+        </div>
+      </div>
+    )
+  }
 }

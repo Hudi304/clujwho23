@@ -47,10 +47,20 @@
     border: 1px solid white;
   }
 
+  .OxCenter {
+    display: flex;
+    justify-content: center;
+  }
+
+  .committeePageContainer {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+
   .committeesPageGridMobile {
     display: grid;
     grid-template-rows: 30vh auto;
-    border: 1px solid white;
+    // border: 1px solid white;
 
     .committeesWroldMapContainerMobile {
       display: flex;
@@ -59,7 +69,12 @@
       width: 100vw;
       margin-top: 6vh;
       animation: mapFadeIn 3s ease-in 0s 1 forwards forwards;
-      border: 1px solid white;
+      // border: 1px solid white;
+
+      .wordMapSvg {
+        transform: scale(calc(1.11));
+        // border: 1px solid yellow;
+      }
     }
 
     .committeesPageGridMobileItem {

@@ -36,80 +36,87 @@ export function Committees(props: any): JSX.Element {
         <div className="committeesPageContainerMobile">
           <div className="committeesPageGridMobile">
             <div className="committeesWroldMapContainerMobile">
-              <WorldMapMobile />
+              <WorldMapMobile width={'100vw'} height={'30vh'} />
             </div>
 
-            <CustomPaper width={'90vw'} height={'auto'}>
-              <div className="mobileTextContainer">
-                AMRO
-                <div>{AMRO_Description.p1}</div>
-                <br />
-                <div>{AMRO_Description.p2}</div>
-                <br />
-                <div>{AMRO_Description.p3}</div>
-                <br />
-              </div>
-            </CustomPaper>
-
-            <CustomPaper width={'90vw'} height={'auto'}>
-              <div className="mobileTextContainer">
-                AFRO
-                <div>{AMRO_Description.p1}</div>
-                <br />
-                <div>{AMRO_Description.p2}</div>
-                <br />
-                <div>{AMRO_Description.p3}</div>
-                <br />
-              </div>
-            </CustomPaper>
-
-            <CustomPaper width={'90vw'} height={'auto'}>
-              <div className="mobileTextContainer">
-                EURO
-                <div>{AMRO_Description.p1}</div>
-                <br />
-                <div>{AMRO_Description.p2}</div>
-                <br />
-                <div>{AMRO_Description.p3}</div>
-                <br />
-              </div>
-            </CustomPaper>
-
-            <CustomPaper width={'90vw'} height={'auto'}>
-              <div className="mobileTextContainer">
-                EMRO
-                <div>{AMRO_Description.p1}</div>
-                <br />
-                <div>{AMRO_Description.p2}</div>
-                <br />
-                <div>{AMRO_Description.p3}</div>
-                <br />
-              </div>
-            </CustomPaper>
-
-            <CustomPaper width={'90vw'} height={'auto'}>
-              <div className="mobileTextContainer">
-                WPRO
-                <div>{AMRO_Description.p1}</div>
-                <br />
-                <div>{AMRO_Description.p2}</div>
-                <br />
-                <div>{AMRO_Description.p3}</div>
-                <br />
-              </div>
-            </CustomPaper>
-
-            <CustomPaper width={'90vw'} height={'auto'}>
-              <div className="mobileTextContainer">
-                SEARO
-                <div>{AMRO_Description.p1}</div>
-                <br />
-                <div>{AMRO_Description.p2}</div>
-                <br />
-                <div>{AMRO_Description.p3}</div>
-                <br />
-              </div>
-            </CustomPaper>
+            <div className="OxCenter committeePageContainer">
+              <CustomPaper width={'90vw'} height={'auto'}>
+                <div className="mobileTextContainer">
+                  AMRO
+                  <div>{AMRO_Description.p1}</div>
+                  <br />
+                  <div>{AMRO_Description.p2}</div>
+                  <br />
+                  <div>{AMRO_Description.p3}</div>
+                  <br />
+                </div>
+              </CustomPaper>
+            </div>
+            <div className="OxCenter committeePageContainer">
+              <CustomPaper width={'90vw'} height={'auto'}>
+                <div className="mobileTextContainer">
+                  AFRO
+                  <div>{AMRO_Description.p1}</div>
+                  <br />
+                  <div>{AMRO_Description.p2}</div>
+                  <br />
+                  <div>{AMRO_Description.p3}</div>
+                  <br />
+                </div>
+              </CustomPaper>
+            </div>
+            <div className="OxCenter committeePageContainer">
+              <CustomPaper width={'90vw'} height={'auto'}>
+                <div className="mobileTextContainer">
+                  EURO
+                  <div>{AMRO_Description.p1}</div>
+                  <br />
+                  <div>{AMRO_Description.p2}</div>
+                  <br />
+                  <div>{AMRO_Description.p3}</div>
+                  <br />
+                </div>
+              </CustomPaper>
+            </div>
+            <div className="OxCenter committeePageContainer">
+              <CustomPaper width={'90vw'} height={'auto'}>
+                <div className="mobileTextContainer">
+                  EMRO
+                  <div>{AMRO_Description.p1}</div>
+                  <br />
+                  <div>{AMRO_Description.p2}</div>
+                  <br />
+                  <div>{AMRO_Description.p3}</div>
+                  <br />
+                </div>
+              </CustomPaper>
+            </div>
+            <div className="OxCenter committeePageContainer">
+              <CustomPaper width={'90vw'} height={'auto'}>
+                <div className="mobileTextContainer">
+                  WPRO
+                  <div>{AMRO_Description.p1}</div>
+                  <br />
+                  <div>{AMRO_Description.p2}</div>
+                  <br />
+                  <div>{AMRO_Description.p3}</div>
+                  <br />
+                </div>
+              </CustomPaper>
+            </div>
+            <div className="OxCenter committeePageContainer">
+              <CustomPaper width={'90vw'} height={'auto'}>
+                <div className="mobileTextContainer">
+                  SEARO
+                  <div>{AMRO_Description.p1}</div>
+                  <br />
+                  <div>{AMRO_Description.p2}</div>
+                  <br />
+                  <div>{AMRO_Description.p3}</div>
+                  <br />
+                </div>
+              </CustomPaper>
+            </div>
           </div>
         </div>
         <div className={`nav-bar-container`}>

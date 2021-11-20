@@ -217,6 +217,7 @@ export function WorldMapMobile(props: any) {
       viewBox="0 0 300 113"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="wordMapSvg"
     >
       <g id="CommitteesMap" clip-path="url(#clip0_1_3)">
         <g id="EMRO">

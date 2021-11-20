@@ -150,9 +150,9 @@ export function ApplyNow(props: any): JSX.Element {
             <div className="paperContainerMobile OxCenter">
               <CustomPaper width={'90vw'} height={'80vh'}>
                 <div className="iframeContainer OxCenter">
-            {/* <iframe src="https://www.w3schools.com" title="Iframe Example"></iframe> */}
-            ... insert formular here ...
-            </div>
+                  {/* <iframe src="https://www.w3schools.com" title="Iframe Example"></iframe> */}
+                  ... insert formular here ...
+                </div>
               </CustomPaper>
             </div>
           </div>
@@ -166,43 +166,43 @@ export function ApplyNow(props: any): JSX.Element {
   } else {
     return (
       <div>
-        <div className="applyNowPageGridContainer OxCenter backgroud-image debug">
-          <div className="applyNowPageGrid debug">
+        <div className="applyNowPageGridContainer OxCenter backgroud-image ">
+          <div className="applyNowPageGrid ">
             <p className="titleContainer xOyCenter">
               The experience of your studenthood starts in:{' '}
             </p>
             <div className="countDownContainer xOyCenter">
               <div className="counterContainer">
-                <div className="cardContainerMobile">
+                <div className="cardContainer">
                   <div className="counterCard">{`${timeLeft.weeks}`}</div>
                   <p className="cardLabel xOyCenter">Weeks</p>
                 </div>
                 <div className="xOyCenter points "> : </div>
 
-                <div className="cardContainerMobile">
-                  <div className="counterCardMobile">{`${timeLeft.days}`}</div>
+                <div className="cardContainer">
+                  <div className="counterCard">{`${timeLeft.days}`}</div>
                   <p className="cardLabel xOyCenter">Days</p>
                 </div>
                 <div className="xOyCenter points "> : </div>
-                <div className="cardContainerMobile">
-                  <div className="counterCardMobile">{`${timeLeft.hours}`}</div>
+                <div className="cardContainer">
+                  <div className="counterCard">{`${timeLeft.hours}`}</div>
                   <p className="cardLabel xOyCenter">Hours</p>
                 </div>
                 <div className="xOyCenter points "> : </div>
-                <div className="cardContainerMobile">
-                  <div className="counterCardMobile">{`${timeLeft.minutes}`}</div>
+                <div className="cardContainer">
+                  <div className="counterCard">{`${timeLeft.minutes}`}</div>
                   <p className="cardLabel xOyCenter">Minutes</p>
                 </div>
                 <div className="xOyCenter points "> : </div>
-                <div className="cardContainerMobile">
-                  <div className="counterCardMobile">{`${timeLeft.seconds}`}</div>
+                <div className="cardContainer">
+                  <div className="counterCard">{`${timeLeft.seconds}`}</div>
                   <p className="cardLabel xOyCenter">Seconds</p>
                 </div>
               </div>
             </div>
 
             <div className="paperContainer OxCenter">
-              <CustomPaper width={'1220px'} height={'80vh'}>
+              <CustomPaper width={'80vw'} height={'80vh'}>
                 <div className="iframeContainer OxCenter">
                   {/* <iframe src="https://www.w3schools.com" title="Iframe Example"></iframe> */}
                   ... insert formular here ...

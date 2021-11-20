@@ -1,9 +1,30 @@
-.aboutUsPageContainer {
-  display: flex;
-  justify-content: center;
-  background-color: #4a5568;
+// ? WEB
+@media only screen and (min-width: 600px) {
+  .aboutUsPageContainer {
+    display: flex;
+    justify-content: center;
+    background-color: #4a5568;
 
-  .aboutUsPageGrid {
-    margin-top: 6vh;
+    .aboutUsPageGrid {
+      margin-top: 10vh;
+      .inPaper {
+        width: 70vw;
+        min-width: 900px;
+        max-width: 1280px;
+      }
+    }
+  }
+}
+
+// ? MOBILE
+@media only screen and (max-width: 600px) {
+  .aboutUsPageContainer {
+    display: flex;
+    justify-content: center;
+    background-color: #4a5568;
+
+    .aboutUsPageGrid {
+      margin-top: 6vh;
+    }
   }
 }

@@ -5,6 +5,7 @@
 
 .EMROg:hover {
   transform: scale(1.02);
+  filter: drop-shadow(1vw 1vw 1vw rgb(43, 43, 43));
 }
 
 .AFROg {
@@ -14,6 +15,7 @@
 
 .AFROg:hover {
   transform: scale(1.015);
+  filter: drop-shadow(1vw 1vw 1vw rgb(43, 43, 43));
 }
 
 .EUROg {
@@ -23,6 +25,8 @@
 
 .EUROg:hover {
   transform: scale(1.01);
+  transform: translateX(-4px);
+  filter: drop-shadow(1vw 1vw 1vw rgb(43, 43, 43));
 }
 
 .AMROg {
@@ -32,6 +36,7 @@
 
 .AMROg:hover {
   transform: scale(1.01);
+  filter: drop-shadow(1vw 1vw 1vw rgb(43, 43, 43));
 }
 
 .SEAROg {
@@ -41,6 +46,7 @@
 
 .SEAROg:hover {
   transform: scale(1.01);
+  filter: drop-shadow(1vw 1vw 1vw rgb(43, 43, 43));
 }
 
 .WPROg {
@@ -50,6 +56,8 @@
 
 .WPROg:hover {
   transform: scale(1.01);
+  filter: drop-shadow(1vw 1vw 1vw rgb(43, 43, 43));
+  z-index: 10;
 }
 
 .worldMap {

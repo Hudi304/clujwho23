@@ -16,12 +16,17 @@ import {
   hoursArrayFriday,
   getFridayBubbleOptions,
   getSaturdayBubbleOptions,
-  getSundayBubbleOptions
+  getSundayBubbleOptions,
+  bubbleOptionsArraySaturday,
+  bubbleOptionsArraySunday
 } from './scheduler-constants'
 /* eslint-disable */
 
 export function Schedule(props: any): JSX.Element {
   const now = new Date()
+  const [ref, inView] = useInView({
+    threshold: 0.5
+  })
   const [fridayBubbleOpt, setFridayBubbleOpt] = useState(
     getFridayBubbleOptions(now)
   )
@@ -61,17 +66,23 @@ export function Schedule(props: any): JSX.Element {
     return () => clearTimeout(timer)
   })
 
-  function ScheduleComponentWeb() {
+  function ScheduleComponentWebFriday() {
     return (
       <div className="scheduleComponentContainer ">
         <div className="scheduleOxGrid ">
-          <p className="scheduleTitle ">Friday</p>
+          <p className="scheduleTitle " style={{ paddingLeft: '7vh' }}>
+            Friday
+          </p>
           <p></p>
           <p></p>
 
           <div className="scheduleOyHourGrid ">
             {hoursArrayFriday.map((hour, index) => {
-              return <div  key={index * 13} className="scheduleHourGridItem ">{hour}</div>
+              return (
+                <div key={index * 13} className="scheduleHourGridItem ">
+                  {hour}
+                </div>
+              )
             })}
           </div>
           <div className="scheduleOyBubbleGrid ">
@@ -85,8 +96,8 @@ export function Schedule(props: any): JSX.Element {
                     colorHashT={bubbleOpt.colorHashT}
                     colorHashC={bubbleOpt.colorHashC}
                     colorHashB={bubbleOpt.colorHashB}
-                    width="5vw"
-                    height="5vw"
+                    width="5vh"
+                    height="5vh"
                   ></Bubble>
                 </div>
               )
@@ -100,6 +111,110 @@ export function Schedule(props: any): JSX.Element {
                 </div>
               )
             })}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  function ScheduleComponentWebSaturday() {
+    return (
+      <div className="scheduleComponentContainer ">
+        <div className="scheduleOxGrid ">
+          <p className="scheduleTitle ">Saturday</p>
+          <p></p>
+          <p></p>
+
+          <div className="scheduleOyHourGrid ">
+            {hoursArraySaturday.map((hour, index) => {
+              return (
+                <div key={index * 13} className="scheduleHourGridItem ">
+                  {hour}
+                </div>
+              )
+            })}
+          </div>
+          <div className="scheduleOyBubbleGrid ">
+            {bubbleOptionsArraySaturday.map((bubbleOpt, index) => {
+              return (
+                <div key={index * 5} className="scheduleBubbleGridItem">
+                  <Bubble
+                    key={index * 17}
+                    connectTop={bubbleOpt.connectTop}
+                    connectBotomn={bubbleOpt.connectBotomn}
+                    colorHashT={bubbleOpt.colorHashT}
+                    colorHashC={bubbleOpt.colorHashC}
+                    colorHashB={bubbleOpt.colorHashB}
+                    width="5vh"
+                    height="5vh"
+                  ></Bubble>
+                </div>
+              )
+            })}
+          </div>
+          <div className="scheduleOyActivityGrid">
+            {activityArraySaturday.map((activity, index) => {
+              return (
+                <div key={index * 19} className="scheduleActivityGridItem">
+                  {activity}
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  function ScheduleComponentWebSunday() {
+    return (
+      <div className="scheduleComponentContainer ">
+        <div className="scheduleOxGrid ">
+          <p className="scheduleTitle " style={{ paddingLeft: '4vh' }}>
+            Saturday
+          </p>
+          <p></p>
+          <p></p>
+
+          <div className="scheduleOyHourGridSunday ">
+            {hoursArraySunday
+              .filter(act => act != '')
+              .map((hour, index) => {
+                return (
+                  <div key={index * 13} className="scheduleHourGridItem ">
+                    {hour}
+                  </div>
+                )
+              })}
+          </div>
+          <div className="scheduleOyBubbleGridSunday ">
+            {bubbleOptionsArraySunday.map((bubbleOpt, index) => {
+              return (
+                <div key={index * 5} className="scheduleBubbleGridItem">
+                  <Bubble
+                    key={index * 17}
+                    connectTop={bubbleOpt.connectTop}
+                    connectBotomn={bubbleOpt.connectBotomn}
+                    colorHashT={bubbleOpt.colorHashT}
+                    colorHashC={bubbleOpt.colorHashC}
+                    colorHashB={bubbleOpt.colorHashB}
+                    width="5vh"
+                    height="5vh"
+                  ></Bubble>
+                </div>
+              )
+            })}
+          </div>
+          <div className="scheduleOyActivityGridSunday">
+            {activityArraySunday
+              .filter(act => act != '')
+              .map((activity, index) => {
+                return (
+                  <div key={index * 19} className="scheduleActivityGridItem">
+                    {activity}
+                  </div>
+                )
+              })}
           </div>
         </div>
       </div>
@@ -150,6 +265,67 @@ export function Schedule(props: any): JSX.Element {
 
               <div className="scheduleOyActivityGrid">
                 {activityArrayFiday.map((activity, index) => {
+                  return (
+                    <div
+                      key={'FridayActivity' + index}
+                      className="scheduleActivityGridItem"
+                    >
+                      {activity}
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  function ScheduleComponentMobileSaturday() {
+    return (
+      <div className="scheduleComponentContainer">
+        <div className="scheduleOxGrid ">
+          <p className="scheduleTitle ">Saturday</p>
+          <div className="scheduleCardBodyContainer">
+            <div className="schedulerBodyOxGrid">
+              <div className="scheduleOyHourGrid ">
+                {hoursArraySaturday.map((hour, index) => {
+                  return (
+                    <div
+                      key={'FridayHour' + index}
+                      className="scheduleHourGridItem "
+                    >
+                      {hour}
+                    </div>
+                  )
+                })}
+              </div>
+
+              <div className="scheduleOyBubbleGrid ">
+                {saturdayBubbleOpt.map((bubbleOpt, index) => {
+                  return (
+                    <div
+                      key={'FridayBubble' + index}
+                      className="scheduleBubbleGridItem "
+                    >
+                      <Bubble
+                        key={index * 17}
+                        connectTop={bubbleOpt.connectTop}
+                        connectBotomn={bubbleOpt.connectBotomn}
+                        colorHashT={bubbleOpt.colorHashT}
+                        colorHashC={bubbleOpt.colorHashC}
+                        colorHashB={bubbleOpt.colorHashB}
+                        width="7vh"
+                        height="7vh"
+                      ></Bubble>
+                    </div>
+                  )
+                })}
+              </div>
+
+              <div className="scheduleOyActivityGrid">
+                {activityArraySaturday.map((activity, index) => {
                   return (
                     <div
                       key={'FridayActivity' + index}
@@ -337,20 +513,22 @@ export function Schedule(props: any): JSX.Element {
   } else {
     return (
       <div>
-        <div className="schedulePageContainer backgroud-image debug">
+        <div className="schedulePageContainer ">
           <div className="schedulePageGridContainer">
             <div className="scheduleGridItem">
-              <CustomPaper width={'90vw'} height={'auto'}>
-                <ScheduleComponentWeb />
-              </CustomPaper>
+              <ScheduleComponentWebFriday />
             </div>
-
-            <div className="scheduleGridItem">dsadsadsa</div>
+            <div className="scheduleGridItem">
+              <ScheduleComponentWebSaturday />
+            </div>
+            <div className="scheduleGridItem">
+              <ScheduleComponentWebSunday />
+            </div>
           </div>
         </div>
 
         <div className={`nav-bar-container`}>
-          <NavBarComponent inView={true} mobile={mobile} />
+          <NavBarComponent inView={inView} mobile={mobile} />
         </div>
       </div>
     )

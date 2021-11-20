@@ -36,6 +36,7 @@ import {
   SwipeableDrawer
 } from '@mui/material'
 import { blue, pink } from '@mui/material/colors'
+import { minWidth } from '@mui/system'
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right'
 
@@ -86,13 +87,10 @@ export function NavBarComponent(props: any): JSX.Element {
     history.push(path)
   }
 
-
   if (props.mobile) {
     return (
       <>
-        <div
-          className={`nav-bar-component-mobile ${navBarClasses} `}
-        >
+        <div className={`nav-bar-component-mobile ${navBarClasses} `}>
           <div className="nav-bar-mobile-hamburger-container ">
             <IconButton
               className="hamburger-menu"
@@ -254,66 +252,70 @@ export function NavBarComponent(props: any): JSX.Element {
       <div className={`nav-bar-component ${navBarClasses}`}>
         <div className="nav-bar-container-grid">
           <div className="nav-bar-logo-container">
-            <img className="nav-bar-logo" src={ClujWhoLogoBar} />
+            <div className="iconContainer">
+              <img className="nav-bar-logo" src={ClujWhoLogo} />
+            </div>
+            <p className="navBarTitle">ClujWHO</p>
           </div>
 
-          <div className="nav-bar-flex-container">
-            <div className="nav-bar-buttons-container">
-              <NavBarButton
-                text={'Home'}
-                onClick={(e: any) => {
-                  redirect('/clujwho23/home', e)
-                }}
-              />
-              <NavBarButton
-                text={'Apply now'}
-                onClick={(e: any) => {
-                  redirect('/clujwho23/apply_now', e)
-                }}
-              />
-              <NavBarButton
-                text={'About us'}
-                onClick={(e: any) => {
-                  redirect('/clujwho23/about_us', e)
-                }}
-              />
-              <NavBarButton
-                text={'Schedule'}
-                onClick={(e: any) => {
-                  redirect('/clujwho23/schedule', e)
-                }}
-              />
-              <NavBarButton
-                text={'Committees'}
-                onClick={(e: any) => {
-                  redirect('/clujwho23/committees', e)
-                }}
-              />
-              <NavBarButton
-                text={'Our Team'}
-                onClick={(e: any) => {
-                  redirect('/clujwho23/our_team', e)
-                }}
-              />
-              <NavBarButton
-                text={'Resources'}
-                onClick={(e: any) => {
-                  redirect('/clujwho23/resources', e)
-                }}
-              />
-              <NavBarButton
-                text={'Contact'}
-                onClick={(e: any) => {
-                  redirect('/clujwho23/contact', e)
-                }}
-              />
-              <NavBarButton
-                text={'Sponsors'}
-                onClick={(e: any) => {
-                  redirect('/clujwho23/sponsors', e)
-                }}
-              />
-            </div>
+          <div className="nav-bar-buttons-container">
+            <NavBarButton
+              text={'Home'}
+              onClick={(e: any) => {
+                redirect('/clujwho23/home', e)
+              }}
+            />
+            <NavBarButton
+              style={{ minWidth: '124px' }}
+              text={'Apply now'}
+              onClick={(e: any) => {
+                redirect('/clujwho23/apply_now', e)
+              }}
+            />
+            <NavBarButton
+              style={{ minWidth: '112px' }}
+              text={'About us'}
+              onClick={(e: any) => {
+                redirect('/clujwho23/about_us', e)
+              }}
+            />
+            <NavBarButton
+              text={'Schedule'}
+              onClick={(e: any) => {
+                redirect('/clujwho23/schedule', e)
+              }}
+            />
+            <NavBarButton
+              text={'Committees'}
+              onClick={(e: any) => {
+                redirect('/clujwho23/committees', e)
+              }}
+            />
+            <NavBarButton
+              style={{ minWidth: '112px' }}
+              text={'Our Team'}
+              onClick={(e: any) => {
+                redirect('/clujwho23/our_team', e)
+              }}
+            />
+            <NavBarButton
+              text={'Resources'}
+              onClick={(e: any) => {
+                redirect('/clujwho23/resources', e)
+              }}
+            />
+            <NavBarButton
+              text={'Contact'}
+              onClick={(e: any) => {
+                redirect('/clujwho23/contact', e)
+              }}
+            />
+            <NavBarButton
+              text={'Sponsors'}
+              onClick={(e: any) => {
+                redirect('/clujwho23/sponsors', e)
+              }}
+            />
           </div>
         </div>
       </div>
@@ -324,12 +326,13 @@ export function NavBarComponent(props: any): JSX.Element {
 interface NavBarButtonProps {
   text: string
   onClick: any
+  style?: any
 }
 
 function NavBarButton(props: NavBarButtonProps): JSX.Element {
-  const { text, onClick } = props
+  const { text, onClick, style } = props
   return (
-    <button className="nav-bar-btn" onClick={onClick}>
+    <button style={style} className="nav-bar-btn" onClick={onClick}>
       {text}
     </button>
   )

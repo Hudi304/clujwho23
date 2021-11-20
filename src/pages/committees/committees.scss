@@ -1,39 +1,69 @@
-.committeesPageContainer {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+@media only screen and (min-width: 600px) {
+  .committeesPageContainerMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #4a5568;
+    border: 1px solid white;
+  }
 
-  .committeesPageGrid {
+  .OxCenter {
+    display: flex;
+    justify-content: center;
+  }
+
+  .committeesPageGridMobile {
+    margin-top: 7vh;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 50vh auto auto auto auto auto auto;
-    margin-top: 15vh;
-    border: 1px solid black;
+    grid-template-rows: 60vh auto;
+    grid-row-gap: 30px;
 
-    .centerPage {
+    .committeesWroldMapContainerMobile {
       display: flex;
-      // justify-content: center;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      width: 1220px;
+      margin-top: 6vh;
+      animation: mapFadeIn 3s ease-in 0s 1 forwards forwards;
+      border: 1px solid white;
 
-      .worldMapContainer {
-        height: min-content;
-        width: max-content;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 50px;
-
-        animation: mapFadeIn 3s ease-in 0s 1 forwards forwards;
-      }
-
-      .contentContainer {
-        margin-top: 100px;
-        border: 1px solid black;
-        width: 1000px;
+      .wordMapSvg {
+        transform: scale(calc(1.11));
       }
     }
+    .committeePageContainer {
+      width: 70vw;
+      max-width: 900px;
+    }
+
+    .committeesPageGridMobileItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .mobileTextContainer {
+        margin: 2vw;
+        width: 70vw;
+        max-width: 900px;
+      }
+    }
+
+    @keyframes mapFadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@keyframes mapFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/clujwho23/static/css/main.bfe2191e.chunk.css",
-    "main.js": "/clujwho23/static/js/main.40bfaf65.chunk.js",
-    "main.js.map": "/clujwho23/static/js/main.40bfaf65.chunk.js.map",
+    "main.css": "/clujwho23/static/css/main.ebb52c72.chunk.css",
+    "main.js": "/clujwho23/static/js/main.2a61d0dd.chunk.js",
+    "main.js.map": "/clujwho23/static/js/main.2a61d0dd.chunk.js.map",
     "runtime-main.js": "/clujwho23/static/js/runtime-main.9acff78b.js",
     "runtime-main.js.map": "/clujwho23/static/js/runtime-main.9acff78b.js.map",
     "static/js/2.17dcc877.chunk.js": "/clujwho23/static/js/2.17dcc877.chunk.js",
@@ -10,16 +10,17 @@
     "static/js/3.00ab2875.chunk.js": "/clujwho23/static/js/3.00ab2875.chunk.js",
     "static/js/3.00ab2875.chunk.js.map": "/clujwho23/static/js/3.00ab2875.chunk.js.map",
     "index.html": "/clujwho23/index.html",
-    "static/css/main.bfe2191e.chunk.css.map": "/clujwho23/static/css/main.bfe2191e.chunk.css.map",
+    "static/css/main.ebb52c72.chunk.css.map": "/clujwho23/static/css/main.ebb52c72.chunk.css.map",
     "static/js/2.17dcc877.chunk.js.LICENSE.txt": "/clujwho23/static/js/2.17dcc877.chunk.js.LICENSE.txt",
     "static/media/AFRO-map-image.41cd9e6b.png": "/clujwho23/static/media/AFRO-map-image.41cd9e6b.png",
     "static/media/ClujWHOLogo.7e7081ea.png": "/clujwho23/static/media/ClujWHOLogo.7e7081ea.png",
-    "static/media/appy-now.scss": "/clujwho23/static/media/ClujWhoBackground.0ab6fb53.png"
+    "static/media/appy-now.scss": "/clujwho23/static/media/ClujWhoBackground.0ab6fb53.png",
+    "static/media/amonfUS.7c0a94e8.png": "/clujwho23/static/media/amonfUS.7c0a94e8.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9acff78b.js",
     "static/js/2.17dcc877.chunk.js",
-    "static/css/main.bfe2191e.chunk.css",
-    "static/js/main.40bfaf65.chunk.js"
+    "static/css/main.ebb52c72.chunk.css",
+    "static/js/main.2a61d0dd.chunk.js"
   ]
 }

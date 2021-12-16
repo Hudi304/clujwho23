@@ -262,58 +262,58 @@ export function NavBarComponent(props: any): JSX.Element {
             <NavBarButton
               text={'Home'}
               onClick={(e: any) => {
-                redirect('/clujwho23/home', e)
+                redirect('/', e)
               }}
             />
             <NavBarButton
               style={{ minWidth: '124px' }}
               text={'Apply now'}
               onClick={(e: any) => {
-                redirect('/clujwho23/apply_now', e)
+                redirect('/apply_now', e)
               }}
             />
             <NavBarButton
               style={{ minWidth: '112px' }}
               text={'About us'}
               onClick={(e: any) => {
-                redirect('/clujwho23/about_us', e)
+                redirect('/about_us', e)
               }}
             />
             <NavBarButton
               text={'Schedule'}
               onClick={(e: any) => {
-                redirect('/clujwho23/schedule', e)
+                redirect('/schedule', e)
               }}
             />
             <NavBarButton
               text={'Committees'}
               onClick={(e: any) => {
-                redirect('/clujwho23/committees', e)
+                redirect('/committees', e)
               }}
             />
             <NavBarButton
               style={{ minWidth: '112px' }}
               text={'Our Team'}
               onClick={(e: any) => {
-                redirect('/clujwho23/our_team', e)
+                redirect('/our_team', e)
               }}
             />
             <NavBarButton
               text={'Resources'}
               onClick={(e: any) => {
-                redirect('/clujwho23/resources', e)
+                redirect('/resources', e)
               }}
             />
             <NavBarButton
               text={'Contact'}
               onClick={(e: any) => {
-                redirect('/clujwho23/contact', e)
+                redirect('/contact', e)
               }}
             />
             <NavBarButton
               text={'Sponsors'}
               onClick={(e: any) => {
-                redirect('/clujwho23/sponsors', e)
+                redirect('/sponsors', e)
               }}
             />
           </div>

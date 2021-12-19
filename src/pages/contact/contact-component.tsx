@@ -23,17 +23,37 @@ export function Contact(props: any): JSX.Element {
     }
   }, [dimensions])
 
-  return (
-    <div>
-      <div className="apply-now-page-grid-container backgroud-image debug">
-        <CustomPaper width={'1220px'} height={'300vh'}>
-          Contact
-        </CustomPaper>
-      </div>
+  if (mobile) {
+    return (
+      <div>
+        <div className="aboutUsPageContainer backgroud-image ">
+          <div className="aboutUsPageGrid">
+            <CustomPaper width={'90vw'} height={'100vh'}>
+              Contact
+            </CustomPaper>
+          </div>
+        </div>
 
-      <div className={`nav-bar-container`}>
-        <NavBarComponent inView={inView} mobile={mobile} />
+        <div className={`nav-bar-container`}>
+          <NavBarComponent inView={inView} mobile={mobile} />
+        </div>
       </div>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div>
+        <div className="aboutUsPageContainer ">
+          <div className="aboutUsPageGrid">
+            <CustomPaper width={'auto'} height={'100vh'}>
+              <div className="inPaper">Contact</div>
+            </CustomPaper>
+          </div>
+        </div>
+
+        <div className={`nav-bar-container`}>
+          <NavBarComponent inView={inView} mobile={mobile} />
+        </div>
+      </div>
+    )
+  }
 }

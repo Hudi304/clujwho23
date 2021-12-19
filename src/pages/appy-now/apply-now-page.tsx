@@ -78,9 +78,9 @@ export function ApplyNow(props: any): JSX.Element {
 
   const date = new Date()
   const registrationStartDate = new Date()
-  registrationStartDate.setMonth(11)
-  registrationStartDate.setDate(15)
-  registrationStartDate.setFullYear(2021)
+  registrationStartDate.setMonth(1)
+  registrationStartDate.setDate(1)
+  registrationStartDate.setFullYear(2022)
   registrationStartDate.setHours(0)
   registrationStartDate.setMinutes(0)
   registrationStartDate.setSeconds(0)
@@ -89,8 +89,8 @@ export function ApplyNow(props: any): JSX.Element {
     seconds: 59 - date.getSeconds(),
     minutes: 59 - date.getMinutes(),
     hours: 23 - date.getHours(),
-    days: nrOfDaysBetween(date, registrationStartDate) % 7,
-    weeks: (nrOfDaysBetween(date, registrationStartDate) / 7) | 0
+    days: Math.abs(nrOfDaysBetween(date, registrationStartDate) % 7),
+    weeks: Math.abs((nrOfDaysBetween(date, registrationStartDate) / 7) | 0)
   })
 
   useEffect(() => {
@@ -99,11 +99,9 @@ export function ApplyNow(props: any): JSX.Element {
         seconds: 60 - date.getSeconds(),
         minutes: 60 - date.getMinutes(),
         hours: 24 - date.getHours(),
-        days: nrOfDaysBetween(date, registrationStartDate) % 7,
-        weeks: (nrOfDaysBetween(date, registrationStartDate) / 7) | 0
+        days: Math.abs(nrOfDaysBetween(date, registrationStartDate) % 7),
+        weeks: Math.abs((nrOfDaysBetween(date, registrationStartDate) / 7) | 0)
       }
-      console.log('dsadas')
-
       setTimeLeft(timeLeft)
     }, 1000)
     return () => clearTimeout(timer)

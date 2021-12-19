@@ -30,10 +30,8 @@
       }
 
       .EMRO-image-container {
-        // width: 90%;
         .EMRO-Image {
           width: 100%;
-          // max-width: 500px;
         }
       }
 
@@ -188,6 +186,17 @@
 
             //? EMRO
             .EMRO-image-container-m {
+              width: 84vw;
+
+              .EMRO-Image-m {
+                margin-top: 1vh;
+                width: 100%;
+                height: auto;
+              }
+            }
+
+            //? EURO
+            .EURO-image-container-m {
               width: 84vw;
 
               .EMRO-Image-m {

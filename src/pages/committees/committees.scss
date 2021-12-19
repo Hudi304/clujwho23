@@ -22,10 +22,19 @@
     .committee-description-container {
       padding: 15px;
       font-size: 21px;
+      // width: 50%;
 
-      .AFRO-Title {
+      .committee-description-title {
         font-size: 3vh;
         font-weight: 600;
+      }
+
+      .EMRO-image-container {
+        // width: 90%;
+        .EMRO-Image {
+          width: 100%;
+          // max-width: 500px;
+        }
       }
 
       .AFRO-first-paragraph {
@@ -142,11 +151,12 @@
             padding: 3vw;
             font-size: 15px;
 
-            .AFRO-Title {
+            .committee-description-title-m {
               font-size: 5vw;
               font-weight: 600;
             }
 
+            //? AFRO
             .AFRO-first-paragraph {
               padding-top: 10px;
               width: 100%;
@@ -162,7 +172,6 @@
                 height: auto;
               }
             }
-
             .AFRO-bullet-point-list-container {
               margin-top: 0px;
               .AFRO-bullet-point-list-title {
@@ -177,6 +186,18 @@
               }
             }
 
+            //? EMRO
+            .EMRO-image-container-m {
+              width: 84vw;
+
+              .EMRO-Image-m {
+                margin-top: 1vh;
+                width: 100%;
+                height: auto;
+              }
+            }
+
+            //? SIGNITURE
             .signiture-container {
               display: flex;
               width: 84vw;

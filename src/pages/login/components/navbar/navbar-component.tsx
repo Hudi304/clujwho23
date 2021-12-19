@@ -129,7 +129,7 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={() => {
-                    history.push('/clujwho23/home')
+                    history.push('/')
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -142,7 +142,7 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={() => {
-                    history.push('/clujwho23/apply_now')
+                    history.push('/apply_now')
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -155,7 +155,7 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={() => {
-                    history.push('/clujwho23/about_us')
+                    history.push('/about_us')
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -168,7 +168,7 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={() => {
-                    history.push('/clujwho23/schedule')
+                    history.push('/schedule')
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -181,7 +181,7 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={() => {
-                    history.push('/clujwho23/committees')
+                    history.push('/committees')
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -194,7 +194,7 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={() => {
-                    history.push('/clujwho23/our_team')
+                    history.push('/our_team')
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -207,7 +207,7 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={() => {
-                    history.push('/clujwho23/resources')
+                    history.push('/resources')
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -220,7 +220,7 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={() => {
-                    history.push('/clujwho23/contact')
+                    history.push('/contact')
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -233,7 +233,7 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={() => {
-                    history.push('/clujwho23/sponsors')
+                    history.push('/sponsors')
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"

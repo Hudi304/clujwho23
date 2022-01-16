@@ -260,6 +260,12 @@ export function NavBarComponent(props: any): JSX.Element {
 
           <div className="nav-bar-buttons-container">
             <NavBarButton
+              text={'Home2'}
+              onClick={(e: any) => {
+                redirect('/home2', e)
+              }}
+            />
+            <NavBarButton
               text={'Home'}
               onClick={(e: any) => {
                 redirect('/', e)

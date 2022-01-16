@@ -1,0 +1,163 @@
+.desktopBackGround {
+  display: grid;
+  grid-template-rows: 100vh 40vh 60vh;
+  background-color: #4a5568;
+
+  .firstImageContainer {
+    height: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .flexCenter1 {
+      grid-column: 1;
+      grid-row: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 100vh;
+      width: 100vw;
+
+      .firstImage {
+        width: 1920px;
+        height: 1080px;
+
+        position: relative;
+        top: 10vh;
+      }
+
+      @media only screen and (max-width: 1900px) {
+        .firstImage {
+          height: 100vh;
+          position: relative;
+          top: 0vh;
+        }
+      }
+    }
+
+    .flexCenter2 {
+      z-index: 1;
+      grid-column: 1;
+      grid-row: 1;
+      height: 100vh;
+      width: 1920px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+
+  .secondContainer {
+    height: 100%;
+    background-color: #0088c6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .homePageCardGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 60vw;
+      position: relative;
+      bottom: 20px;
+      z-index: 1;
+
+      .homePageCardContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+
+        .homePageCard {
+          // padding: 10%;
+          padding-top: 0;
+          padding-left: 10%;
+          padding-right: 10%;
+          height: 100%;
+
+          display: grid;
+          grid-template-rows: 10% 90%;
+
+          .homePageCardTitile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: 700;
+            color: white;
+          }
+
+          .homePageCardContent {
+            font-size: 20px;
+            color: white;
+
+            .topicList {
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .thirdContainer {
+    height: 100%;
+    display: flex;
+
+    .thirdContainerLeft {
+      position: relative;
+      height: 100%;
+      width: 50%;
+      background-color: orangered;
+      transition: 2s;
+      color: white;
+      font-size: 25px;
+      padding: 20px;
+      padding-left: 100px;
+      padding-right: 50px;
+    }
+
+    .thirdContainerLeftOutside {
+      right: 50vw;
+    }
+    .thirdContainerLeftInside {
+      right: 0;
+    }
+
+    .thirdContainerRight {
+      position: relative;
+      height: 100%;
+      width: 50%;
+      background-color: orange;
+      transition: 2s;
+      color: white;
+      font-size: 25px;
+      padding: 20px;
+      padding-left: 50px;
+      padding-right: 100px;
+
+      .thirdContainerRightText {
+        padding: 20px;
+      }
+    }
+
+    .thirdContainerRightOutside {
+      left: 50vw;
+    }
+    .thirdContainerRightInside {
+      left: 0vw;
+    }
+  }
+}
+
+.plusIcon {
+  width: 5px;
+  height: 5px;
+}
+
+.debug {
+  border: 1px solid white;
+}

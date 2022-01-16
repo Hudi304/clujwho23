@@ -1,9 +1,17 @@
+element {
+  --custom-gray: #4a5568;
+  --custom-deep-blue: #1a202c;
+}
+
 .desktopBackGround {
   display: grid;
-  grid-template-rows: 100vh 40vh 60vh;
+  grid-template-rows: 100vh 10vh 20vh 60vh 100vh;
   background-color: #4a5568;
+  width: 100vw;
 
   .firstImageContainer {
+    grid-column: 1;
+    grid-row: 1;
     height: auto;
     display: grid;
     grid-template-columns: auto;
@@ -20,6 +28,7 @@
       align-items: flex-end;
       height: 100vh;
       width: 100vw;
+      overflow: visible;
 
       .firstImage {
         width: 1920px;
@@ -37,25 +46,59 @@
         }
       }
     }
-
-    .flexCenter2 {
-      z-index: 1;
-      grid-column: 1;
-      grid-row: 1;
-      height: 100vh;
-      width: 1920px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-    }
   }
 
   .secondContainer {
+    z-index: 1;
+    grid-column: 1;
+    grid-row: 1;
+    height: 110vh;
+    // width: 1920px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .thirdContainer {
+    grid-column: 1;
+    grid-row: 3;
     height: 100%;
-    background-color: #0088c6;
+    background-color: #1a202c;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    width: 100vw;
+
+    .homePageTitleGridContainer {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr;
+      height: 100%;
+      width: 100vw;
+
+      .homePageTitleContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .homePageTitle {
+          color: #17a0df;
+          font-size: 8vh;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      .homePageMessageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .homePageMessage {
+          color: #17a0df;
+          font-size: 4vh;
+        }
+      }
+    }
 
     .homePageCardGrid {
       display: grid;
@@ -103,53 +146,174 @@
     }
   }
 
-  .thirdContainer {
+  .fourthContainerWaves {
+    grid-column: 1;
+    grid-row: 4;
     height: 100%;
-    display: flex;
+    z-index: 1;
+  }
 
-    .thirdContainerLeft {
-      position: relative;
-      height: 100%;
-      width: 50%;
-      background-color: orangered;
-      transition: 2s;
-      color: white;
-      font-size: 25px;
-      padding: 20px;
-      padding-left: 100px;
-      padding-right: 50px;
-    }
+  .fourthContainer {
+    grid-column: 1;
+    grid-row: 4;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
 
-    .thirdContainerLeftOutside {
-      right: 50vw;
-    }
-    .thirdContainerLeftInside {
-      right: 0;
-    }
+    .globeContainer {
+      grid-column: 1;
+      grid-row: 1;
+      height: 60vh;
+      grid-area: 1 / 1 / 1 / span 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    .thirdContainerRight {
-      position: relative;
-      height: 100%;
-      width: 50%;
-      background-color: orange;
-      transition: 2s;
-      color: white;
-      font-size: 25px;
-      padding: 20px;
-      padding-left: 50px;
-      padding-right: 100px;
-
-      .thirdContainerRightText {
-        padding: 20px;
+      .globeContainer2 {
+        width: 50vh;
       }
     }
 
-    .thirdContainerRightOutside {
-      left: 50vw;
+    .orbitContainer {
+      grid-column: 1;
+      grid-row: 1;
+      height: 60vh;
+      grid-area: 1 / 1 / 1 / span 2;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1a202c;
+
+      .orbitContainer2 {
+        width: 50vh;
+      }
     }
-    .thirdContainerRightInside {
-      left: 0vw;
+
+    .fourthContainerLeft {
+      width: 50vw;
+      grid-column: 1;
+      grid-row: 1;
+
+      .thirdContainerLeft {
+        position: relative;
+        height: 100%;
+        width: 60vw;
+        transition: 2s;
+        color: white;
+        display: flex;
+
+        .thirdContainerLeftRect {
+          width: 50vw;
+          background-color: orangered;
+          display: flex;
+          align-items: center;
+
+          .thirdContainerLeftRectTextContainer {
+            position: relative;
+            padding-left: 10vw;
+            font-size: 2.6vh;
+            font-weight: 700;
+            max-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            gap: 15px;
+            justify-content: center;
+
+            .thirdContainerLeftRectTextContainerP1 {
+              font-size: 120%;
+              width: 45vw;
+              margin: 0;
+            }
+
+            .thirdContainerLeftRectTextContainerP2 {
+              width: 40vw;
+              font-size: 100%;
+              margin: 0;
+            }
+
+            .thirdContainerLeftRectTextContainerP3 {
+              width: 35vw;
+              margin: 0;
+              font-size: 100%;
+            }
+          }
+        }
+
+        .thirdContainerLeftTriCont {
+          width: 10vw;
+
+          .thirdContainerLeftTri {
+            width: 0;
+            height: 0;
+            border-top: 60vh solid orangered;
+            border-right: 10vw solid transparent;
+          }
+        }
+      }
+
+      .thirdContainerLeftOutside {
+        right: 50vw;
+      }
+      .thirdContainerLeftInside {
+        right: 5vw;
+      }
     }
+
+    .fourthContainerRight {
+      width: 50vw;
+      grid-column: 2;
+      grid-row: 1;
+
+      .thirdContainerRight {
+        position: relative;
+        height: 100%;
+        width: 60vw;
+        transition: 2s;
+        color: white;
+        font-size: 25px;
+        display: flex;
+
+        .thirdContainerRightRect {
+          width: 50vw;
+          background-color: orange;
+          display: flex;
+          // justify-content: center;
+          align-items: center;
+
+          .sexualHealthImg {
+            height: 50vh;
+          }
+        }
+
+        .thirdContainerRightTriCont {
+          width: 10vw;
+
+          .thirdContainerRightTri {
+            width: 0;
+            height: 0;
+            border-bottom: 60vh solid orange;
+            border-left: 10vw solid transparent;
+          }
+        }
+      }
+
+      .thirdContainerRightOutside {
+        left: 40vw;
+      }
+      .thirdContainerRightInside {
+        left: -5vw;
+      }
+    }
+  }
+
+  .fifthContainer {
+    grid-column: 1;
+    grid-row: 5;
+    height: 100%;
+    display: flex;
   }
 }
 
@@ -160,4 +324,32 @@
 
 .debug {
   border: 1px solid white;
+}
+
+.waves {
+  // transform: scaleY(0.6);
+}
+
+.cls-1 {
+  fill: none;
+}
+
+.cls-2 {
+  fill: #085dad;
+}
+
+.cls-3 {
+  isolation: isolate;
+}
+
+.cls-4 {
+  clip-path: url(#clip-path);
+}
+
+.cls-5 {
+  fill: #8cc739;
+}
+
+.cls-6 {
+  clip-path: url(#clip-path-2);
 }

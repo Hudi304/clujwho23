@@ -10,6 +10,8 @@ function Tear() {
       version="1.1"
       viewBox="0 0 512 512"
       xmlSpace="preserve"
+      preserveAspectRatio="none"
+
     >
       <path
         fill="#0C92B6"

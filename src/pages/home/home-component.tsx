@@ -208,7 +208,9 @@ function Home2(props: any): JSX.Element {
 
             <div className="topic-list-container">
               <div className="topic-list">
-                <Baby />
+                <div className="icon">
+                  <Baby />
+                </div>
                 <div className="centerOy">Abortion & family planning</div>
 
                 <Virus />

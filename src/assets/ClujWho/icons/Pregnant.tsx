@@ -10,6 +10,8 @@ function Pregnant() {
       version="1.1"
       viewBox="0 0 511.988 511.988"
       xmlSpace="preserve"
+      preserveAspectRatio="none"
+
     >
       <path
         fill="#ED5564"

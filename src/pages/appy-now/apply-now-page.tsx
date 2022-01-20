@@ -146,12 +146,19 @@ export function ApplyNow(props: any): JSX.Element {
               </div>
             </div>
             <div className="paperContainerMobile OxCenter">
-              <CustomPaper width={'90vw'} height={'80vh'}>
-                <div className="iframeContainer OxCenter">
+              {/* <CustomPaper width={'90vw'} height={'fit'}> */}
+                <div className="iframeContainerMobile OxCenter">
                   {/* <iframe src="https://www.w3schools.com" title="Iframe Example"></iframe> */}
-                  ... insert formular here ...
+                  {/* ... insert formular here ... */}
+                  <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScj6xGbjMMttGS2VwbbEkUZ9tTWLpOIRFJTexjN1k9jhFtD7A/viewform?embedded=true"
+                    width="100%"
+                    className='iframe'
+                  >
+                    Loading…
+                  </iframe>
                 </div>
-              </CustomPaper>
+              {/* </CustomPaper> */}
             </div>
           </div>
         </div>

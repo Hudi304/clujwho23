@@ -10,6 +10,8 @@ function Genders() {
       version="1.1"
       viewBox="0 0 464 464"
       xmlSpace="preserve"
+      preserveAspectRatio="none"
+
     >
       <path
         fill="#A0DCE6"

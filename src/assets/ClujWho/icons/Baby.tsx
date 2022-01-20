@@ -10,6 +10,7 @@ function Baby() {
       version="1.1"
       viewBox="0 0 501.6 501.6"
       xmlSpace="preserve"
+      preserveAspectRatio="none"
     >
       <path
         fill="#F75959"

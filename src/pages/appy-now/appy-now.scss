@@ -114,7 +114,7 @@ body {
     .applyNowPageGridMobile {
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: 2vh 3vh 16vh 80vh 30vh;
+      grid-template-rows: 2vh 3vh 16vh auto ;
       margin-top: 8vh;
 
       .titleContainerMobile {
@@ -177,8 +177,20 @@ body {
       }
 
       .paperContainerMobile {
-        margin-top: 5vh;
+        // margin-top: 5vh;
+        height: max-content;
+
         .iframeContainerMobile {
+          width: 100%;
+          height: max-content;
+
+          .iframe {
+            overflow-y: hidden;
+            overflow: hidden;
+            height: auto;
+            height: max-content;
+            height: 70vh;
+          }
         }
       }
     }

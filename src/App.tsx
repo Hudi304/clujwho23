@@ -14,7 +14,7 @@ import { HomePage2 } from './pages/home/home-component'
 
 function App(): JSX.Element {
   return (
-    <div>
+    <div className='app'>
       <HashRouter>
         <Route exact path="/home2" component={HomePage2} />
         <Route exact path="/" component={HomePage} />

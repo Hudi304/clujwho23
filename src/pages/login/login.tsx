@@ -122,7 +122,7 @@ function Home(props: any): JSX.Element {
         </div>
 
         <div className={`nav-bar-container`}>
-          <NavBarComponent inView={inView} mobile={mobile} />
+          <NavBarComponent inView={false} mobile={mobile} />
         </div>
       </>
     )

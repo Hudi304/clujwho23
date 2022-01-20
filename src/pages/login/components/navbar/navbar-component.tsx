@@ -59,7 +59,9 @@ export function NavBarComponent(props: any): JSX.Element {
     console.log('IN VIEW', inView)
     if (!props.mobile) {
       if (inView) {
-        setNavBarClasses('')
+        setNavBarClasses('nav-bar-active')
+
+        // setNavBarClasses('')
       } else {
         setNavBarClasses('nav-bar-active')
       }

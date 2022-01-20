@@ -16,8 +16,8 @@ function App(): JSX.Element {
   return (
     <div className='app'>
       <HashRouter>
-        <Route exact path="/home2" component={HomePage2} />
-        <Route exact path="/" component={HomePage} />
+        {/* <Route exact path="/home2" component={HomePage2} /> */}
+        <Route exact path="/" component={HomePage2} />
         <Route path="/apply_now" component={ApplyNow} />
         <Route path="/about_us" component={AboutUs} />
         <Route path="/schedule" component={Schedule} />

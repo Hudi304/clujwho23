@@ -192,7 +192,7 @@ export function NavBarComponent(props: any): JSX.Element {
                   Committees
                 </IconButton>
               </div>
-              <div className="menu-list-item">
+              {/* <div className="menu-list-item">
                 <IconButton
                   className="menu-icon-btn"
                   onClick={() => {
@@ -243,7 +243,7 @@ export function NavBarComponent(props: any): JSX.Element {
                   <AddModerator sx={{ color: blue[500], fontSize: '4vh' }} />
                   Sponsors
                 </IconButton>
-              </div>
+              </div> */}
             </List>
           </SwipeableDrawer>
         </div>
@@ -261,12 +261,12 @@ export function NavBarComponent(props: any): JSX.Element {
           </div>
 
           <div className="nav-bar-buttons-container">
-            <NavBarButton
+            {/* <NavBarButton
               text={'Home2'}
               onClick={(e: any) => {
                 redirect('/home2', e)
               }}
-            />
+            /> */}
             <NavBarButton
               text={'Home'}
               onClick={(e: any) => {
@@ -299,7 +299,7 @@ export function NavBarComponent(props: any): JSX.Element {
                 redirect('/committees', e)
               }}
             />
-            <NavBarButton
+            {/* <NavBarButton
               style={{ minWidth: '112px' }}
               text={'Our Team'}
               onClick={(e: any) => {
@@ -323,7 +323,7 @@ export function NavBarComponent(props: any): JSX.Element {
               onClick={(e: any) => {
                 redirect('/sponsors', e)
               }}
-            />
+            /> */}
           </div>
         </div>
       </div>

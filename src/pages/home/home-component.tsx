@@ -28,6 +28,17 @@ import Tear from '../../assets/ClujWho/icons/Tear'
 import Genders from '../../assets/ClujWho/icons/Genders'
 import Pregnant from '../../assets/ClujWho/icons/Pregnant'
 import CancerRibbon from '../../assets/ClujWho/icons/CancerRibbon'
+import Facebook from '../../assets/ClujWho/icons/Facebook'
+import Instagram from '../../assets/ClujWho/icons/Instagram'
+import Wave1 from '../../assets/ClujWho/waves/Wave1'
+import FooterWaves from '../../assets/ClujWho/waves/FooterWaves'
+import GrayToGray from '../../assets/ClujWho/waves/GrayToGray'
+
+import Sexual from './../../assets/ClujWho/Sexual.png'
+import Health from './../../assets/ClujWho/Health.png'
+
+import SexHea from './../../assets/ClujWho/SexHea.png'
+import UalLth from './../../assets/ClujWho/UalLth.png'
 
 function Home2(props: any): JSX.Element {
   const [ref, inView] = useInView({
@@ -61,13 +72,19 @@ function Home2(props: any): JSX.Element {
 
   window.addEventListener('scroll', () => pop(), true)
 
-  const handleResize = () => {
-    setDimensions({
-      width: window.innerWidth,
-      height: window.innerHeight
-    })
-  }
   const [mobile, setMobile] = useState(false)
+  const [hasScrolled, setHasScrolled] = useState(false)
+
+  function globeAnimation(inView: boolean) {
+    if (hasScrolled) {
+      return true
+    }
+    if (inView && !hasScrolled) {
+      setHasScrolled(true)
+      return true
+    }
+    return false
+  }
 
   useEffect(() => {
     if (dimensions.width < 600) {
@@ -131,10 +148,10 @@ function Home2(props: any): JSX.Element {
                   : 'mobile-thirdContainerLeftOutside'
               }`}
             >
-              <div className="mobile-leftRect  "></div>
-              <div className="mobile-leftTri  ">
-                {/* <div className="mobile-tri"></div> */}
+              <div className="mobile-leftRect  ">
+                <img className="sexual-image" src={SexHea} />
               </div>
+              <div className="mobile-leftTri  "></div>
             </div>
 
             <div
@@ -144,22 +161,28 @@ function Home2(props: any): JSX.Element {
                   : 'mobile-thirdContainerRightOutside'
               }`}
             >
-              <div className="mobile-rightTri  ">
-                {/* <div className="mobile-tri"></div> */}
+              <div className="mobile-rightTri  "></div>
+              <div className="mobile-rightRect  ">
+                <img className="health-image" src={UalLth} />
               </div>
-              <div className="mobile-rightRect  "></div>
             </div>
+          </div>
+
+          <div className="wave1">
+            <Wave1 />
           </div>
 
           <div className="mobile-fifthContainer ">
             <div
               className={`mobile-orbit-container ${
-                inView6 ? 'mobile-orbit-container-animation' : ''
+                globeAnimation(inView6)
+                  ? 'mobile-orbit-container-animation'
+                  : ''
               }`}
             >
               <Orbit
                 className={`mobile-orbit ${
-                  inView6 ? 'mobile-orbit-animation' : ''
+                  globeAnimation(inView6) ? 'mobile-orbit-animation' : ''
                 }`}
               />
             </div>
@@ -167,7 +190,9 @@ function Home2(props: any): JSX.Element {
             <div className="mobile-globe-container-container">
               <div
                 className={`mobile-globe-container ${
-                  inView6 ? 'mobile-globe-container-animation' : ''
+                  globeAnimation(inView6)
+                    ? 'mobile-globe-container-animation'
+                    : ''
                 }`}
               >
                 <Globe />
@@ -220,6 +245,10 @@ function Home2(props: any): JSX.Element {
             </div>
           </div>
 
+          <div className="waves2">
+            <GrayToGray />
+          </div>
+
           <div className="mobile-seventhContainer ">
             <h2 className="implications">Implications</h2>
             <div className="content">
@@ -242,33 +271,25 @@ function Home2(props: any): JSX.Element {
                 sexual violence against men, as a cause of social prejudice,
                 embarrassment and shame
               </p>
-              <p>Difficulty in obtaining contraceptives</p>
-              <p>Declining use of condoms </p>
-              <p>STDs</p>
-              <p>High maternal and infant mortality rate </p>
-              <p>Cervical cancer</p>
-              <p>Abortion</p>
-              <p>Self treatment with antibiotics – STIs</p>
-              <p>Sexual education</p>
-              <p>Female genital mutilation</p>
-              <p>Family planning </p>
-
-              <p>Domestic violence </p>
-              <p>LGBTQIA+ </p>
-              <p>Sex workers</p>
-              <p>Male vs female equality issues </p>
-              <p>Surgical ban?</p>
-              <p>Cancer screening </p>
-              <p>Testicular & prostate cancer</p>
-              <p>Breast cancer </p>
-              <p>Fertility rates </p>
-              <p>Underage pregnancies</p>
-              <p>Gonorrhoea & chlamydia </p>
             </div>
+          </div>
+
+          <div className="footer">
+            <div className="facebook-icon-container">
+              <Facebook />
+            </div>
+            <div className="instagram-icon-container">
+              <Instagram />
+            </div>
+          </div>
+
+          <div className="mobile-waves-footer ">
+            <FooterWaves />
           </div>
 
           <div className="mobile-fourthContainerWaves  ">
             <WavesBot />
+            {/* <FooterWaves /> */}
           </div>
         </div>
 

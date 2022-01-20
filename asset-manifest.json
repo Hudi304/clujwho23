@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/clujwho23/static/css/main.cd77a9ab.chunk.css",
-    "main.js": "/clujwho23/static/js/main.567987b8.chunk.js",
-    "main.js.map": "/clujwho23/static/js/main.567987b8.chunk.js.map",
+    "main.css": "/clujwho23/static/css/main.d907e39e.chunk.css",
+    "main.js": "/clujwho23/static/js/main.92d65fbb.chunk.js",
+    "main.js.map": "/clujwho23/static/js/main.92d65fbb.chunk.js.map",
     "runtime-main.js": "/clujwho23/static/js/runtime-main.8dc564d0.js",
     "runtime-main.js.map": "/clujwho23/static/js/runtime-main.8dc564d0.js.map",
     "static/js/2.68bd0e6a.chunk.js": "/clujwho23/static/js/2.68bd0e6a.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.33868083.chunk.js": "/clujwho23/static/js/3.33868083.chunk.js",
     "static/js/3.33868083.chunk.js.map": "/clujwho23/static/js/3.33868083.chunk.js.map",
     "index.html": "/clujwho23/index.html",
-    "static/css/main.cd77a9ab.chunk.css.map": "/clujwho23/static/css/main.cd77a9ab.chunk.css.map",
+    "static/css/main.d907e39e.chunk.css.map": "/clujwho23/static/css/main.d907e39e.chunk.css.map",
     "static/js/2.68bd0e6a.chunk.js.LICENSE.txt": "/clujwho23/static/js/2.68bd0e6a.chunk.js.LICENSE.txt",
     "static/media/AFRO-map-image.41cd9e6b.png": "/clujwho23/static/media/AFRO-map-image.41cd9e6b.png",
     "static/media/Catedrala1080p_logo.89ce1ebe.png": "/clujwho23/static/media/Catedrala1080p_logo.89ce1ebe.png",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.8dc564d0.js",
     "static/js/2.68bd0e6a.chunk.js",
-    "static/css/main.cd77a9ab.chunk.css",
-    "static/js/main.567987b8.chunk.js"
+    "static/css/main.d907e39e.chunk.css",
+    "static/js/main.92d65fbb.chunk.js"
   ]
 }

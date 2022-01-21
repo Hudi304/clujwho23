@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/clujwho23/static/css/main.b37e47c4.chunk.css",
-    "main.js": "/clujwho23/static/js/main.3d6d656e.chunk.js",
-    "main.js.map": "/clujwho23/static/js/main.3d6d656e.chunk.js.map",
-    "runtime-main.js": "/clujwho23/static/js/runtime-main.e0207efa.js",
-    "runtime-main.js.map": "/clujwho23/static/js/runtime-main.e0207efa.js.map",
-    "static/js/2.8bee549d.chunk.js": "/clujwho23/static/js/2.8bee549d.chunk.js",
-    "static/js/2.8bee549d.chunk.js.map": "/clujwho23/static/js/2.8bee549d.chunk.js.map",
-    "static/js/3.04853625.chunk.js": "/clujwho23/static/js/3.04853625.chunk.js",
-    "static/js/3.04853625.chunk.js.map": "/clujwho23/static/js/3.04853625.chunk.js.map",
-    "index.html": "/clujwho23/index.html",
-    "static/css/main.b37e47c4.chunk.css.map": "/clujwho23/static/css/main.b37e47c4.chunk.css.map",
-    "static/js/2.8bee549d.chunk.js.LICENSE.txt": "/clujwho23/static/js/2.8bee549d.chunk.js.LICENSE.txt",
-    "static/media/Catedrala1080p_Logo.d4000ed0.jpeg": "/clujwho23/static/media/Catedrala1080p_Logo.d4000ed0.jpeg",
-    "static/media/ClujWHOLogo.7e7081ea.png": "/clujwho23/static/media/ClujWHOLogo.7e7081ea.png",
-    "static/media/appy-now.scss": "/clujwho23/static/media/ClujWhoBackground.0ab6fb53.png",
-    "static/media/SexHea.456337ba.png": "/clujwho23/static/media/SexHea.456337ba.png",
-    "static/media/UalLth.168123f1.png": "/clujwho23/static/media/UalLth.168123f1.png",
-    "static/media/siglaosmbuna_400.bf419541.png": "/clujwho23/static/media/siglaosmbuna_400.bf419541.png"
+    "main.css": "./static/css/main.b30ca3b9.chunk.css",
+    "main.js": "./static/js/main.5c3f0a29.chunk.js",
+    "main.js.map": "./static/js/main.5c3f0a29.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.58386fee.js",
+    "runtime-main.js.map": "./static/js/runtime-main.58386fee.js.map",
+    "static/js/2.0a6f9ce1.chunk.js": "./static/js/2.0a6f9ce1.chunk.js",
+    "static/js/2.0a6f9ce1.chunk.js.map": "./static/js/2.0a6f9ce1.chunk.js.map",
+    "static/js/3.9e365267.chunk.js": "./static/js/3.9e365267.chunk.js",
+    "static/js/3.9e365267.chunk.js.map": "./static/js/3.9e365267.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.b30ca3b9.chunk.css.map": "./static/css/main.b30ca3b9.chunk.css.map",
+    "static/js/2.0a6f9ce1.chunk.js.LICENSE.txt": "./static/js/2.0a6f9ce1.chunk.js.LICENSE.txt",
+    "static/media/Catedrala.d4000ed0.jpg": "./static/media/Catedrala.d4000ed0.jpg",
+    "static/media/ClujWHOLogo.7e7081ea.png": "./static/media/ClujWHOLogo.7e7081ea.png",
+    "static/media/appy-now.scss": "./static/media/ClujWhoBackground.0ab6fb53.png",
+    "static/media/SexHea.456337ba.png": "./static/media/SexHea.456337ba.png",
+    "static/media/UalLth.168123f1.png": "./static/media/UalLth.168123f1.png",
+    "static/media/siglaosmbuna_400.bf419541.png": "./static/media/siglaosmbuna_400.bf419541.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e0207efa.js",
-    "static/js/2.8bee549d.chunk.js",
-    "static/css/main.b37e47c4.chunk.css",
-    "static/js/main.3d6d656e.chunk.js"
+    "static/js/runtime-main.58386fee.js",
+    "static/js/2.0a6f9ce1.chunk.js",
+    "static/css/main.b30ca3b9.chunk.css",
+    "static/js/main.5c3f0a29.chunk.js"
   ]
 }

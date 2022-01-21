@@ -12,11 +12,11 @@ export const InstaUrl = 'https://www.instagram.com/clujwho/'
 
 export function WebFooter() {
   return (
-    <div className="footer-grid">
-      <div className="footer-waves-container">
+    <div className="web-footer-grid">
+      <div className="web-footer-waves-container">
         <FooterWavesWeb />
       </div>
-      <div className="footer">
+      <div className="web-footer">
         <div className="facebook-insta-container">
           <div className="facebook-icon-container">
             <a className="anchor" href={FaceBookUrl}>

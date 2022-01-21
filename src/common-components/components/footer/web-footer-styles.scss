@@ -1,8 +1,8 @@
-.footer-grid {
+.web-footer-grid {
   display: grid;
   grid-template-rows: auto auto;
 
-  .footer-waves-container {
+  .web-footer-waves-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -10,7 +10,7 @@
     background-color: #1a202c;
   }
 
-  .footer {
+  .web-footer {
     grid-column: 1;
     grid-row: 7;
     display: flex;

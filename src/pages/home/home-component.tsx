@@ -177,7 +177,7 @@ function Home2(props: any): JSX.Element {
             <Wave1 />
           </div>
 
-          <div className="mobile-fifthContainer ">
+          <div className="mobile-fifthContainer " ref={ref6}>
             <div
               className={`mobile-orbit-container ${
                 globeAnimation(inView6)

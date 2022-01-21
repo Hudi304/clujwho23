@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/clujwho23/static/css/main.d907e39e.chunk.css",
-    "main.js": "/clujwho23/static/js/main.090a95ac.chunk.js",
-    "main.js.map": "/clujwho23/static/js/main.090a95ac.chunk.js.map",
+    "main.css": "/clujwho23/static/css/main.a0fad5ee.chunk.css",
+    "main.js": "/clujwho23/static/js/main.69255502.chunk.js",
+    "main.js.map": "/clujwho23/static/js/main.69255502.chunk.js.map",
     "runtime-main.js": "/clujwho23/static/js/runtime-main.8dc564d0.js",
     "runtime-main.js.map": "/clujwho23/static/js/runtime-main.8dc564d0.js.map",
     "static/js/2.68bd0e6a.chunk.js": "/clujwho23/static/js/2.68bd0e6a.chunk.js",
@@ -10,22 +10,23 @@
     "static/js/3.33868083.chunk.js": "/clujwho23/static/js/3.33868083.chunk.js",
     "static/js/3.33868083.chunk.js.map": "/clujwho23/static/js/3.33868083.chunk.js.map",
     "index.html": "/clujwho23/index.html",
-    "static/css/main.d907e39e.chunk.css.map": "/clujwho23/static/css/main.d907e39e.chunk.css.map",
+    "static/css/main.a0fad5ee.chunk.css.map": "/clujwho23/static/css/main.a0fad5ee.chunk.css.map",
     "static/js/2.68bd0e6a.chunk.js.LICENSE.txt": "/clujwho23/static/js/2.68bd0e6a.chunk.js.LICENSE.txt",
     "static/media/AFRO-map-image.41cd9e6b.png": "/clujwho23/static/media/AFRO-map-image.41cd9e6b.png",
-    "static/media/Catedrala1080p_logo.89ce1ebe.png": "/clujwho23/static/media/Catedrala1080p_logo.89ce1ebe.png",
+    "static/media/Catedrala1080p_Logo.d4000ed0.jpeg": "/clujwho23/static/media/Catedrala1080p_Logo.d4000ed0.jpeg",
     "static/media/ClujWHOLogo.7e7081ea.png": "/clujwho23/static/media/ClujWHOLogo.7e7081ea.png",
     "static/media/appy-now.scss": "/clujwho23/static/media/ClujWhoBackground.0ab6fb53.png",
     "static/media/EMRO-map-image.126ec1df.png": "/clujwho23/static/media/EMRO-map-image.126ec1df.png",
     "static/media/SexHea.456337ba.png": "/clujwho23/static/media/SexHea.456337ba.png",
     "static/media/UalLth.168123f1.png": "/clujwho23/static/media/UalLth.168123f1.png",
     "static/media/amonfUS.7c0a94e8.png": "/clujwho23/static/media/amonfUS.7c0a94e8.png",
-    "static/media/sexual_health.a5795ae6.png": "/clujwho23/static/media/sexual_health.a5795ae6.png"
+    "static/media/sexual_health.a5795ae6.png": "/clujwho23/static/media/sexual_health.a5795ae6.png",
+    "static/media/siglaosmbuna_400.bf419541.png": "/clujwho23/static/media/siglaosmbuna_400.bf419541.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8dc564d0.js",
     "static/js/2.68bd0e6a.chunk.js",
-    "static/css/main.d907e39e.chunk.css",
-    "static/js/main.090a95ac.chunk.js"
+    "static/css/main.a0fad5ee.chunk.css",
+    "static/js/main.69255502.chunk.js"
   ]
 }

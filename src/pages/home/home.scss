@@ -723,7 +723,7 @@ element {
         align-items: center;
 
         .web-sexual-image {
-          height: 20vh;
+          height: 30vh;
         }
       }
 
@@ -757,7 +757,8 @@ element {
         align-items: center;
 
         .web-health-image {
-          height: 20vh;
+          margin-top: 0.5vh;
+          height: 29.5vh;
         }
       }
     }
@@ -1022,7 +1023,7 @@ element {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 5vh;
+      font-size: 8vh;
       font-weight: 600;
     }
 
@@ -1030,7 +1031,7 @@ element {
       display: grid;
       width: 40vw;
       font-weight: 600;
-      font-size: 2vh;
+      font-size: 3vh;
     }
   }
 }

@@ -170,7 +170,7 @@ export function Schedule(props: any): JSX.Element {
     return (
       <div className="scheduleComponentContainer ">
         <div className="scheduleOxGrid ">
-          <p className="scheduleTitle " style={{ paddingLeft: '4vh' }}>
+          <p className="scheduleTitle " style={{ paddingLeft: '6vh' }}>
             Sunday
           </p>
           <p></p>

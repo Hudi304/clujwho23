@@ -523,7 +523,7 @@ function Home2(props: any): JSX.Element {
           </div>
 
           <div className="web-seventhContainer ">
-            <div className="web-implications">Implications</div>
+            <div className="web-implications">Theme Implications</div>
             <div className="web-content">
               <p>
                 Financial burdens – WHO estimates 1.4 billion USD go each year

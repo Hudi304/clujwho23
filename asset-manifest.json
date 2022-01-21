@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/clujwho23/static/css/main.a0fad5ee.chunk.css",
+    "main.css": "/clujwho23/static/css/main.e759e975.chunk.css",
     "main.js": "/clujwho23/static/js/main.69255502.chunk.js",
     "main.js.map": "/clujwho23/static/js/main.69255502.chunk.js.map",
     "runtime-main.js": "/clujwho23/static/js/runtime-main.8dc564d0.js",
@@ -10,7 +10,7 @@
     "static/js/3.33868083.chunk.js": "/clujwho23/static/js/3.33868083.chunk.js",
     "static/js/3.33868083.chunk.js.map": "/clujwho23/static/js/3.33868083.chunk.js.map",
     "index.html": "/clujwho23/index.html",
-    "static/css/main.a0fad5ee.chunk.css.map": "/clujwho23/static/css/main.a0fad5ee.chunk.css.map",
+    "static/css/main.e759e975.chunk.css.map": "/clujwho23/static/css/main.e759e975.chunk.css.map",
     "static/js/2.68bd0e6a.chunk.js.LICENSE.txt": "/clujwho23/static/js/2.68bd0e6a.chunk.js.LICENSE.txt",
     "static/media/AFRO-map-image.41cd9e6b.png": "/clujwho23/static/media/AFRO-map-image.41cd9e6b.png",
     "static/media/Catedrala1080p_Logo.d4000ed0.jpeg": "/clujwho23/static/media/Catedrala1080p_Logo.d4000ed0.jpeg",
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.8dc564d0.js",
     "static/js/2.68bd0e6a.chunk.js",
-    "static/css/main.a0fad5ee.chunk.css",
+    "static/css/main.e759e975.chunk.css",
     "static/js/main.69255502.chunk.js"
   ]
 }

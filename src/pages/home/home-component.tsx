@@ -2,15 +2,10 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { useEffect, useLayoutEffect, useState } from 'react'
 import InView, { useInView } from 'react-intersection-observer'
-import ClujWhoLogo from './../../assets/ClujWHOLogo.png'
-import Paper from '@mui/material/Paper'
 import { NavBarComponent } from '../login/components/navbar/navbar-component'
 import { login } from '../login/login.actions'
 
 import './home.scss'
-
-import ClujImage from '../../assets/ClujWho/Catedrala.png'
-import ClujWHO_sigla from '../../assets/ClujWho/ClujWHO_sigla.svg'
 
 import sexual_health from '../../assets/ClujWho/sexual_health.png'
 
@@ -36,12 +31,13 @@ import Wave1 from '../../assets/ClujWho/waves/Wave1'
 import FooterWaves from '../../assets/ClujWho/waves/FooterWaves'
 import GrayToGray from '../../assets/ClujWho/waves/GrayToGray'
 
-import Sexual from './../../assets/ClujWho/Sexual.png'
-import Health from './../../assets/ClujWho/Health.png'
-
 import SexHea from './../../assets/ClujWho/SexHea.png'
 import UalLth from './../../assets/ClujWho/UalLth.png'
 import Email from '../../assets/ClujWho/icons/Email'
+import { Footer } from '../../common-components/components/footer/footer'
+import { WebFooter } from '../../common-components/components/footer/web-footer'
+import Wave_6_7 from '../../assets/ClujWho/waves/Wave_6_7'
+import WavesGlobe from '../../assets/ClujWho/waves/WavesGlobe'
 
 export const FaceBookUrl = 'https://www.facebook.com/clujwho'
 export const InstaUrl = 'https://www.instagram.com/clujwho/'
@@ -64,6 +60,10 @@ function Home2(props: any): JSX.Element {
 
   const [ref6, inView6] = useInView({
     threshold: 0.1
+  })
+
+  const [webCourtains, inViewWebCourtains] = useInView({
+    threshold: 0.99
   })
 
   const [dimensions, setDimensions] = useState({
@@ -324,7 +324,7 @@ function Home2(props: any): JSX.Element {
                 <Email />
               </div>
 
-              <h3 className='email'>clujwho@osmcluj.ro</h3>
+              <h3 className="email">clujwho@osmcluj.ro</h3>
             </div>
 
             <div className="osm-logo-container">
@@ -347,10 +347,9 @@ function Home2(props: any): JSX.Element {
       <>
         <div className="desktopBackGround " id="desktopBackGround">
           <div className="firstImageContainer">
-            <div className="flexCenter1">
-              <img className="firstImage" src={Catedrala1080p_logo} />
-            </div>
+            <img className="web-firstImage" src={Catedrala1080p_logo} />
           </div>
+
           <div className="secondContainer">
             <Waves />
           </div>
@@ -371,82 +370,192 @@ function Home2(props: any): JSX.Element {
             </div>
           </div>
 
-          <div className="fourthContainerWaves">
-            <WavesBot />
-          </div>
+          <div className="fourthContainerWaves">{/* <WavesBot /> */}</div>
 
-          <div className="fourthContainer ">
-            <div className="orbitContainer">
-              <div className="orbitContainer2">{/* <Orbit /> */}</div>
+          <div className="web-fourthContainer" ref={webCourtains}>
+            <div className="web-fourthContainer-content-container ">
+              <div className="web-fourthContainer-content ">
+                <p>WHY pick sexual health during a global pandemic?</p>
+                <p>
+                  When the whole world is watching over the coronavirus, we feel
+                  other, very pressing global health threats have taken the back
+                  seat. One of these issues is sexual health, a matter that
+                  concerns every individual’s day to day lives and has
+                  implications beyond the medical aspects.
+                </p>
+                <p>
+                  Also, as this is our first edition and we want to bring as
+                  many people, not necessarily familiar with these simulations,
+                  we feel sexual health is the more approachable topic we could
+                  choose.
+                </p>
+              </div>
             </div>
 
-            <div className="globeContainer">
-              <div className="globeContainer2">
+            <div
+              className={`web-thirdContainerLeft ${
+                inViewWebCourtains
+                  ? 'web-thirdContainerLeftInside'
+                  : 'web-thirdContainerLeftOutside'
+              }`}
+            >
+              <div className="web-leftRect  ">
+                <img className="web-sexual-image" src={SexHea} />
+              </div>
+            </div>
+
+            <div
+              className={`web-thirdContainerRight ${
+                inViewWebCourtains
+                  ? 'web-thirdContainerRightInside'
+                  : 'web-thirdContainerRightOutside'
+              }`}
+            >
+              <div className="web-rightRect  ">
+                <img className="web-health-image" src={UalLth} />
+              </div>
+            </div>
+          </div>
+
+          <div className="wavesGlobe">
+            <WavesGlobe />
+          </div>
+
+          <div className="web-fifthContainer " ref={ref6}>
+            <div
+              className={`web-orbit-container ${
+                globeAnimation(inView6) ? 'web-orbit-container-animation' : ''
+              }`}
+            >
+              <Orbit
+                className={`web-orbit ${
+                  globeAnimation(inView6) ? 'web-orbit-animation' : ''
+                }`}
+              />
+            </div>
+
+            <div className="web-globe-container-container ">
+              <div
+                className={`web-globe-container ${
+                  globeAnimation(inView6) ? 'web-globe-container-animation' : ''
+                }`}
+              >
                 <Globe />
               </div>
             </div>
-            <div className="fourthContainerLeft">
-              <div
-                ref={ref2}
-                className={`thirdContainerLeft ${
-                  inView1
-                    ? 'thirdContainerLeftInside'
-                    : 'thirdContainerLeftOutside'
-                }`}
-              >
-                <div className="thirdContainerLeftRect  ">
-                  <div className="thirdContainerLeftRectTextContainer ">
-                    <p className="thirdContainerLeftRectTextContainerP1 ">
-                      {' '}
-                      WHY pick sexual health during a global pandemic?
-                    </p>
-                    <p className="thirdContainerLeftRectTextContainerP2 ">
-                      When the whole world is watching over the coronavirus, we
-                      feel other, very pressing global health threats have taken
-                      the back seat. One of these issues is sexual health, a
-                      matter that concerns every individual’s day to day lives
-                      and has implications beyond the medical aspects.
-                    </p>
-                    <p className="thirdContainerLeftRectTextContainerP3 ">
-                      Also, as this is our first edition and we want to bring as
-                      many people, not necessarily familiar with these
-                      simulations, we feel sexual health is the more
-                      approachable topic we could choose.
-                    </p>
+          </div>
+
+          <div className="web-sixthContainer " ref={ref6}>
+            <h2 className="web-main-topics">Main topics</h2>
+            <h3 className="web-the-main">
+              The main discussed topics are going to be:
+            </h3>
+
+            <div className="topic-list-container">
+              <div className="topic-list">
+                <div className="topic-list-item">
+                  <div className="icon">
+                    <Baby />
+                  </div>
+                  <div className="centerOy">Abortion & family planning</div>
+                </div>
+
+                <div className="topic-list-item">
+                  <div className="icon">
+                    <Virus />
+                  </div>
+                  <div className="centerOy">STDs & STIs</div>
+                </div>
+
+                <div className="topic-list-item">
+                  <div className="icon">
+                    <Teacher />
+                  </div>
+                  <div className="centerOy">Sexual education</div>
+                </div>
+
+                <div className="topic-list-item">
+                  <div className="icon">
+                    <Tear />
+                  </div>
+                  <div className="centerOy">Domestic violence</div>
+                </div>
+
+                <div className="topic-list-item">
+                  <div className="icon">
+                    <Genders />
+                  </div>
+                  <div className="centerOy">Gender discrepancies</div>
+                </div>
+
+                <div className="topic-list-item">
+                  <div className="icon">
+                    <CancerRibbon />
+                  </div>
+                  <div className="centerOy">Genital cancers</div>
+                </div>
+
+                <div className="topic-list-item">
+                  <div className="icon">
+                    <Pregnant />
+                  </div>
+                  <div className="centerOy">
+                    Pregnancy and birth complications
                   </div>
                 </div>
-                <div className="thirdContainerLeftTriCont  ">
-                  <div className="thirdContainerLeftTri"></div>
+
+                <div className="topic-list-item">
+                  <div className="icon">
+                    <LGBT />
+                  </div>
+                  <div className="centerOy">LGBTQIA+</div>
+                </div>
+
+                <div className="topic-list-item">
+                  <div className="icon">
+                    <Condom />
+                  </div>
+                  <div className="list">
+                    <div className="centerOy paddinTop">Access to :</div>
+                    <div className="padding-left">Contraceptives</div>
+                    <div className="padding-left">Medical treatments</div>
+                    <div className="padding-left">Prophylaxis</div>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="fourthContainerRight">
-              <div
-                className={`thirdContainerRight ${
-                  inView1
-                    ? 'thirdContainerRightInside'
-                    : 'thirdContainerRightOutside'
-                }`}
-              >
-                <div className="thirdContainerRightTriCont  ">
-                  <div className="thirdContainerRightTri"></div>
-                </div>
-                <div className="thirdContainerRightRect  ">
-                  <img className="sexualHealthImg" src={sexual_health} />
-                </div>
-              </div>
+          <div className="waves_6_7">
+            <Wave_6_7 />
+          </div>
+
+          <div className="web-seventhContainer ">
+            <div className="web-implications">Implications</div>
+            <div className="web-content">
+              <p>
+                Financial burdens – WHO estimates 1.4 billion USD go each year
+                towards treatment of complications coming from the practice of
+                female genital mutilation.
+              </p>
+              <p>
+                Legal issues - Over 71 jurisdictions criminalize private,
+                consensual sexual activities among same sex individuals.
+              </p>
+              <p>
+                Social security – UN Women reported that 1 in 4 women feel more
+                unsafe at home since COVID-19 and only 1 in 10 would seek help
+                from the police.
+              </p>
+              <p>
+                Cultural – the unfortunately underreported cases of domestic and
+                sexual violence against men, as a cause of social prejudice,
+                embarrassment and shame
+              </p>
             </div>
-
-            {/* //? Aici merger scris ceva sub alea  */}
           </div>
 
-          <div className="fifthContainer" ref={ref1}>
-            <Globe />
-            {/* <Orbit /> */}
-
-            {/* //? Aici merger scris ceva sub alea  */}
-          </div>
+          <WebFooter />
         </div>
 
         <div className={`nav-bar-container`}>
@@ -468,6 +577,70 @@ const mapDispatchToProps = (dispatch: any) => ({
 
 export const HomePage2 = connect(mapStateToProps, mapDispatchToProps)(Home2)
 // conecteaza pagina la store, deci avem access la store
+
+// <div className="fourthContainer ">
+// <div className="orbitContainer">
+//   <div className="orbitContainer2"></div>
+// </div>
+
+// <div className="globeContainer">
+//   <div className="globeContainer2">
+//     <Globe />
+//   </div>
+// </div>
+// <div className="fourthContainerLeft">
+//   <div
+//     ref={ref2}
+//     className={`thirdContainerLeft ${
+//       inView1
+//         ? 'thirdContainerLeftInside'
+//         : 'thirdContainerLeftOutside'
+//     }`}
+//   >
+//     <div className="thirdContainerLeftRect  ">
+//       <div className="thirdContainerLeftRectTextContainer ">
+//         <p className="thirdContainerLeftRectTextContainerP1 ">
+//           {' '}
+//           WHY pick sexual health during a global pandemic?
+//         </p>
+//         <p className="thirdContainerLeftRectTextContainerP2 ">
+//           When the whole world is watching over the coronavirus, we
+//           feel other, very pressing global health threats have taken
+//           the back seat. One of these issues is sexual health, a
+//           matter that concerns every individual’s day to day lives
+//           and has implications beyond the medical aspects.
+//         </p>
+//         <p className="thirdContainerLeftRectTextContainerP3 ">
+//           Also, as this is our first edition and we want to bring as
+//           many people, not necessarily familiar with these
+//           simulations, we feel sexual health is the more
+//           approachable topic we could choose.
+//         </p>
+//       </div>
+//     </div>
+//     <div className="thirdContainerLeftTriCont  ">
+//       <div className="thirdContainerLeftTri"></div>
+//     </div>
+//   </div>
+// </div>
+
+// <div className="fourthContainerRight">
+//   <div
+//     className={`thirdContainerRight ${
+//       inView1
+//         ? 'thirdContainerRightInside'
+//         : 'thirdContainerRightOutside'
+//     }`}
+//   >
+//     <div className="thirdContainerRightTriCont  ">
+//       <div className="thirdContainerRightTri"></div>
+//     </div>
+//     <div className="thirdContainerRightRect  ">
+//       <img className="sexualHealthImg" src={sexual_health} />
+//     </div>
+//   </div>
+// </div>
+// </div>
 
 function Waves() {
   return (

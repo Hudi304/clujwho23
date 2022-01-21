@@ -171,7 +171,7 @@ export function Schedule(props: any): JSX.Element {
       <div className="scheduleComponentContainer ">
         <div className="scheduleOxGrid ">
           <p className="scheduleTitle " style={{ paddingLeft: '4vh' }}>
-            Saturday
+            Sunday
           </p>
           <p></p>
           <p></p>

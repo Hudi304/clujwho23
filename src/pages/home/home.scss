@@ -549,19 +549,20 @@ element {
 
 .desktopBackGround {
   display: grid;
-  grid-template-rows: auto 10vh 20vh 60vh 60vh;
+  grid-template-rows: auto auto auto 40vh auto auto;
+  background-color: #4a5568;
   width: 100vw;
 
   .firstImageContainer {
     grid-column: 1;
     grid-row: 1;
-    height: auto;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    width: 100%;
+    width: 100vw;
     height: 100%;
-    overflow: hidden;
+
+    .web-firstImage {
+      width: 100vw;
+    }
 
     .flexCenter1 {
       grid-column: 1;
@@ -581,7 +582,7 @@ element {
   .secondContainer {
     width: 100vw;
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 1;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -675,174 +676,362 @@ element {
     }
   }
 
-  .fourthContainerWaves {
-    grid-column: 1;
-    grid-row: 4;
-    height: 100%;
-    z-index: 1;
-  }
-
-  .fourthContainer {
+  .web-fourthContainer {
     grid-column: 1;
     grid-row: 4;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     width: 100vw;
+    background-color: #1a202c;
 
-    .globeContainer {
-      grid-column: 1;
-      grid-row: 1;
-      height: 60vh;
-      grid-area: 1 / 1 / 1 / span 2;
+    .web-fourthContainer-content-container {
+      width: 100vw;
+      height: 100%;
+      max-height: 100%;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      grid-area: 1 / 1 / 1 / 2;
 
-      .globeContainer2 {
-        width: 50vh;
+      .web-fourthContainer-content {
+        color: aliceblue;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        font-size: 25px;
+        font-weight: 600;
+        text-align: center;
       }
     }
 
-    .orbitContainer {
+    .web-thirdContainerLeft {
       grid-column: 1;
       grid-row: 1;
-      height: 60vh;
-      grid-area: 1 / 1 / 1 / span 2;
+      position: relative;
+      transition: 2s;
+      height: 100%;
+      width: 60vw;
+      display: grid;
+      grid-template-columns: 5fr 1fr;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #1a202c;
-
-      .orbitContainer2 {
-        width: 50vh;
-      }
-    }
-
-    .fourthContainerLeft {
-      width: 50vw;
-      grid-column: 1;
-      grid-row: 1;
-
-      .thirdContainerLeft {
-        position: relative;
+      .web-leftRect {
+        background-color: orangered;
+        width: 100%;
         height: 100%;
-        width: 60vw;
-        transition: 2s;
-        color: white;
+
         display: flex;
+        justify-content: flex-end;
+        align-items: center;
 
-        .thirdContainerLeftRect {
-          width: 50vw;
-          background-color: orangered;
-          display: flex;
-          align-items: center;
-
-          .thirdContainerLeftRectTextContainer {
-            position: relative;
-            padding-left: 10vw;
-            font-size: 2.6vh;
-            font-weight: 700;
-            max-height: 60vh;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            gap: 15px;
-            justify-content: center;
-
-            .thirdContainerLeftRectTextContainerP1 {
-              font-size: 120%;
-              width: 45vw;
-              margin: 0;
-            }
-
-            .thirdContainerLeftRectTextContainerP2 {
-              width: 40vw;
-              font-size: 100%;
-              margin: 0;
-            }
-
-            .thirdContainerLeftRectTextContainerP3 {
-              width: 35vw;
-              margin: 0;
-              font-size: 100%;
-            }
-          }
-        }
-
-        .thirdContainerLeftTriCont {
-          width: 10vw;
-
-          .thirdContainerLeftTri {
-            width: 0;
-            height: 0;
-            border-top: 60vh solid orangered;
-            border-right: 10vw solid transparent;
-          }
+        .web-sexual-image {
+          height: 20vh;
         }
       }
 
-      .thirdContainerLeftOutside {
-        right: 50vw;
-      }
-      .thirdContainerLeftInside {
-        right: 5vw;
+      .web-leftTri {
+        width: 10vw;
       }
     }
 
-    .fourthContainerRight {
-      width: 50vw;
+    .web-thirdContainerLeftInside {
+      right: 40vw;
+    }
+    .web-thirdContainerLeftOutside {
+      right: 0vw;
+    }
+
+    .web-thirdContainerRight {
       grid-column: 2;
       grid-row: 1;
+      width: 50vw;
+      position: relative;
+      transition: 2s;
+      height: 100%;
+      width: 50vw;
 
-      .thirdContainerRight {
-        position: relative;
+      .web-rightRect {
+        background-color: pink;
+        width: 100%;
         height: 100%;
-        width: 60vw;
-        transition: 2s;
-        color: white;
-        font-size: 25px;
         display: flex;
+        justify-content: flex-start;
+        align-items: center;
 
-        .thirdContainerRightRect {
-          width: 50vw;
-          background-color: orange;
-          display: flex;
-          align-items: center;
-
-          .sexualHealthImg {
-            width: 40vw;
-          }
-        }
-
-        .thirdContainerRightTriCont {
-          width: 10vw;
-
-          .thirdContainerRightTri {
-            width: 0;
-            height: 0;
-            border-bottom: 60vh solid orange;
-            border-left: 10vw solid transparent;
-          }
+        .web-health-image {
+          height: 20vh;
         }
       }
+    }
 
-      .thirdContainerRightOutside {
-        left: 40vw;
+    .web-thirdContainerRightInside {
+      right: 10vw;
+    }
+    .web-thirdContainerRightOutside {
+      right: 50vw;
+    }
+  }
+
+  .web-fifthContainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+    grid-column: 1;
+    grid-row: 5;
+    max-width: 100vw;
+    z-index: 1;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    // background-color: #253551;
+
+    .web-orbit-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      grid-column: 1;
+      grid-row: 1;
+      z-index: 2;
+    }
+
+    .web-orbit {
+      height: 38vh;
+      transform: scaleX(0.01) scaleY(0.01);
+    }
+
+    .web-orbit-animation {
+      animation-name: orbitPopUpRotation, rotation;
+      animation-duration: 10s, 10s;
+      animation-delay: 0s, 10s; /* add this */
+      animation-timing-function: linear, linear;
+      animation-iteration-count: 1, infinite;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes orbitPopUpRotation {
+      0% {
+        transform: rotate(0deg) scaleX(0.01) scaleY(0.01);
       }
-      .thirdContainerRightInside {
-        left: -5vw;
+      8% {
+        transform: rotate(28.8deg) scaleX(1.1) scaleY(1.1);
+      }
+      10% {
+        transform: rotate(36deg) scaleX(1) scaleY(1);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @-moz-keyframes orbitPopUpRotation {
+      /* older versions of FF */
+      0% {
+        -moz-transform: rotate(0deg) scaleX(0.01) scaleY(0.01);
+      }
+      8% {
+        -moz-transform: rotate(28.8deg) scaleX(1.1) scaleY(1.1);
+      }
+      10% {
+        -moz-transform: rotate(36deg) scaleX(1) scaleY(1);
+      }
+      100% {
+        -moz-transform: rotate(360deg);
+      }
+    }
+
+    @-moz-keyframes orbitPopUp {
+      0% {
+        -moz-transform: scaleX(0.01) scaleY(0.01);
+      }
+      85% {
+        -moz-transform: scaleX(1.1) scaleY(1.1);
+      }
+      100% {
+        -moz-transform: scaleX(1) scaleY(1);
+      }
+    }
+
+    @keyframes orbitPopUp {
+      0% {
+        transform: scaleX(0.01) scaleY(0.01);
+      }
+      85% {
+        transform: scaleX(1.1) scaleY(1.1);
+      }
+      100% {
+        transform: scaleX(1) scaleY(1);
+      }
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .web-globe-container-container {
+      grid-column: 1;
+      grid-row: 1;
+      width: 100vw;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .web-globe-container {
+      width: 34vh;
+      transition: 1s;
+      transform: scaleX(0.01) scaleY(0.01);
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .web-globe-container-animation {
+      animation: globePopUp 1s linear 0s 1 forwards;
+    }
+
+    @keyframes globePopUp {
+      0% {
+        transform: scaleX(0.01) scaleY(0.01);
+      }
+      85% {
+        transform: scaleX(1.1) scaleY(1.1);
+      }
+      100% {
+        transform: scaleX(1) scaleY(1);
       }
     }
   }
 
-  .fifthContainer {
+  .wavesGlobe {
     grid-column: 1;
     grid-row: 5;
-    height: 100%;
+    z-index: 1;
+    transform: rotate(180deg);
+    background-color: #253551;
+
     display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .web-sixthContainer {
+    grid-column: 1;
+    grid-row: 6;
+    height: 100%;
+    max-width: 100vw;
+    z-index: 1;
+    background-color: #253551;
+    color: white;
+    // margin-bottom: 50vw;
+
+    .web-main-topics {
+      display: flex;
+      justify-content: center;
+      font-size: 4vw;
+    }
+
+    .web-the-main {
+      width: 100vw;
+      font-size: 100%;
+      display: flex;
+      justify-content: center;
+      font-size: 3vw;
+    }
+
+    .topic-list-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .topic-list {
+        width: auto;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.5vh;
+
+        .topic-list-item {
+          display: flex;
+          gap: 1.5vh;
+
+          .icon {
+            max-width: 5vh;
+            max-height: 5vh;
+            width: 5vh;
+            height: 5vh;
+          }
+
+          .centerOy {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 2.5vh;
+          }
+
+          .paddinTop {
+            padding-top: 1vh;
+            padding-bottom: 0;
+          }
+
+          .list {
+            display: flex;
+            flex-direction: column;
+
+            .padding-left {
+              padding-left: 5vw;
+              font-weight: 600;
+              font-size: 2.5vh;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .waves_6_7 {
+    grid-column: 1;
+    grid-row: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #253551;
+  }
+
+  .web-seventhContainer {
+    grid-column: 1;
+    grid-row: 8;
     background-color: #1a202c;
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .web-implications {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 5vh;
+      font-weight: 600;
+    }
+
+    .web-content {
+      display: grid;
+      width: 40vw;
+      font-weight: 600;
+      font-size: 2vh;
+    }
   }
 }
 

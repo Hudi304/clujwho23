@@ -75,72 +75,13 @@ export function Committees(props: any): JSX.Element {
   } else {
     return (
       <div>
-        <div className="committeesPageContainerMobile">
-          <div className="committeesPageGridMobile">
-            <div className="committeesWroldMapContainerMobile">
+        <div className="committees-web-backgroud ">
+          <div className="committees-web-page-grid">
+            <div className="map-container debug">
               <WorldMap width={'100vw'} height={'30vh'} />
             </div>
 
-            <EURODescription mobile={mobile} />
-
-            <EMRODescription mobile={mobile} />
-
-            <AFRODescription mobile={mobile} />
-
-            <div className="OxCenter committeePageContainer">
-              <Paper elevation={10}>
-                <div className="mobileTextContainer">
-                  AMRO
-                  <div>{AMRO_Description.p1}</div>
-                  <br />
-                  <div>{AMRO_Description.p2}</div>
-                  <br />
-                  <div>{AMRO_Description.p3}</div>
-                  <br />
-                </div>
-              </Paper>
-            </div>
-
-            <div className="OxCenter committeePageContainer">
-              <CustomPaper width={'90vw'} height={'auto'}>
-                <div className="mobileTextContainer">
-                  EURO
-                  <div>{AMRO_Description.p1}</div>
-                  <br />
-                  <div>{AMRO_Description.p2}</div>
-                  <br />
-                  <div>{AMRO_Description.p3}</div>
-                  <br />
-                </div>
-              </CustomPaper>
-            </div>
-
-            <div className="OxCenter committeePageContainer">
-              <CustomPaper width={'90vw'} height={'auto'}>
-                <div className="mobileTextContainer">
-                  WPRO
-                  <div>{AMRO_Description.p1}</div>
-                  <br />
-                  <div>{AMRO_Description.p2}</div>
-                  <br />
-                  <div>{AMRO_Description.p3}</div>
-                  <br />
-                </div>
-              </CustomPaper>
-            </div>
-            <div className="OxCenter committeePageContainer">
-              <CustomPaper width={'90vw'} height={'auto'}>
-                <div className="mobileTextContainer">
-                  SEARO
-                  <div>{AMRO_Description.p1}</div>
-                  <br />
-                  <div>{AMRO_Description.p2}</div>
-                  <br />
-                  <div>{AMRO_Description.p3}</div>
-                  <br />
-                </div>
-              </CustomPaper>
-            </div>
+            <div className="descriptions-list debug">dsadsa</div>
           </div>
         </div>
 

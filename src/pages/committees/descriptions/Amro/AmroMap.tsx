@@ -4,7 +4,7 @@ function WorldMapAmro() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      // width='4181'
+      width="25vw"
       // height='1613'
       fill="none"
       viewBox="0 0 4181 1613"

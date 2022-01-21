@@ -28,7 +28,7 @@ import { Footer } from '../../common-components/components/footer/footer'
 import WorldMapEuro from './descriptions/Euro/EuroMap'
 import WorldMapAfro from './descriptions/Afro/AfroMap'
 import WorldMapEmro from './descriptions/Emro/EmroMap'
-import WorldMapAmro from './descriptions/Amro/AfroMap'
+import WorldMapAmro from './descriptions/Amro/AmroMap'
 import WorldMapSearo from './descriptions/Searo/SearoMap'
 import WorldMapWpro from './descriptions/Wpro/WproMap'
 

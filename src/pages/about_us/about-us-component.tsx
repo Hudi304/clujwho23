@@ -86,9 +86,8 @@ export function AboutUs(props: any): JSX.Element {
               </p>
               <p>
                 If you need any explanation of the aforementioned terms, check
-                our instagram page. We encourage everyone to participate, even if
-                it sounds intimidating at first glance!
-                
+                our instagram page. We encourage everyone to participate, even
+                if it sounds intimidating at first glance!
               </p>
               <h2 className="title">WHY?</h2>
               <p>
@@ -190,11 +189,9 @@ export function AboutUs(props: any): JSX.Element {
                     discuss can be solved in the real world.
                   </p>
                   <p>
-                    If you need any explenation of the aforementioned terms,
-                    (check our instagram page, The Delegate's Handbook or ???)
-                    (ceva pentru new delegates? ca we cater to everyone and
-                    encourage everyone to participate even if it sounds
-                    intimidating? ca facem traininguri inainte?)
+                    If you need any explanation of the aforementioned terms,
+                    check our instagram page. We encourage everyone to
+                    participate, even if it sounds intimidating at first glance!
                   </p>
                 </div>
               </div>
@@ -226,9 +223,9 @@ export function AboutUs(props: any): JSX.Element {
                   </p>
 
                   <p>
-                    With ClujWHO, our goal is to raise awareness and further
+                    With ClujWHO, our goal is to raise awareness and further the
                     understanding of this decision-making process, as it has a
-                    big, although invisible, impact in all of our lives.
+                    big, although invisible, impact on all of our lives.
                   </p>
                 </div>
               </div>

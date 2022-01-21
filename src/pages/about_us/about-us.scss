@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     background-color: #4a5568;
-
     background: rgb(65, 120, 142);
     background: linear-gradient(
       180deg,
@@ -14,21 +13,17 @@
       rgba(83, 76, 106, 1) 100%
     );
     align-items: center;
-
     width: 100vw;
     height: auto;
-
     color: aliceblue;
     font-weight: 600;
 
     .aboutUsPageGrid {
       margin: 3vw;
       margin-top: 6vh;
-
       margin-bottom: 0;
       display: flex;
       flex-direction: column;
-      // justify-content: center;
       align-items: center;
 
       .about-us-content {
@@ -37,17 +32,18 @@
         margin-bottom: 20vh;
         display: flex;
         flex-direction: column;
-        gap: 10vh;
+        // gap: 10vh;
 
         .web-card {
+          margin-top: 10vh;
           display: grid;
 
           .content {
             grid-column: 1;
             grid-row: 1;
             background-color: #1a202c;
-            padding: 3vh;
-            border-radius: 3vh;
+            padding: 30px;
+            border-radius: 30px;
             z-index: 2;
           }
 
@@ -59,12 +55,12 @@
             align-items: center;
             position: relative;
             transition-duration: 1s;
-            bottom: 10vh;
+            bottom: 93px;
 
             .title-inner-container {
               background-color: #1a202c;
-              padding: 3vh;
-              border-radius: 3vh;
+              padding: 30px;
+              border-radius: 30px;
             }
           }
 
@@ -74,7 +70,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            bottom: 18vh;
+            bottom: 176px;
             transition-duration: 2s;
           }
 
@@ -84,7 +80,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            bottom: 26vh;
+            bottom: 245px;
             transition-duration: 2s;
           }
 
@@ -94,7 +90,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            bottom: 22vh;
+            bottom: 210px;
             transition-duration: 2s;
           }
         }

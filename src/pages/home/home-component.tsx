@@ -9,7 +9,7 @@ import './home.scss'
 
 import sexual_health from '../../assets/ClujWho/sexual_health.png'
 
-import Catedrala1080p_logo from '../../assets/ClujWho/Catedrala1080p_Logo.jpeg'
+import Catedrala1080p_logo from '../../assets/ClujWho/Catedrala.jpg'
 
 import OSM_Logo from '../../assets/ClujWho/siglaosmbuna_400.png'
 

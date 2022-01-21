@@ -55,7 +55,7 @@ export function WPROescriptionNew(props: any): JSX.Element {
     )
   } else {
     return (
-      <div className="WPRO-mobile-page-card">
+      <div className="WPRO-web-page-card">
         <h3>The Western Pacific Regional Office (WPRO)</h3>
 
         <p>

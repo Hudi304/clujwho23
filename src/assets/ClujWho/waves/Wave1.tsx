@@ -6,11 +6,12 @@ function Wave1() {
       xmlns="http://www.w3.org/2000/svg"
       x="0"
       y="0"
+      width="100vw"
       enableBackground="new 0 0 900 525"
       fill="none"
       viewBox="0 0 900 525"
     >
-       <g clipPath="url(#clip0_1_2)">
+      <g clipPath="url(#clip0_1_2)">
         <path fill="#253551" d="M900 0H0v525h900V0z"></path>
         <circle
           cx="450"

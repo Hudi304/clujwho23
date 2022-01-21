@@ -1,21 +1,15 @@
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { useEffect, useLayoutEffect, useState } from 'react'
-import InView, { useInView } from 'react-intersection-observer'
-import { NavBarComponent } from '../login/components/navbar/navbar-component'
-import { login } from '../login/login.actions'
-
 import './home.scss'
 
-import sexual_health from '../../assets/ClujWho/sexual_health.png'
-
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
+import { NavBarComponent } from '../login/components/navbar/navbar-component'
+import { login } from '../login/login.actions'
 import Catedrala1080p_logo from '../../assets/ClujWho/Catedrala.jpg'
-
 import OSM_Logo from '../../assets/ClujWho/siglaosmbuna_400.png'
-
 import AddCircleIcon from '@mui/icons-material/AddCircle'
 import { Orbit } from './orbit'
-import { transform } from 'typescript'
 import { LGBT } from '../../assets/ClujWho/icons/LGBT'
 import Condom from '../../assets/ClujWho/icons/Condom'
 import Baby from '../../assets/ClujWho/icons/Baby'
@@ -30,11 +24,9 @@ import Instagram from '../../assets/ClujWho/icons/Instagram'
 import Wave1 from '../../assets/ClujWho/waves/Wave1'
 import FooterWaves from '../../assets/ClujWho/waves/FooterWaves'
 import GrayToGray from '../../assets/ClujWho/waves/GrayToGray'
-
 import SexHea from './../../assets/ClujWho/SexHea.png'
 import UalLth from './../../assets/ClujWho/UalLth.png'
 import Email from '../../assets/ClujWho/icons/Email'
-import { Footer } from '../../common-components/components/footer/footer'
 import { WebFooter } from '../../common-components/components/footer/web-footer'
 import Wave_6_7 from '../../assets/ClujWho/waves/Wave_6_7'
 import WavesGlobe from '../../assets/ClujWho/waves/WavesGlobe'
@@ -576,71 +568,6 @@ const mapDispatchToProps = (dispatch: any) => ({
 })
 
 export const HomePage2 = connect(mapStateToProps, mapDispatchToProps)(Home2)
-// conecteaza pagina la store, deci avem access la store
-
-// <div className="fourthContainer ">
-// <div className="orbitContainer">
-//   <div className="orbitContainer2"></div>
-// </div>
-
-// <div className="globeContainer">
-//   <div className="globeContainer2">
-//     <Globe />
-//   </div>
-// </div>
-// <div className="fourthContainerLeft">
-//   <div
-//     ref={ref2}
-//     className={`thirdContainerLeft ${
-//       inView1
-//         ? 'thirdContainerLeftInside'
-//         : 'thirdContainerLeftOutside'
-//     }`}
-//   >
-//     <div className="thirdContainerLeftRect  ">
-//       <div className="thirdContainerLeftRectTextContainer ">
-//         <p className="thirdContainerLeftRectTextContainerP1 ">
-//           {' '}
-//           WHY pick sexual health during a global pandemic?
-//         </p>
-//         <p className="thirdContainerLeftRectTextContainerP2 ">
-//           When the whole world is watching over the coronavirus, we
-//           feel other, very pressing global health threats have taken
-//           the back seat. One of these issues is sexual health, a
-//           matter that concerns every individual’s day to day lives
-//           and has implications beyond the medical aspects.
-//         </p>
-//         <p className="thirdContainerLeftRectTextContainerP3 ">
-//           Also, as this is our first edition and we want to bring as
-//           many people, not necessarily familiar with these
-//           simulations, we feel sexual health is the more
-//           approachable topic we could choose.
-//         </p>
-//       </div>
-//     </div>
-//     <div className="thirdContainerLeftTriCont  ">
-//       <div className="thirdContainerLeftTri"></div>
-//     </div>
-//   </div>
-// </div>
-
-// <div className="fourthContainerRight">
-//   <div
-//     className={`thirdContainerRight ${
-//       inView1
-//         ? 'thirdContainerRightInside'
-//         : 'thirdContainerRightOutside'
-//     }`}
-//   >
-//     <div className="thirdContainerRightTriCont  ">
-//       <div className="thirdContainerRightTri"></div>
-//     </div>
-//     <div className="thirdContainerRightRect  ">
-//       <img className="sexualHealthImg" src={sexual_health} />
-//     </div>
-//   </div>
-// </div>
-// </div>
 
 function Waves() {
   return (
@@ -700,20 +627,6 @@ function WavesBot() {
       height="100"
       version="1.1"
     >
-      {/* <path
-        d="M0 49L13.8 44.5C27.7 40 55.3 31 83.2 36C111 41 139 60 166.8 71.2C194.7 82.3 222.3 85.7 250.2 83.8C278 82 306 75 333.8 65C361.7 55 389.3 42 417.2 43C445 44 473 59 500.8 61.3C528.7 63.7 556.3 53.3 584.2 56.3C612 59.3 640 75.7 667.8 82C695.7 88.3 723.3 84.7 751.2 72.3C779 60 807 39 834.8 41.3C862.7 43.7 890.3 69.3 918.2 80.2C946 91 974 87 1001.8 74.2C1029.7 61.3 1057.3 39.7 1085.2 35.5C1113 31.3 1141 44.7 1168.8 49.3C1196.7 54 1224.3 50 1252.2 55C1280 60 1308 74 1335.8 82.7C1363.7 91.3 1391.3 94.7 1419.2 94.8C1447 95 1475 92 1502.8 79.3C1530.7 66.7 1558.3 44.3 1586.2 37.5C1614 30.7 1642 39.3 1669.8 48C1697.7 56.7 1725.3 65.3 1753.2 66.3C1781 67.3 1809 60.7 1836.8 53.3C1864.7 46 1892.3 38 1906.2 34L1920 30L1920 0L1906.2 0C1892.3 0 1864.7 0 1836.8 0C1809 0 1781 0 1753.2 0C1725.3 0 1697.7 0 1669.8 0C1642 0 1614 0 1586.2 0C1558.3 0 1530.7 0 1502.8 0C1475 0 1447 0 1419.2 0C1391.3 0 1363.7 0 1335.8 0C1308 0 1280 0 1252.2 0C1224.3 0 1196.7 0 1168.8 0C1141 0 1113 0 1085.2 0C1057.3 0 1029.7 0 1001.8 0C974 0 946 0 918.2 0C890.3 0 862.7 0 834.8 0C807 0 779 0 751.2 0C723.3 0 695.7 0 667.8 0C640 0 612 0 584.2 0C556.3 0 528.7 0 500.8 0C473 0 445 0 417.2 0C389.3 0 361.7 0 333.8 0C306 0 278 0 250.2 0C222.3 0 194.7 0 166.8 0C139 0 111 0 83.2 0C55.3 0 27.7 0 13.8 0L0 0Z"
-        fill="#0751e6"
-        fill-opacity="0.3"
-      /> */}
-      {/* <path
-        d="M0 63L13.8 56.3C27.7 49.7 55.3 36.3 83.2 35.7C111 35 139 47 166.8 52.7C194.7 58.3 222.3 57.7 250.2 56.3C278 55 306 53 333.8 47.8C361.7 42.7 389.3 34.3 417.2 37C445 39.7 473 53.3 500.8 59.8C528.7 66.3 556.3 65.7 584.2 60.7C612 55.7 640 46.3 667.8 46.8C695.7 47.3 723.3 57.7 751.2 57.8C779 58 807 48 834.8 44.7C862.7 41.3 890.3 44.7 918.2 49C946 53.3 974 58.7 1001.8 54.7C1029.7 50.7 1057.3 37.3 1085.2 38.8C1113 40.3 1141 56.7 1168.8 57.5C1196.7 58.3 1224.3 43.7 1252.2 34.5C1280 25.3 1308 21.7 1335.8 24.5C1363.7 27.3 1391.3 36.7 1419.2 41.3C1447 46 1475 46 1502.8 47.5C1530.7 49 1558.3 52 1586.2 53C1614 54 1642 53 1669.8 55.7C1697.7 58.3 1725.3 64.7 1753.2 65.3C1781 66 1809 61 1836.8 59.2C1864.7 57.3 1892.3 58.7 1906.2 59.3L1920 60L1920 0L1906.2 0C1892.3 0 1864.7 0 1836.8 0C1809 0 1781 0 1753.2 0C1725.3 0 1697.7 0 1669.8 0C1642 0 1614 0 1586.2 0C1558.3 0 1530.7 0 1502.8 0C1475 0 1447 0 1419.2 0C1391.3 0 1363.7 0 1335.8 0C1308 0 1280 0 1252.2 0C1224.3 0 1196.7 0 1168.8 0C1141 0 1113 0 1085.2 0C1057.3 0 1029.7 0 1001.8 0C974 0 946 0 918.2 0C890.3 0 862.7 0 834.8 0C807 0 779 0 751.2 0C723.3 0 695.7 0 667.8 0C640 0 612 0 584.2 0C556.3 0 528.7 0 500.8 0C473 0 445 0 417.2 0C389.3 0 361.7 0 333.8 0C306 0 278 0 250.2 0C222.3 0 194.7 0 166.8 0C139 0 111 0 83.2 0C55.3 0 27.7 0 13.8 0L0 0Z"
-        fill="#0044a7"
-        fill-opacity="0.9"
-      /> */}
-      {/* <path
-        d="M0 5L13.8 13.2C27.7 21.3 55.3 37.7 83.2 46.5C111 55.3 139 56.7 166.8 50.5C194.7 44.3 222.3 30.7 250.2 26.3C278 22 306 27 333.8 25C361.7 23 389.3 14 417.2 13.3C445 12.7 473 20.3 500.8 28.8C528.7 37.3 556.3 46.7 584.2 51.5C612 56.3 640 56.7 667.8 49.8C695.7 43 723.3 29 751.2 29C779 29 807 43 834.8 46.8C862.7 50.7 890.3 44.3 918.2 37.2C946 30 974 22 1001.8 21C1029.7 20 1057.3 26 1085.2 29.5C1113 33 1141 34 1168.8 32.3C1196.7 30.7 1224.3 26.3 1252.2 26.8C1280 27.3 1308 32.7 1335.8 34.2C1363.7 35.7 1391.3 33.3 1419.2 28.3C1447 23.3 1475 15.7 1502.8 15.5C1530.7 15.3 1558.3 22.7 1586.2 29.7C1614 36.7 1642 43.3 1669.8 43.2C1697.7 43 1725.3 36 1753.2 32.2C1781 28.3 1809 27.7 1836.8 28.5C1864.7 29.3 1892.3 31.7 1906.2 32.8L1920 34L1920 0L1906.2 0C1892.3 0 1864.7 0 1836.8 0C1809 0 1781 0 1753.2 0C1725.3 0 1697.7 0 1669.8 0C1642 0 1614 0 1586.2 0C1558.3 0 1530.7 0 1502.8 0C1475 0 1447 0 1419.2 0C1391.3 0 1363.7 0 1335.8 0C1308 0 1280 0 1252.2 0C1224.3 0 1196.7 0 1168.8 0C1141 0 1113 0 1085.2 0C1057.3 0 1029.7 0 1001.8 0C974 0 946 0 918.2 0C890.3 0 862.7 0 834.8 0C807 0 779 0 751.2 0C723.3 0 695.7 0 667.8 0C640 0 612 0 584.2 0C556.3 0 528.7 0 500.8 0C473 0 445 0 417.2 0C389.3 0 361.7 0 333.8 0C306 0 278 0 250.2 0C222.3 0 194.7 0 166.8 0C139 0 111 0 83.2 0C55.3 0 27.7 0 13.8 0L0 0Z"
-        fill="#0d3368"
-      /> */}
       <path
         d="M0 24L13.8 20.2C27.7 16.3 55.3 8.7 83.2 9.8C111 11 139 21 166.8 20.8C194.7 20.7 222.3 10.3 250.2 5.2C278 0 306 0 333.8 3C361.7 6 389.3 12 417.2 12.5C445 13 473 8 500.8 10.8C528.7 13.7 556.3 24.3 584.2 27C612 29.7 640 24.3 667.8 22.8C695.7 21.3 723.3 23.7 751.2 23.3C779 23 807 20 834.8 18.8C862.7 17.7 890.3 18.3 918.2 16.3C946 14.3 974 9.7 1001.8 7C1029.7 4.3 1057.3 3.7 1085.2 3.7C1113 3.7 1141 4.3 1168.8 5C1196.7 5.7 1224.3 6.3 1252.2 7.5C1280 8.7 1308 10.3 1335.8 13.8C1363.7 17.3 1391.3 22.7 1419.2 22.2C1447 21.7 1475 15.3 1502.8 13C1530.7 10.7 1558.3 12.3 1586.2 13.3C1614 14.3 1642 14.7 1669.8 14.2C1697.7 13.7 1725.3 12.3 1753.2 11.3C1781 10.3 1809 9.7 1836.8 11.7C1864.7 13.7 1892.3 18.3 1906.2 20.7L1920 23L1920 0L1906.2 0C1892.3 0 1864.7 0 1836.8 0C1809 0 1781 0 1753.2 0C1725.3 0 1697.7 0 1669.8 0C1642 0 1614 0 1586.2 0C1558.3 0 1530.7 0 1502.8 0C1475 0 1447 0 1419.2 0C1391.3 0 1363.7 0 1335.8 0C1308 0 1280 0 1252.2 0C1224.3 0 1196.7 0 1168.8 0C1141 0 1113 0 1085.2 0C1057.3 0 1029.7 0 1001.8 0C974 0 946 0 918.2 0C890.3 0 862.7 0 834.8 0C807 0 779 0 751.2 0C723.3 0 695.7 0 667.8 0C640 0 612 0 584.2 0C556.3 0 528.7 0 500.8 0C473 0 445 0 417.2 0C389.3 0 361.7 0 333.8 0C306 0 278 0 250.2 0C222.3 0 194.7 0 166.8 0C139 0 111 0 83.2 0C55.3 0 27.7 0 13.8 0L0 0Z"
         fill="#1a202c"
@@ -952,70 +865,3 @@ function Globe(style: any, className: string) {
   )
 }
 
-function some() {
-  return (
-    <div className="homePageCardGrid">
-      <div className="homePageCardContainer">
-        <div className="homePageCard ">
-          <div className="homePageCardTitile">WHY?</div>
-          <div className="homePageCardContent">
-            <p>
-              For this year’s theme is going to be <b> Sexual Health</b>.
-            </p>
-            <p>
-              In our thinking process in choosing the first edition’s theme we
-              considered that in the pandemic context we let aside the other
-              problems that we have in our world and only discussed pandemic
-              related issues over and over again.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="homePageCardContainer">
-        <div className="homePageCard ">
-          <div className="homePageCardTitile">Sexual health</div>
-          <div className="homePageCardContent">
-            <p>
-              Now more discussed than ever but still a problem because people
-              still see it as a taboo subject, not everyone has access to
-              information and medical care, legal issues in many countries.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="homePageCardContainer">
-        <div className="homePageCard ">
-          <div className="homePageCardTitile">Main topics</div>
-          <div className="homePageCardContent">
-            <p>The main discussed topics are going to be:</p>
-
-            <div className="topicList">
-              <div>
-                <AddCircleIcon style={{ fontSize: 15 }} /> access to
-                contraceptive methods and pregnancy related issues
-              </div>
-              <div>
-                <AddCircleIcon style={{ fontSize: 15 }} /> access to medical
-                care regarding sexual health problems
-              </div>
-              <div>
-                <AddCircleIcon style={{ fontSize: 15 }} /> abortion
-              </div>
-              <div>
-                <AddCircleIcon style={{ fontSize: 15 }} /> gender inequality
-              </div>
-              <div>
-                <AddCircleIcon style={{ fontSize: 15 }} /> STDs
-              </div>
-              <div>
-                <AddCircleIcon style={{ fontSize: 15 }} /> LGBTQIA
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}

@@ -4,7 +4,7 @@ function Wave_6_7() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      // width="1920"
+      width="100vw"
       // height="200"
       version="1.1"
       viewBox="0 0 1920 200"

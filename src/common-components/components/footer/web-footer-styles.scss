@@ -19,29 +19,30 @@
     flex-direction: column;
     width: 100vw;
     padding-bottom: 2vw;
+    background-color: #aedfff;
 
-    .footer-waves-container {
+    .web-footer-waves-container {
       width: 100vw;
     }
 
-    .facebook-insta-container {
+    .web-facebook-insta-container {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 5vw;
 
-      .facebook-icon-container {
+      .web-facebook-icon-container {
         width: 10vh;
         height: 10vh;
         background-color: aliceblue;
         z-index: 7;
 
-        .anchor {
+        .web-anchor {
           z-index: 7;
           width: 10vh;
           height: 10vh;
 
-          .anchor-button {
+          .web-anchor-button {
             width: 10vh;
             height: 10vh;
             border: none;
@@ -50,17 +51,17 @@
         }
       }
 
-      .instagram-icon-container {
+      .web-instagram-icon-container {
         width: 10vh;
         height: 10vh;
         z-index: 8;
 
-        .anchor-insta {
+        .web-anchor-insta {
           z-index: 8;
           width: 10vh;
           height: 10vh;
 
-          .anchor-button-insta {
+          .web-anchor-button-insta {
             width: 10vh;
             height: 10vh;
             border: none;
@@ -71,17 +72,17 @@
       }
     }
 
-    .email-container {
+    .web-email-container {
       display: flex;
       justify-content: center;
       gap: 2vw;
 
-      .email-icon-container {
+      .web-email-icon-container {
         width: 10vh;
         height: 10vh;
       }
 
-      .email {
+      .web-email {
         padding: 0;
         margin: 0;
         color: #17a0df;
@@ -91,10 +92,10 @@
       }
     }
 
-    .osm-logo-container {
+    .web-osm-logo-container {
       width: 20vh;
 
-      .osm-logo {
+      .web-osm-logo {
         width: 20vh;
       }
     }

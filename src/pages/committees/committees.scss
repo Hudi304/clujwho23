@@ -1,5 +1,13 @@
 .committees-backgroud {
   background-color: #4a5568;
+  background: rgb(65, 120, 142);
+  background: linear-gradient(
+    180deg,
+    rgb(26, 138, 182) 0%,
+    rgba(60, 80, 124, 1) 30%,
+    rgba(60, 80, 124, 1) 55%,
+    rgba(83, 76, 106, 1) 100%
+  );
   display: grid;
   grid-template-rows: min-content auto;
 
@@ -134,6 +142,7 @@
     align-items: center;
     height: auto;
     background-color: #4a5568;
+
     // border: 1px solid white;
   }
 

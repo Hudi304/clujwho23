@@ -69,7 +69,7 @@ export function EURODescriptionNew(props: any): JSX.Element {
             eliminate inequities”
           </li>
         </ul>
-
+{/* 
         <p>References</p>
         <ul>
           <li>
@@ -87,7 +87,7 @@ export function EURODescriptionNew(props: any): JSX.Element {
               www.euro.who.int/en/health-topics
             </a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     )
   } else {

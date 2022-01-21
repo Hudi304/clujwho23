@@ -3,15 +3,14 @@
   .aboutUsPageContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #4a5568;
+
+    width: 100vw;
+    height: 100vh;
 
     .aboutUsPageGrid {
       margin-top: 10vh;
-      .inPaper {
-        width: 70vw;
-        min-width: 900px;
-        max-width: 1280px;
-      }
     }
   }
 }
@@ -22,9 +21,33 @@
     display: flex;
     justify-content: center;
     background-color: #4a5568;
+    align-items: center;
+
+    width: 100vw;
+    height: auto;
+
+    color: aliceblue;
+    font-weight: 600;
 
     .aboutUsPageGrid {
+      margin: 3vw;
       margin-top: 6vh;
+
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+
+      .about-us-content {
+        width: 90vw;
+
+        .title {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
     }
   }
 }

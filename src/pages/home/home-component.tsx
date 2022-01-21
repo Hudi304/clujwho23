@@ -43,8 +43,8 @@ import SexHea from './../../assets/ClujWho/SexHea.png'
 import UalLth from './../../assets/ClujWho/UalLth.png'
 import Email from '../../assets/ClujWho/icons/Email'
 
-const FaceBookUrl = 'https://www.facebook.com/clujwho'
-const InstaUrl = 'https://www.instagram.com/clujwho/'
+export const FaceBookUrl = 'https://www.facebook.com/clujwho'
+export const InstaUrl = 'https://www.instagram.com/clujwho/'
 function Home2(props: any): JSX.Element {
   const [ref, inView] = useInView({
     threshold: 0.1

@@ -4,6 +4,7 @@ import { NavBarComponent } from '../login/components/navbar/navbar-component'
 import './appy-now.scss'
 import { CustomPaper } from '../../components/custom-paper/paper-component'
 import { useEffect, useState } from 'react'
+import { Timer } from './timer/timer'
 /* eslint-disable */
 
 function monthToDays(month: number, year: number): number {
@@ -62,6 +63,9 @@ export function ApplyNow(props: any): JSX.Element {
     threshold: 0.5
   })
 
+  const [chair, setChair] = useState(false)
+  const [delegate, setDelegate] = useState(false)
+
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight
@@ -84,6 +88,33 @@ export function ApplyNow(props: any): JSX.Element {
   registrationStartDate.setHours(0)
   registrationStartDate.setMinutes(0)
   registrationStartDate.setSeconds(0)
+
+  const ChairRegEndData = new Date()
+
+  ChairRegEndData.setMonth(1)
+  ChairRegEndData.setDate(13)
+  ChairRegEndData.setFullYear(2022)
+  ChairRegEndData.setHours(0)
+  ChairRegEndData.setMinutes(0)
+  ChairRegEndData.setSeconds(0)
+
+  const DelegatesRegEndData = new Date()
+
+  DelegatesRegEndData.setMonth(1)
+  DelegatesRegEndData.setDate(13)
+  DelegatesRegEndData.setFullYear(2022)
+  DelegatesRegEndData.setHours(0)
+  DelegatesRegEndData.setMinutes(0)
+  DelegatesRegEndData.setSeconds(0)
+
+  const CujWhoStart = new Date()
+
+  CujWhoStart.setMonth(2)
+  CujWhoStart.setDate(4)
+  CujWhoStart.setFullYear(2022)
+  CujWhoStart.setHours(0)
+  CujWhoStart.setMinutes(0)
+  CujWhoStart.setSeconds(0)
 
   const [timeLeft, setTimeLeft] = useState({
     seconds: 59 - date.getSeconds(),
@@ -110,56 +141,108 @@ export function ApplyNow(props: any): JSX.Element {
   if (mobile) {
     return (
       <div>
-        <div className="applyNowPageGridContainerMobile OxCenter backgroud-image">
-          <div className="applyNowPageGridMobile">
-            <p className="titleContainerMobile xOyCenter">
+        <div className="apply-now-container OxCenter">
+          <div className="apply-now-grid">
+            {/* <p className="titleContainerMobile xOyCenter">
               The experience of your studenthood
             </p>
-            <p className="titleContainerMobile xOyCenter">starts in:</p>
-            <div className="countDownContainerMobile xOyCenter">
-              <div className="counterContainerMobile">
-                <div className="cardContainerMobile">
-                  <div className="counterCardMobile">{`${timeLeft.weeks}`}</div>
-                  <p className="cardLabelMobile xOyCenter">Weeks</p>
-                </div>
-                <div className="xOyCenter pointsMobile "> : </div>
+            <p className="titleContainerMobile xOyCenter">starts in:</p> */}
 
-                <div className="cardContainerMobile">
-                  <div className="counterCardMobile">{`${timeLeft.days}`}</div>
-                  <p className="cardLabelMobile xOyCenter">Days</p>
-                </div>
-                <div className="xOyCenter pointsMobile "> : </div>
-                <div className="cardContainerMobile">
-                  <div className="counterCardMobile">{`${timeLeft.hours}`}</div>
-                  <p className="cardLabelMobile xOyCenter">Hours</p>
-                </div>
-                <div className="xOyCenter pointsMobile "> : </div>
-                <div className="cardContainerMobile">
-                  <div className="counterCardMobile">{`${timeLeft.minutes}`}</div>
-                  <p className="cardLabelMobile xOyCenter">Minutes</p>
-                </div>
-                <div className="xOyCenter pointsMobile "> : </div>
-                <div className="cardContainerMobile">
-                  <div className="counterCardMobile">{`${timeLeft.seconds}`}</div>
-                  <p className="cardLabelMobile xOyCenter">Seconds</p>
+            {!chair && !delegate ? (
+              <>
+                <p className="titleContainerMobile xOyCenter">
+                  The experience of your studenthood
+                </p>
+                <p className="titleContainerMobile xOyCenter">starts in:</p>
+              </>
+            ) : null}
+
+            {chair ? (
+              <>
+                <p className="titleContainerMobile xOyCenter">
+                  Chair Registration ends in :
+                </p>
+              </>
+            ) : null}
+
+            {delegate ? (
+              <>
+                <p className="titleContainerMobile xOyCenter">
+                  Delegates Registration ends in :
+                </p>
+              </>
+            ) : null}
+
+            {!chair && !delegate ? (
+              <div>
+                <Timer endDate={CujWhoStart} />
+              </div>
+            ) : null}
+
+            {chair ? (
+              <div>
+                <Timer endDate={ChairRegEndData} />
+              </div>
+            ) : null}
+
+            {delegate ? (
+              <div>
+                <Timer endDate={DelegatesRegEndData} />
+              </div>
+            ) : null}
+
+            <div className="button-bar">
+              <button
+                className="form-btn"
+                onClick={() => {
+                  setChair(true)
+                  setDelegate(false)
+                }}
+              >
+                Chair
+              </button>
+              <button
+                className="form-btn"
+                onClick={() => {
+                  setChair(false)
+                  setDelegate(true)
+                }}
+              >
+                Delegate
+              </button>
+            </div>
+
+            {chair ? (
+              <div>
+                <div className="container-form-mobile OxCenter">
+                  <div className="iframe-container-mobile OxCenter">
+                    <iframe
+                      src="https://docs.google.com/forms/d/e/1FAIpQLScjPbjWOtO4-cPVf-83h4NuuNeGqZ4LmOl393lEC-J79c1f-Q/viewform?embedded=true"
+                      width="100%"
+                      className="iframe"
+                    >
+                      Loading…
+                    </iframe>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="paperContainerMobile OxCenter">
-              {/* <CustomPaper width={'90vw'} height={'fit'}> */}
-                <div className="iframeContainerMobile OxCenter">
-                  {/* <iframe src="https://www.w3schools.com" title="Iframe Example"></iframe> */}
-                  {/* ... insert formular here ... */}
-                  <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLScj6xGbjMMttGS2VwbbEkUZ9tTWLpOIRFJTexjN1k9jhFtD7A/viewform?embedded=true"
-                    width="100%"
-                    className='iframe'
-                  >
-                    Loading…
-                  </iframe>
+            ) : null}
+
+            {delegate ? (
+              <div>
+                <div className="container-form-mobile OxCenter">
+                  <div className="iframe-container-mobile OxCenter">
+                    <iframe
+                      src="https://docs.google.com/forms/d/e/1FAIpQLScj6xGbjMMttGS2VwbbEkUZ9tTWLpOIRFJTexjN1k9jhFtD7A/viewform?embedded=true"
+                      width="100%"
+                      className="iframe"
+                    >
+                      Loading…
+                    </iframe>
+                  </div>
                 </div>
-              {/* </CustomPaper> */}
-            </div>
+              </div>
+            ) : null}
           </div>
         </div>
 
@@ -223,4 +306,36 @@ export function ApplyNow(props: any): JSX.Element {
       </div>
     )
   }
+}
+
+{
+  /* <div className="countDownContainerMobile xOyCenter">
+              <div className="counterContainerMobile">
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.weeks}`}</div>
+                  <p className="cardLabelMobile xOyCenter">Weeks</p>
+                </div>
+                <div className="xOyCenter pointsMobile "> : </div>
+
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.days}`}</div>
+                  <p className="cardLabelMobile xOyCenter">Days</p>
+                </div>
+                <div className="xOyCenter pointsMobile "> : </div>
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.hours}`}</div>
+                  <p className="cardLabelMobile xOyCenter">Hours</p>
+                </div>
+                <div className="xOyCenter pointsMobile "> : </div>
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.minutes}`}</div>
+                  <p className="cardLabelMobile xOyCenter">Minutes</p>
+                </div>
+                <div className="xOyCenter pointsMobile "> : </div>
+                <div className="cardContainerMobile">
+                  <div className="counterCardMobile">{`${timeLeft.seconds}`}</div>
+                  <p className="cardLabelMobile xOyCenter">Seconds</p>
+                </div>
+              </div>
+            </div> */
 }

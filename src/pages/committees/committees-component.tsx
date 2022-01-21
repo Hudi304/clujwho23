@@ -3,7 +3,7 @@ import { CustomPaper } from '../../components/custom-paper/paper-component'
 import { NavBarComponent } from '../login/components/navbar/navbar-component'
 
 import './committees.scss'
-import { WorldMap, WorldMapMobile } from './world-map'
+import { WorldMap, WorldMapMobile, WorldMapNewColors } from './world-map'
 import { AMRO_Description } from './committees-page-text'
 import { useState, useEffect } from 'react'
 import { Paper } from '@mui/material'
@@ -12,6 +12,19 @@ import AFRO_Image from '../../assets/images/AFRO-map-image.png'
 import EMRO_Image from '../../assets/images/EMRO-map-image.png'
 
 import amongUS from '../../assets/amonfUS.png'
+import { EURODescriptionNew } from './descriptions/Euro/Euro'
+import { AFRODescriptionNew } from './descriptions/Afro/Afro'
+import { EMRODescriptionNew } from './descriptions/Emro/Emro'
+import { AMRODescriptionNew } from './descriptions/Amro/Amro'
+import { SEARODescriptionNew } from './descriptions/Searo/Searo'
+import { WPROescriptionNew } from './descriptions/Wpro/Wpro'
+import { FaceBookUrl, InstaUrl } from '../home/home-component'
+import Instagram from '../../assets/ClujWho/icons/Instagram'
+import Facebook from '../../assets/ClujWho/icons/Facebook'
+import Email from '../../assets/ClujWho/icons/Email'
+
+import OSM_Logo from '../../assets/ClujWho/siglaosmbuna_400.png'
+import { Footer } from '../../common-components/components/footer/footer'
 
 export function Committees(props: any): JSX.Element {
   const [ref, inView] = useInView({
@@ -36,87 +49,24 @@ export function Committees(props: any): JSX.Element {
 
   if (mobile) {
     return (
-      <div>
-        <div className="committeesPageContainerMobile">
-          <div className="committeesPageGridMobile">
-            <div className="committeesWroldMapContainerMobile">
-              <WorldMapMobile width={'100vw'} height={'30vh'} />
-            </div>
-
-            <EURODescription mobile={mobile} />
-
-            <EMRODescription mobile={mobile} />
-
-            <AFRODescription mobile={mobile} />
-
-            <div className="OxCenter committeePageContainer">
-              <CustomPaper width={'90vw'} height={'auto'}>
-                <div className="mobileTextContainer">
-                  AMRO
-                  <div>{AMRO_Description.p1}</div>
-                  <br />
-                  <div>{AMRO_Description.p2}</div>
-                  <br />
-                  <div>{AMRO_Description.p3}</div>
-                  <br />
-                </div>
-              </CustomPaper>
-            </div>
-
-            <div className="OxCenter committeePageContainer">
-              <CustomPaper width={'90vw'} height={'auto'}>
-                <div className="mobileTextContainer">
-                  EURO
-                  <div>{AMRO_Description.p1}</div>
-                  <br />
-                  <div>{AMRO_Description.p2}</div>
-                  <br />
-                  <div>{AMRO_Description.p3}</div>
-                  <br />
-                </div>
-              </CustomPaper>
-            </div>
-            <div className="OxCenter committeePageContainer">
-              <CustomPaper width={'90vw'} height={'auto'}>
-                <div className="mobileTextContainer">
-                  EMRO
-                  <div>{AMRO_Description.p1}</div>
-                  <br />
-                  <div>{AMRO_Description.p2}</div>
-                  <br />
-                  <div>{AMRO_Description.p3}</div>
-                  <br />
-                </div>
-              </CustomPaper>
-            </div>
-            <div className="OxCenter committeePageContainer">
-              <CustomPaper width={'90vw'} height={'auto'}>
-                <div className="mobileTextContainer">
-                  WPRO
-                  <div>{AMRO_Description.p1}</div>
-                  <br />
-                  <div>{AMRO_Description.p2}</div>
-                  <br />
-                  <div>{AMRO_Description.p3}</div>
-                  <br />
-                </div>
-              </CustomPaper>
-            </div>
-            <div className="OxCenter committeePageContainer">
-              <CustomPaper width={'90vw'} height={'auto'}>
-                <div className="mobileTextContainer">
-                  SEARO
-                  <div>{AMRO_Description.p1}</div>
-                  <br />
-                  <div>{AMRO_Description.p2}</div>
-                  <br />
-                  <div>{AMRO_Description.p3}</div>
-                  <br />
-                </div>
-              </CustomPaper>
-            </div>
-          </div>
+      <div className="committees-backgroud">
+        <div className="world-map-container">
+          <WorldMapNewColors />
         </div>
+
+        <div className="committees-content">
+          <EURODescriptionNew mobile={mobile} />
+          <AFRODescriptionNew mobile={mobile} />
+          <EMRODescriptionNew mobile={mobile} />
+          <AMRODescriptionNew mobile={mobile} />
+          <SEARODescriptionNew mobile={mobile} />
+          <WPROescriptionNew mobile={mobile} />
+        </div>
+
+        <div className="footer-container">
+          <Footer />
+        </div>
+
         <div className={`nav-bar-container`}>
           <NavBarComponent inView={true} mobile={mobile} />
         </div>

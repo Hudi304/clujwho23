@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/clujwho23/static/css/main.e759e975.chunk.css",
-    "main.js": "/clujwho23/static/js/main.69255502.chunk.js",
-    "main.js.map": "/clujwho23/static/js/main.69255502.chunk.js.map",
-    "runtime-main.js": "/clujwho23/static/js/runtime-main.8dc564d0.js",
-    "runtime-main.js.map": "/clujwho23/static/js/runtime-main.8dc564d0.js.map",
-    "static/js/2.68bd0e6a.chunk.js": "/clujwho23/static/js/2.68bd0e6a.chunk.js",
-    "static/js/2.68bd0e6a.chunk.js.map": "/clujwho23/static/js/2.68bd0e6a.chunk.js.map",
-    "static/js/3.33868083.chunk.js": "/clujwho23/static/js/3.33868083.chunk.js",
-    "static/js/3.33868083.chunk.js.map": "/clujwho23/static/js/3.33868083.chunk.js.map",
+    "main.css": "/clujwho23/static/css/main.0c4c6356.chunk.css",
+    "main.js": "/clujwho23/static/js/main.6e9c43b4.chunk.js",
+    "main.js.map": "/clujwho23/static/js/main.6e9c43b4.chunk.js.map",
+    "runtime-main.js": "/clujwho23/static/js/runtime-main.2deffae8.js",
+    "runtime-main.js.map": "/clujwho23/static/js/runtime-main.2deffae8.js.map",
+    "static/js/2.653d218c.chunk.js": "/clujwho23/static/js/2.653d218c.chunk.js",
+    "static/js/2.653d218c.chunk.js.map": "/clujwho23/static/js/2.653d218c.chunk.js.map",
+    "static/js/3.abe28721.chunk.js": "/clujwho23/static/js/3.abe28721.chunk.js",
+    "static/js/3.abe28721.chunk.js.map": "/clujwho23/static/js/3.abe28721.chunk.js.map",
     "index.html": "/clujwho23/index.html",
-    "static/css/main.e759e975.chunk.css.map": "/clujwho23/static/css/main.e759e975.chunk.css.map",
-    "static/js/2.68bd0e6a.chunk.js.LICENSE.txt": "/clujwho23/static/js/2.68bd0e6a.chunk.js.LICENSE.txt",
+    "static/css/main.0c4c6356.chunk.css.map": "/clujwho23/static/css/main.0c4c6356.chunk.css.map",
+    "static/js/2.653d218c.chunk.js.LICENSE.txt": "/clujwho23/static/js/2.653d218c.chunk.js.LICENSE.txt",
     "static/media/AFRO-map-image.41cd9e6b.png": "/clujwho23/static/media/AFRO-map-image.41cd9e6b.png",
     "static/media/Catedrala1080p_Logo.d4000ed0.jpeg": "/clujwho23/static/media/Catedrala1080p_Logo.d4000ed0.jpeg",
     "static/media/ClujWHOLogo.7e7081ea.png": "/clujwho23/static/media/ClujWHOLogo.7e7081ea.png",
@@ -24,9 +24,9 @@
     "static/media/siglaosmbuna_400.bf419541.png": "/clujwho23/static/media/siglaosmbuna_400.bf419541.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.8dc564d0.js",
-    "static/js/2.68bd0e6a.chunk.js",
-    "static/css/main.e759e975.chunk.css",
-    "static/js/main.69255502.chunk.js"
+    "static/js/runtime-main.2deffae8.js",
+    "static/js/2.653d218c.chunk.js",
+    "static/css/main.0c4c6356.chunk.css",
+    "static/js/main.6e9c43b4.chunk.js"
   ]
 }

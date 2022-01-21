@@ -14,7 +14,9 @@ import ClujWHO_sigla from '../../assets/ClujWho/ClujWHO_sigla.svg'
 
 import sexual_health from '../../assets/ClujWho/sexual_health.png'
 
-import Catedrala1080p_logo from '../../assets/ClujWho/Catedrala1080p_logo.png'
+import Catedrala1080p_logo from '../../assets/ClujWho/Catedrala1080p_Logo.jpeg'
+
+import OSM_Logo from '../../assets/ClujWho/siglaosmbuna_400.png'
 
 import AddCircleIcon from '@mui/icons-material/AddCircle'
 import { Orbit } from './orbit'
@@ -39,7 +41,10 @@ import Health from './../../assets/ClujWho/Health.png'
 
 import SexHea from './../../assets/ClujWho/SexHea.png'
 import UalLth from './../../assets/ClujWho/UalLth.png'
+import Email from '../../assets/ClujWho/icons/Email'
 
+const FaceBookUrl = 'https://www.facebook.com/clujwho'
+const InstaUrl = 'https://www.instagram.com/clujwho/'
 function Home2(props: any): JSX.Element {
   const [ref, inView] = useInView({
     threshold: 0.1
@@ -213,30 +218,46 @@ function Home2(props: any): JSX.Element {
                 </div>
                 <div className="centerOy">Abortion & family planning</div>
 
-                <Virus />
+                <div className="icon">
+                  <Virus />
+                </div>
                 <div className="centerOy">STDs & STIs</div>
 
-                <Teacher />
+                <div className="icon">
+                  <Teacher />
+                </div>
                 <div className="centerOy">Sexual education</div>
 
-                <Tear />
+                <div className="icon">
+                  <Tear />
+                </div>
                 <div className="centerOy">Domestic violence</div>
 
-                <Genders />
+                <div className="icon">
+                  <Genders />
+                </div>
                 <div className="centerOy">Gender discrepancies</div>
 
-                <CancerRibbon />
+                <div className="icon">
+                  <CancerRibbon />
+                </div>
                 <div className="centerOy">Genital cancers</div>
 
-                <Pregnant />
+                <div className="icon">
+                  <Pregnant />
+                </div>
                 <div className="centerOy">
                   Pregnancy and birth complications
                 </div>
 
-                <LGBT />
+                <div className="icon">
+                  <LGBT />
+                </div>
                 <div className="centerOy">LGBTQIA+</div>
 
-                <Condom />
+                <div className="icon">
+                  <Condom />
+                </div>
                 <div className="list">
                   <div className="centerOy paddinTop">Access to :</div>
                   <div className="padding-left">Contraceptives</div>
@@ -276,22 +297,43 @@ function Home2(props: any): JSX.Element {
             </div>
           </div>
 
-          <div className="footer">
-            <div className="facebook-icon-container">
-              <Facebook />
-            </div>
-            <div className="instagram-icon-container">
-              <Instagram />
-            </div>
-          </div>
-
           <div className="mobile-waves-footer ">
             <FooterWaves />
           </div>
 
+          <div className="footer">
+            <div className="facebook-insta-container">
+              <div className="facebook-icon-container">
+                <a className="anchor" href={FaceBookUrl}>
+                  <button className="anchor-button">
+                    <Facebook />
+                  </button>
+                </a>
+              </div>
+              <div className="instagram-icon-container">
+                <a className="anchor-insta" href={InstaUrl}>
+                  <button className="anchor-button-insta">
+                    <Instagram />
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <div className="email-container">
+              <div className="email-icon-container">
+                <Email />
+              </div>
+
+              <h3 className='email'>clujwho@osmcluj.ro</h3>
+            </div>
+
+            <div className="osm-logo-container">
+              <img className="osm-logo" src={OSM_Logo} />
+            </div>
+          </div>
+
           <div className="mobile-fourthContainerWaves  ">
             <WavesBot />
-            {/* <FooterWaves /> */}
           </div>
         </div>
 
@@ -413,25 +455,6 @@ function Home2(props: any): JSX.Element {
       </>
     )
   }
-}
-
-function card(titile: string, content: string) {
-  return (
-    <div className="homePageCardContainer">
-      <div className="homePageCard ">
-        <div className="homePageCardTitile">WHY?</div>
-        <div className="homePageCardContent">
-          For this year’s theme is going to be Sexual Health. In our thinking
-          process in choosing the first edition’s theme we considered that in
-          the pandemic context we let aside the other problems that we have in
-          our world and only discussed pandemic related issues over and over
-          again. We wanted to bring into light another big and old problem,
-          meaning sexual health and the lack of knowledge people unfortunately
-          have on this subject.
-        </div>
-      </div>
-    </div>
-  )
 }
 
 const mapStateToProps = (state: any) => ({

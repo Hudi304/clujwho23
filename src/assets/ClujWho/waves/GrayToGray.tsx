@@ -6,6 +6,7 @@ function GrayToGray() {
       xmlns="http://www.w3.org/2000/svg"
       x="0"
       y="0"
+      width="100vw"
       fill="none"
       viewBox="0 0 900 274"
       enableBackground="new 0 0 900 274"

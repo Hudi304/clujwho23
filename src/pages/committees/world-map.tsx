@@ -213,12 +213,11 @@ export function WorldMapNewColors(props: any) {
     <svg
       className="worldMap"
       xmlns="http://www.w3.org/2000/svg"
-      // width="4181"
+      width="90vw"
       // height="1613"
       viewBox="0 0 4181 1613"
       fill="none"
       enableBackground="new 0 0 4181 1613"
-
     >
       <g id="WorldMapNewColors">
         <g id="AFRO" className="AFROg">

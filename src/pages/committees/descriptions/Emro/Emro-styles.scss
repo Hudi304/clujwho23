@@ -7,11 +7,25 @@
 
   .EMRO-image-container-m {
     width: 90vw;
-    // height: 20vw;
 
     .EMRO-Image {
       width: 90vw;
-      // height: 20vw;
+    }
+  }
+}
+
+.EMRO-web-page-card {
+  background-color: #253551;
+  color: white;
+  width: auto;
+  padding: 2vw;
+  border-radius: 2vh;
+
+  .EMRO-image-container-m {
+    width: 90vw;
+
+    .EMRO-Image {
+      width: 90vw;
     }
   }
 }

@@ -5,8 +5,8 @@ export function WorldMap(props: any) {
   return (
     <svg
       className="worldMap"
-      width="900"
-      height="350"
+      // width="900"
+      // height="350"
       viewBox="0 0 900 350"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

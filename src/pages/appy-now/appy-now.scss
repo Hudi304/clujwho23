@@ -36,11 +36,13 @@ body {
   .applyNowPageGridContainer {
     display: flex;
     justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
 
     .applyNowPageGrid {
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: 10vh 30vh 100vh;
+      grid-template-rows: 10vh 30vh 15vh auto;
       margin-top: 10vh;
 
       .titleContainer {
@@ -97,10 +99,60 @@ body {
         }
       }
 
+      .button-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        gap: 10vh;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+
+        .form-btn {
+          border: 3px solid #72c2eb;
+          border-radius: 5px;
+          background-color: transparent;
+
+          color: #72c2eb;
+          font-weight: 800;
+          font-size: 5vh;
+        }
+
+        .form-btn:hover {
+          border: 3px solid #72c2eb;
+          border-radius: 5px;
+          background-color: transparent;
+          background-color: #cfd8e4;
+
+          color: #72c2eb;
+          font-weight: 800;
+          font-size: 5vh;
+        }
+      }
+
       .paperContainer {
-        width: 90vw;
-        max-width: 1280px;
+        width: 100vw;
         .iframeContainer {
+          width: 80vw;
+
+          .container-form-mobile {
+            height: max-content;
+
+            .iframe-container-mobile {
+              width: 100%;
+              height: max-content;
+
+              .iframe {
+                overflow-y: hidden;
+                overflow: hidden;
+                height: auto;
+                height: max-content;
+                height: 2800px;
+                width: 50vw;
+                background-color: #72c2eb;
+              }
+            }
+          }
         }
       }
     }

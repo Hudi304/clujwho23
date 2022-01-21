@@ -120,8 +120,8 @@ export function ApplyNow(props: any): JSX.Element {
     seconds: 59 - date.getSeconds(),
     minutes: 59 - date.getMinutes(),
     hours: 23 - date.getHours(),
-    days: Math.abs(nrOfDaysBetween(date, registrationStartDate) % 7),
-    weeks: Math.abs((nrOfDaysBetween(date, registrationStartDate) / 7) | 0)
+    days: Math.abs(nrOfDaysBetween(date, CujWhoStart) % 7),
+    weeks: Math.abs((nrOfDaysBetween(date, CujWhoStart) / 7) | 0)
   })
 
   useEffect(() => {
@@ -130,8 +130,8 @@ export function ApplyNow(props: any): JSX.Element {
         seconds: 60 - date.getSeconds(),
         minutes: 60 - date.getMinutes(),
         hours: 24 - date.getHours(),
-        days: Math.abs(nrOfDaysBetween(date, registrationStartDate) % 7),
-        weeks: Math.abs((nrOfDaysBetween(date, registrationStartDate) / 7) | 0)
+        days: Math.abs(nrOfDaysBetween(date, CujWhoStart) % 7),
+        weeks: Math.abs((nrOfDaysBetween(date, CujWhoStart) / 7) | 0)
       }
       setTimeLeft(timeLeft)
     }, 1000)
@@ -289,13 +289,61 @@ export function ApplyNow(props: any): JSX.Element {
               </div>
             </div>
 
+            <div className="button-bar">
+              <button
+                className="form-btn"
+                onClick={() => {
+                  setChair(true)
+                  setDelegate(false)
+                }}
+              >
+                Chair
+              </button>
+              <button
+                className="form-btn"
+                onClick={() => {
+                  setChair(false)
+                  setDelegate(true)
+                }}
+              >
+                Delegate
+              </button>
+            </div>
+
             <div className="paperContainer OxCenter">
-              <CustomPaper width={'80vw'} height={'80vh'}>
-                <div className="iframeContainer OxCenter">
-                  {/* <iframe src="https://www.w3schools.com" title="Iframe Example"></iframe> */}
-                  ... insert formular here ...
-                </div>
-              </CustomPaper>
+              {/* <CustomPaper width={'80vw'} height={'80vh'}> */}
+              <div className="iframeContainer OxCenter">
+                {chair ? (
+                  <div className="container-form-mobile OxCenter">
+                    <div className="iframe-container-mobile OxCenter">
+                      <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLScjPbjWOtO4-cPVf-83h4NuuNeGqZ4LmOl393lEC-J79c1f-Q/viewform?embedded=true"
+                        width="100%"
+                        className="iframe"
+                      >
+                        Loading…
+                      </iframe>
+                    </div>
+                  </div>
+                ) : null}
+
+                {delegate ? (
+                  <div>
+                    <div className="container-form-mobile OxCenter">
+                      <div className="iframe-container-mobile OxCenter">
+                        <iframe
+                          src="https://docs.google.com/forms/d/e/1FAIpQLScj6xGbjMMttGS2VwbbEkUZ9tTWLpOIRFJTexjN1k9jhFtD7A/viewform?embedded=true"
+                          width="100%"
+                          className="iframe"
+                        >
+                          Loading…
+                        </iframe>
+                      </div>
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+              {/* </CustomPaper> */}
             </div>
           </div>
         </div>

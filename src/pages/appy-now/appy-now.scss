@@ -25,6 +25,7 @@ body {
   justify-content: center;
 }
 
+//  ? WEB
 @media only screen and (min-width: 600px) {
   .backgroud-image {
     background-image: url('./../../assets/ClujWhoBackground.png');
@@ -51,8 +52,24 @@ body {
     .applyNowPageGrid {
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: 10vh 30vh 15vh auto;
+      grid-template-rows: 10vh 30vh auto auto;
       margin-top: 10vh;
+      font-weight: 600;
+
+      //!
+
+      .web-timer-containier {
+        // width: 80vh;
+      }
+
+      .explanation-container {
+        .center-gray {
+          display: flex;
+          justify-content: center;
+          color: white;
+          font-size: 3vh;
+        }
+      }
 
       .titleContainer {
         font-size: 50px;

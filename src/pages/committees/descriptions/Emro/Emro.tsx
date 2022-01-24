@@ -50,9 +50,9 @@ export function EMRODescriptionNew(props: any): JSX.Element {
           Yemen.
         </p>
 
-        <a href="https://www.who.int/publications/i/item/WHO-SRH-21.21">
+        {/* <a href="https://www.who.int/publications/i/item/WHO-SRH-21.21">
           www.who.int/publications
-        </a>
+        </a> */}
       </div>
     )
   } else {
@@ -100,9 +100,9 @@ export function EMRODescriptionNew(props: any): JSX.Element {
           Yemen.
         </p>
 
-        <a href="https://www.who.int/publications/i/item/WHO-SRH-21.21">
+        {/* <a href="https://www.who.int/publications/i/item/WHO-SRH-21.21">
           www.who.int/publications
-        </a>
+        </a> */}
       </div>
     )
   }

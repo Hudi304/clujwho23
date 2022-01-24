@@ -81,16 +81,8 @@ export function ApplyNow(props: any): JSX.Element {
   }, [dimensions])
 
   const date = new Date()
-  const registrationStartDate = new Date()
-  registrationStartDate.setMonth(1)
-  registrationStartDate.setDate(1)
-  registrationStartDate.setFullYear(2022)
-  registrationStartDate.setHours(0)
-  registrationStartDate.setMinutes(0)
-  registrationStartDate.setSeconds(0)
 
   const ChairRegEndData = new Date()
-
   ChairRegEndData.setMonth(1)
   ChairRegEndData.setDate(13)
   ChairRegEndData.setFullYear(2022)
@@ -99,16 +91,14 @@ export function ApplyNow(props: any): JSX.Element {
   ChairRegEndData.setSeconds(0)
 
   const DelegatesRegEndData = new Date()
-
   DelegatesRegEndData.setMonth(1)
-  DelegatesRegEndData.setDate(13)
+  DelegatesRegEndData.setDate(20)
   DelegatesRegEndData.setFullYear(2022)
   DelegatesRegEndData.setHours(0)
   DelegatesRegEndData.setMinutes(0)
   DelegatesRegEndData.setSeconds(0)
 
   const CujWhoStart = new Date()
-
   CujWhoStart.setMonth(2)
   CujWhoStart.setDate(4)
   CujWhoStart.setFullYear(2022)
@@ -124,16 +114,51 @@ export function ApplyNow(props: any): JSX.Element {
     weeks: Math.abs((nrOfDaysBetween(date, CujWhoStart) / 7) | 0)
   })
 
+  const [timeLeftChair, setTimeLeftChair] = useState({
+    seconds: 59 - date.getSeconds(),
+    minutes: 59 - date.getMinutes(),
+    hours: 23 - date.getHours(),
+    days: Math.abs(nrOfDaysBetween(date, ChairRegEndData) % 7),
+    weeks: Math.abs((nrOfDaysBetween(date, ChairRegEndData) / 7) | 0)
+  })
+
+  const [timeLeftDel, setTimeLeftDel] = useState({
+    seconds: 59 - date.getSeconds(),
+    minutes: 59 - date.getMinutes(),
+    hours: 23 - date.getHours(),
+    days: Math.abs(nrOfDaysBetween(date, DelegatesRegEndData) % 7),
+    weeks: Math.abs((nrOfDaysBetween(date, DelegatesRegEndData) / 7) | 0)
+  })
+
   useEffect(() => {
     const timer = setTimeout(() => {
       const timeLeft = {
         seconds: 60 - date.getSeconds(),
-        minutes: 60 - date.getMinutes(),
-        hours: 24 - date.getHours(),
+        minutes: 59 - date.getMinutes(),
+        hours: 23 - date.getHours(),
         days: Math.abs(nrOfDaysBetween(date, CujWhoStart) % 7),
         weeks: Math.abs((nrOfDaysBetween(date, CujWhoStart) / 7) | 0)
       }
+
+      const timeLeftChair = {
+        seconds: 60 - date.getSeconds(),
+        minutes: 59 - date.getMinutes(),
+        hours: 23 - date.getHours(),
+        days: Math.abs(nrOfDaysBetween(date, ChairRegEndData) % 7),
+        weeks: Math.abs((nrOfDaysBetween(date, ChairRegEndData) / 7) | 0)
+      }
+
+      const timeLeftDel = {
+        seconds: 60 - date.getSeconds(),
+        minutes: 59 - date.getMinutes(),
+        hours: 23 - date.getHours(),
+        days: Math.abs(nrOfDaysBetween(date, DelegatesRegEndData) % 7),
+        weeks: Math.abs((nrOfDaysBetween(date, DelegatesRegEndData) / 7) | 0)
+      }
+
       setTimeLeft(timeLeft)
+      setTimeLeftChair(timeLeftChair)
+      setTimeLeftDel(timeLeftDel)
     }, 1000)
     return () => clearTimeout(timer)
   })
@@ -256,36 +281,146 @@ export function ApplyNow(props: any): JSX.Element {
       <div>
         <div className="applyNowPageGridContainer OxCenter backgroud-image ">
           <div className="applyNowPageGrid ">
-            <p className="titleContainer xOyCenter">
-              The experience of your studenthood starts in:{' '}
-            </p>
-            <div className="countDownContainer xOyCenter">
-              <div className="counterContainer">
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.weeks}`}</div>
-                  <p className="cardLabel xOyCenter">Weeks</p>
-                </div>
-                <div className="xOyCenter points "> : </div>
+            {/* <p className="titleContainer xOyCenter">
+              The experience of your studenthood starts in:
+            </p> */}
 
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.days}`}</div>
-                  <p className="cardLabel xOyCenter">Days</p>
+            {!chair && !delegate ? (
+              <>
+                <p className="titleContainer xOyCenter">
+                The experience of your studenthood starts in:
+                </p>
+              </>
+            ) : null}
+
+            {chair ? (
+              <>
+                <p className="titleContainer xOyCenter">
+                  Chair Registration ends in:
+                </p>
+              </>
+            ) : null}
+
+            {delegate ? (
+              <>
+                <p className="titleContainer xOyCenter">
+                  Delegates Registration ends in:
+                </p>
+              </>
+            ) : null}
+
+            {!chair && !delegate ? (
+              <div className="countDownContainer xOyCenter">
+                <div className="counterContainer">
+                  <div className="cardContainer">
+                    <div className="counterCard">{`${timeLeft.weeks}`}</div>
+                    <p className="cardLabel xOyCenter">Weeks</p>
+                  </div>
+                  <div className="xOyCenter points "> : </div>
+
+                  <div className="cardContainer">
+                    <div className="counterCard">{`${timeLeft.days}`}</div>
+                    <p className="cardLabel xOyCenter">Days</p>
+                  </div>
+                  <div className="xOyCenter points "> : </div>
+                  <div className="cardContainer">
+                    <div className="counterCard">{`${timeLeft.hours}`}</div>
+                    <p className="cardLabel xOyCenter">Hours</p>
+                  </div>
+                  <div className="xOyCenter points "> : </div>
+                  <div className="cardContainer">
+                    <div className="counterCard">{`${timeLeft.minutes}`}</div>
+                    <p className="cardLabel xOyCenter">Minutes</p>
+                  </div>
+                  <div className="xOyCenter points "> : </div>
+                  <div className="cardContainer">
+                    <div className="counterCard">{`${timeLeft.seconds}`}</div>
+                    <p className="cardLabel xOyCenter">Seconds</p>
+                  </div>
                 </div>
-                <div className="xOyCenter points "> : </div>
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.hours}`}</div>
-                  <p className="cardLabel xOyCenter">Hours</p>
+              </div>
+            ) : null}
+
+            {delegate ? (
+              <div>
+                <div className="countDownContainer xOyCenter">
+                  <div className="counterContainer">
+                    <div className="cardContainer">
+                      <div className="counterCard">{`${timeLeftDel.weeks}`}</div>
+                      <p className="cardLabel xOyCenter">Weeks</p>
+                    </div>
+                    <div className="xOyCenter points "> : </div>
+
+                    <div className="cardContainer">
+                      <div className="counterCard">{`${timeLeftDel.days}`}</div>
+                      <p className="cardLabel xOyCenter">Days</p>
+                    </div>
+                    <div className="xOyCenter points "> : </div>
+                    <div className="cardContainer">
+                      <div className="counterCard">{`${timeLeftDel.hours}`}</div>
+                      <p className="cardLabel xOyCenter">Hours</p>
+                    </div>
+                    <div className="xOyCenter points "> : </div>
+                    <div className="cardContainer">
+                      <div className="counterCard">{`${timeLeftDel.minutes}`}</div>
+                      <p className="cardLabel xOyCenter">Minutes</p>
+                    </div>
+                    <div className="xOyCenter points "> : </div>
+                    <div className="cardContainer">
+                      <div className="counterCard">{`${timeLeftDel.seconds}`}</div>
+                      <p className="cardLabel xOyCenter">Seconds</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="xOyCenter points "> : </div>
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.minutes}`}</div>
-                  <p className="cardLabel xOyCenter">Minutes</p>
+              </div>
+            ) : null}
+
+            {chair ? (
+              <div>
+                <div className="countDownContainer xOyCenter">
+                  <div className="counterContainer">
+                    <div className="cardContainer">
+                      <div className="counterCard">{`${timeLeftChair.weeks}`}</div>
+                      <p className="cardLabel xOyCenter">Weeks</p>
+                    </div>
+                    <div className="xOyCenter points "> : </div>
+
+                    <div className="cardContainer">
+                      <div className="counterCard">{`${timeLeftChair.days}`}</div>
+                      <p className="cardLabel xOyCenter">Days</p>
+                    </div>
+                    <div className="xOyCenter points "> : </div>
+                    <div className="cardContainer">
+                      <div className="counterCard">{`${timeLeftChair.hours}`}</div>
+                      <p className="cardLabel xOyCenter">Hours</p>
+                    </div>
+                    <div className="xOyCenter points "> : </div>
+                    <div className="cardContainer">
+                      <div className="counterCard">{`${timeLeftChair.minutes}`}</div>
+                      <p className="cardLabel xOyCenter">Minutes</p>
+                    </div>
+                    <div className="xOyCenter points "> : </div>
+                    <div className="cardContainer">
+                      <div className="counterCard">{`${timeLeftChair.seconds}`}</div>
+                      <p className="cardLabel xOyCenter">Seconds</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="xOyCenter points "> : </div>
-                <div className="cardContainer">
-                  <div className="counterCard">{`${timeLeft.seconds}`}</div>
-                  <p className="cardLabel xOyCenter">Seconds</p>
-                </div>
+              </div>
+            ) : null}
+
+            <div className="explanation-container">
+              <div className="center-gray">
+                The fee for registering as a delegate is 30€, it includes:
+                coffee breaks, lunch and social events.
+              </div>
+              <div className="center-gray">
+                You will receive the payment info in your acceptance email.
+              </div>
+
+              <div className="center-gray">
+                {' '}
+                * No accomodation is provided.{' '}
               </div>
             </div>
 

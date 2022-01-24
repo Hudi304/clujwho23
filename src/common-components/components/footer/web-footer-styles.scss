@@ -36,17 +36,22 @@
         height: 10vh;
         background-color: aliceblue;
         z-index: 7;
+        cursor: pointer;
 
         .web-anchor {
           z-index: 7;
           width: 10vh;
           height: 10vh;
+          cursor: pointer;
+
 
           .web-anchor-button {
             width: 10vh;
             height: 10vh;
             border: none;
             padding: 0;
+            cursor: pointer;
+
           }
         }
       }
@@ -55,11 +60,15 @@
         width: 10vh;
         height: 10vh;
         z-index: 8;
+        cursor: pointer;
+
 
         .web-anchor-insta {
           z-index: 8;
           width: 10vh;
           height: 10vh;
+          cursor: pointer;
+
 
           .web-anchor-button-insta {
             width: 10vh;
@@ -67,6 +76,8 @@
             border: none;
             padding: 0;
             background-color: transparent;
+            cursor: pointer;
+
           }
         }
       }

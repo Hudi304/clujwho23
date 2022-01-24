@@ -482,6 +482,7 @@ element {
         height: 10vw;
         background-color: aliceblue;
         z-index: 7;
+        cursor: pointer;
 
         .anchor {
           z-index: 7;
@@ -602,7 +603,7 @@ element {
     .homePageTitleGridContainer {
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 1fr 0.5fr 1fr;
       height: 100%;
       width: 100vw;
 
@@ -627,6 +628,15 @@ element {
           color: #17a0df;
           font-size: 4vh;
         }
+      }
+
+      .home-page-date{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #17a0df;
+        font-size: 5vh;
+
       }
     }
 
@@ -699,7 +709,14 @@ element {
         padding-right: 10vw;
         font-size: 25px;
         font-weight: 600;
-        text-align: center;
+        text-align: justify;
+        margin-left: 4vh;
+        margin-right: 4vh;
+
+        .title{
+          display: flex;
+          justify-content: center;
+        }
       }
     }
 

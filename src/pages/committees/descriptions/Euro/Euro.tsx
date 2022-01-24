@@ -157,7 +157,7 @@ export function EURODescriptionNew(props: any): JSX.Element {
           </li>
         </ul>
 
-        <p>References</p>
+        {/* <p>References</p>
         <ul>
           <li>
             <a href="https://apps.who.int/iris/bitstream/handle/10665/345018/WHO-EURO-2021-3230-42989-60075-eng.pdf?sequence=1&isAllowed=y">
@@ -174,7 +174,7 @@ export function EURODescriptionNew(props: any): JSX.Element {
               www.euro.who.int/en/health-topics
             </a>
           </li>
-        </ul>
+        </ul> */}
       </div>
     )
   }

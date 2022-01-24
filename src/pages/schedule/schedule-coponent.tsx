@@ -51,68 +51,75 @@ export function Schedule(props: any): JSX.Element {
     }
   }, [dimensions])
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const now = new Date()
-      if (now.getMinutes() % 15 == 0 && now.getSeconds() % 10 == 0) {
-        console.log('dsadas')
-        setSundayBubbleOpt(getSundayBubbleOptions(now))
-        setFridayBubbleOpt(getFridayBubbleOptions(now))
-        setSaturdayBubbleOpt(getSaturdayBubbleOptions(now))
-      }
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     const now = new Date()
+  //     if (now.getMinutes() % 15 == 0 && now.getSeconds() % 10 == 0) {
+  //       console.log('dsadas')
+  //       setSundayBubbleOpt(getSundayBubbleOptions(now))
+  //       setFridayBubbleOpt(getFridayBubbleOptions(now))
+  //       setSaturdayBubbleOpt(getSaturdayBubbleOptions(now))
+  //     }
 
-      setTimeLeft(!timeLeft)
-    }, 1000)
-    return () => clearTimeout(timer)
-  })
+  //     setTimeLeft(!timeLeft)
+  //   }, 1000)
+  //   return () => clearTimeout(timer)
+  // })
 
   function ScheduleComponentWebFriday() {
     return (
       <div className="scheduleComponentContainer ">
-        <div className="scheduleOxGrid ">
-          <p className="scheduleTitle " style={{ paddingLeft: '7vh' }}>
-            Friday
-          </p>
-          <p></p>
-          <p></p>
 
-          <div className="scheduleOyHourGrid ">
-            {hoursArrayFriday.map((hour, index) => {
-              return (
-                <div key={index * 13} className="scheduleHourGridItem ">
-                  {hour}
-                </div>
-              )
-            })}
-          </div>
-          <div className="scheduleOyBubbleGrid ">
-            {bubbleOptionsArrayFriday.map((bubbleOpt, index) => {
-              return (
-                <div key={index * 5} className="scheduleBubbleGridItem">
-                  <Bubble
-                    key={index * 17}
-                    connectTop={bubbleOpt.connectTop}
-                    connectBotomn={bubbleOpt.connectBotomn}
-                    colorHashT={bubbleOpt.colorHashT}
-                    colorHashC={bubbleOpt.colorHashC}
-                    colorHashB={bubbleOpt.colorHashB}
-                    width="5vh"
-                    height="5vh"
-                  ></Bubble>
-                </div>
-              )
-            })}
-          </div>
-          <div className="scheduleOyActivityGrid">
-            {activityArrayFiday.map((activity, index) => {
-              return (
-                <div key={index * 19} className="scheduleActivityGridItem">
-                  {activity}
-                </div>
-              )
-            })}
+        <div className='scheduleComponentContainerFlex '>
+
+          {/* <div className='date'>dasdsa</div> */}
+
+          <div className="scheduleOxGrid ">
+            <p className="scheduleTitle " style={{ paddingLeft: '7vh' }}>
+              Friday
+            </p>
+            <p></p>
+            <p></p>
+
+            <div className="scheduleOyHourGrid ">
+              {hoursArrayFriday.map((hour, index) => {
+                return (
+                  <div key={index * 13} className="scheduleHourGridItem ">
+                    {hour}
+                  </div>
+                )
+              })}
+            </div>
+            <div className="scheduleOyBubbleGrid ">
+              {bubbleOptionsArrayFriday.map((bubbleOpt, index) => {
+                return (
+                  <div key={index * 5} className="scheduleBubbleGridItem">
+                    <Bubble
+                      key={index * 17}
+                      connectTop={bubbleOpt.connectTop}
+                      connectBotomn={bubbleOpt.connectBotomn}
+                      colorHashT={bubbleOpt.colorHashT}
+                      colorHashC={bubbleOpt.colorHashC}
+                      colorHashB={bubbleOpt.colorHashB}
+                      width="5vh"
+                      height="5vh"
+                    ></Bubble>
+                  </div>
+                )
+              })}
+            </div>
+            <div className="scheduleOyActivityGrid">
+              {activityArrayFiday.map((activity, index) => {
+                return (
+                  <div key={index * 19} className="scheduleActivityGridItem">
+                    {activity}
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
+
       </div>
     )
   }

@@ -51,28 +51,24 @@ export function Schedule(props: any): JSX.Element {
     }
   }, [dimensions])
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     const now = new Date()
-  //     if (now.getMinutes() % 15 == 0 && now.getSeconds() % 10 == 0) {
-  //       console.log('dsadas')
-  //       setSundayBubbleOpt(getSundayBubbleOptions(now))
-  //       setFridayBubbleOpt(getFridayBubbleOptions(now))
-  //       setSaturdayBubbleOpt(getSaturdayBubbleOptions(now))
-  //     }
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const now = new Date()
+      if (now.getMinutes() % 15 == 0 && now.getSeconds() % 10 == 0) {
+        console.log('dsadas')
+        setSundayBubbleOpt(getSundayBubbleOptions(now))
+        setFridayBubbleOpt(getFridayBubbleOptions(now))
+        setSaturdayBubbleOpt(getSaturdayBubbleOptions(now))
+      }
 
-  //     setTimeLeft(!timeLeft)
-  //   }, 1000)
-  //   return () => clearTimeout(timer)
-  // })
+      setTimeLeft(!timeLeft)
+    }, 1000)
+    return () => clearTimeout(timer)
+  })
 
   function ScheduleComponentWebFriday() {
     return (
       <div className="scheduleComponentContainer ">
-
-        <div className='scheduleComponentContainerFlex '>
-
-          {/* <div className='date'>dasdsa</div> */}
 
           <div className="scheduleOxGrid ">
             <p className="scheduleTitle " style={{ paddingLeft: '7vh' }}>
@@ -118,7 +114,6 @@ export function Schedule(props: any): JSX.Element {
               })}
             </div>
           </div>
-        </div>
 
       </div>
     )

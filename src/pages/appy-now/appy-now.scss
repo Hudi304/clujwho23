@@ -204,8 +204,10 @@ body {
     .apply-now-grid {
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: auto auto auto auto;
-      margin-top: 7vh;
+      // grid-template-rows: auto auto auto auto;
+      grid-template-rows: 8vh 12vh 12vh 8vh 58vh;
+
+      margin-top: 5vh;
       height: max-content;
 
       .titleContainerMobile {
@@ -214,7 +216,22 @@ body {
         font-weight: 700;
         color: #d8e0e9;
         filter: drop-shadow(1vw 1vw 1vw rgb(43, 43, 43));
-        margin-bottom: 2vh;
+        margin-bottom: 1vh;
+      }
+
+      .explanation-container{
+        margin-top: 1vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .center-gray {
+          display: flex;
+          justify-content: center;
+          color: white;
+          font-size: 3vw;
+        }
       }
 
       .button-bar {
@@ -260,7 +277,7 @@ body {
             overflow: hidden;
             height: auto;
             height: max-content;
-            height: 70vh;
+            height: 55vh;
           }
         }
       }

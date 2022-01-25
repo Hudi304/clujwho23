@@ -168,18 +168,15 @@ export function ApplyNow(props: any): JSX.Element {
       <div>
         <div className="apply-now-container OxCenter">
           <div className="apply-now-grid">
-            {/* <p className="titleContainerMobile xOyCenter">
-              The experience of your studenthood
-            </p>
-            <p className="titleContainerMobile xOyCenter">starts in:</p> */}
+            
 
             {!chair && !delegate ? (
-              <>
+              <div>
                 <p className="titleContainerMobile xOyCenter">
                   The experience of your studenthood
                 </p>
                 <p className="titleContainerMobile xOyCenter">starts in:</p>
-              </>
+              </div>
             ) : null}
 
             {chair ? (
@@ -215,6 +212,21 @@ export function ApplyNow(props: any): JSX.Element {
                 <Timer endDate={DelegatesRegEndData} />
               </div>
             ) : null}
+
+            <div className="explanation-container">
+              <div className="center-gray">
+                The fee for registering as a delegate is 30€,
+              </div>
+
+              <div className="center-gray">
+                it includes: coffee breaks, lunch and social events.
+              </div>
+              <div className="center-gray">
+                You will receive the payment info in your acceptance email.
+              </div>
+
+              <div className="center-gray">* No accomodation is provided.</div>
+            </div>
 
             <div className="button-bar">
               <button
@@ -288,7 +300,7 @@ export function ApplyNow(props: any): JSX.Element {
             {!chair && !delegate ? (
               <>
                 <p className="titleContainer xOyCenter">
-                The experience of your studenthood starts in:
+                  The experience of your studenthood starts in:
                 </p>
               </>
             ) : null}

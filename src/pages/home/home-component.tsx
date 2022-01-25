@@ -115,13 +115,18 @@ function Home2(props: any): JSX.Element {
                   First of its kind in Eastern Europe
                 </div>
               </div>
+
+              <div className="mobile-homePageDateContainer">
+                <b> March 4-6, 2022</b>
+              </div>
             </div>
           </div>
 
           <div className="mobile-fourthContainer " ref={ref5}>
             <div className="mobile-fourthContainer-content-container ">
               <div className="mobile-fourthContainer-content ">
-                <p>WHY pick sexual health during a global pandemic?</p>
+                {/* <p>WHY pick sexual health during a global pandemic?</p> */}
+                <p className="title">This year, the theme is Sexual Health</p>
                 <p>
                   When the whole world is watching over the coronavirus, we feel
                   other, very pressing global health threats have taken the back
@@ -139,10 +144,11 @@ function Home2(props: any): JSX.Element {
             </div>
 
             <div
-              className={`mobile-thirdContainerLeft ${inView5
+              className={`mobile-thirdContainerLeft ${
+                inView5
                   ? 'mobile-thirdContainerLeftInside'
                   : 'mobile-thirdContainerLeftOutside'
-                }`}
+              }`}
             >
               <div className="mobile-leftRect  ">
                 <img className="sexual-image" src={SexHea} />
@@ -151,10 +157,11 @@ function Home2(props: any): JSX.Element {
             </div>
 
             <div
-              className={`mobile-thirdContainerRight ${inView5
+              className={`mobile-thirdContainerRight ${
+                inView5
                   ? 'mobile-thirdContainerRightInside'
                   : 'mobile-thirdContainerRightOutside'
-                }`}
+              }`}
             >
               <div className="mobile-rightTri  "></div>
               <div className="mobile-rightRect  ">
@@ -169,23 +176,26 @@ function Home2(props: any): JSX.Element {
 
           <div className="mobile-fifthContainer " ref={ref6}>
             <div
-              className={`mobile-orbit-container ${globeAnimation(inView6)
+              className={`mobile-orbit-container ${
+                globeAnimation(inView6)
                   ? 'mobile-orbit-container-animation'
                   : ''
-                }`}
+              }`}
             >
               <Orbit
-                className={`mobile-orbit ${globeAnimation(inView6) ? 'mobile-orbit-animation' : ''
-                  }`}
+                className={`mobile-orbit ${
+                  globeAnimation(inView6) ? 'mobile-orbit-animation' : ''
+                }`}
               />
             </div>
 
             <div className="mobile-globe-container-container">
               <div
-                className={`mobile-globe-container ${globeAnimation(inView6)
+                className={`mobile-globe-container ${
+                  globeAnimation(inView6)
                     ? 'mobile-globe-container-animation'
                     : ''
-                  }`}
+                }`}
               >
                 <Globe />
               </div>
@@ -354,11 +364,8 @@ function Home2(props: any): JSX.Element {
                 </div>
               </div>
 
-              <div className='home-page-date'>
-                <b>
-                  March 4-6, 2022
-
-                </b>
+              <div className="home-page-date">
+                <b>March 4-6, 2022</b>
               </div>
             </div>
           </div>
@@ -370,7 +377,7 @@ function Home2(props: any): JSX.Element {
               <div className="web-fourthContainer-content ">
                 {/* <p>WHY pick sexual health during a global pandemic?</p>
                  */}
-                <p className='title'>This year, the theme is Sexual Health</p>
+                <p className="title">This year, the theme is Sexual Health</p>
 
                 <p>
                   When the whole world is watching over the coronavirus, we feel
@@ -389,10 +396,11 @@ function Home2(props: any): JSX.Element {
             </div>
 
             <div
-              className={`web-thirdContainerLeft ${inViewWebCourtains
+              className={`web-thirdContainerLeft ${
+                inViewWebCourtains
                   ? 'web-thirdContainerLeftInside'
                   : 'web-thirdContainerLeftOutside'
-                }`}
+              }`}
             >
               <div className="web-leftRect  ">
                 <img className="web-sexual-image" src={SexHea} />
@@ -400,10 +408,11 @@ function Home2(props: any): JSX.Element {
             </div>
 
             <div
-              className={`web-thirdContainerRight ${inViewWebCourtains
+              className={`web-thirdContainerRight ${
+                inViewWebCourtains
                   ? 'web-thirdContainerRightInside'
                   : 'web-thirdContainerRightOutside'
-                }`}
+              }`}
             >
               <div className="web-rightRect  ">
                 <img className="web-health-image" src={UalLth} />
@@ -417,19 +426,22 @@ function Home2(props: any): JSX.Element {
 
           <div className="web-fifthContainer " ref={ref6}>
             <div
-              className={`web-orbit-container ${globeAnimation(inView6) ? 'web-orbit-container-animation' : ''
-                }`}
+              className={`web-orbit-container ${
+                globeAnimation(inView6) ? 'web-orbit-container-animation' : ''
+              }`}
             >
               <Orbit
-                className={`web-orbit ${globeAnimation(inView6) ? 'web-orbit-animation' : ''
-                  }`}
+                className={`web-orbit ${
+                  globeAnimation(inView6) ? 'web-orbit-animation' : ''
+                }`}
               />
             </div>
 
             <div className="web-globe-container-container ">
               <div
-                className={`web-globe-container ${globeAnimation(inView6) ? 'web-globe-container-animation' : ''
-                  }`}
+                className={`web-globe-container ${
+                  globeAnimation(inView6) ? 'web-globe-container-animation' : ''
+                }`}
               >
                 <Globe />
               </div>
@@ -863,4 +875,3 @@ function Globe(style: any, className: string) {
     </div>
   )
 }
-

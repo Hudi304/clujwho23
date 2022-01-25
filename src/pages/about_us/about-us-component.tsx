@@ -44,13 +44,22 @@ export function AboutUs(props: any): JSX.Element {
             <div className="about-us-content">
               <h2 className="title">WHO?</h2>
               <p>
-                A group of students from Cluj-Napoca who are planning to organize the first Model WHO in Eastern Europe.
+                A group of students from Cluj-Napoca who are planning to
+                organize the first Model WHO in Eastern Europe.
               </p>
               <p>
-                Inspired by similar, well-established simulations all around the world, we believe it is time to bring this type of conference closer to students in our geographical area.
+                Inspired by similar, well-established simulations all around the
+                world, we believe it is time to bring this type of conference
+                closer to students in our geographical area.
               </p>
               <p>
-                This is a fully student-led conference, beginning with the person who first came up with this exciting idea, Ioana Tăbușcă, the organizing committee, and finally, our dedicated volunteers. We are all working to help put together and popularize this type of simulation, in the hope of putting Cluj-Napoca on the Model WHO map, alongside more well-known conferences happening in Paris, London, Rotterdam and Sheffield.
+                This is a fully student-led conference, beginning with the
+                person who first came up with this exciting idea, Ioana Tăbușcă,
+                the organizing committee, and finally, our dedicated volunteers.
+                We are all working to help put together and popularize this type
+                of simulation, in the hope of putting Cluj-Napoca on the Model
+                WHO map, alongside more well-known conferences happening in
+                Paris, London, Rotterdam and Sheffield.
               </p>
               <h2 className="title">WHAT?</h2>
               <p>
@@ -60,8 +69,8 @@ export function AboutUs(props: any): JSX.Element {
               <p>
                 For the first time in our part of the continent, students have
                 the opportunity to embody a country's WHO Ambassador and see for
-                themselves how crucial global public health decions are
-                discussed, assesed and ultimately taken. Similar to MUNs, our
+                themselves how crucial global public health decisions are
+                discussed, assessed and ultimately taken. Similar to MUNs, our
                 participants have the chance to take part in engaging debates,
                 expand their knowledge and better their team-work, diplomacy and
                 negotiating skills.
@@ -76,8 +85,8 @@ export function AboutUs(props: any): JSX.Element {
                 be solved in the real world.
               </p>
               <p>
-                If you need any explanation of the aforementioned terms, check
-                our instagram page. We encourage everyone to participate, even
+                If you need any clarification on the aforementioned terms, check
+                our Instagram page. We encourage everyone to participate, even
                 if it sounds intimidating at first glance!
               </p>
               <h2 className="title">WHY?</h2>
@@ -103,7 +112,7 @@ export function AboutUs(props: any): JSX.Element {
               <p>
                 With ClujWHO, our goal is to raise awareness and further the
                 understanding of this decision-making process, as it has a big,
-                although invisible, impact on all of our lives.
+                although invisible, impact on all our lives.
               </p>
             </div>
             <div>
@@ -134,10 +143,19 @@ export function AboutUs(props: any): JSX.Element {
                     organize the first Model WHO in Eastern Europe.
                   </p>
                   <p>
-                    Inspired by similar, well-established simulations all around the world, we believe it is time to bring this type of conference closer to students in our geographical area.
+                    Inspired by similar, well-established simulations all around
+                    the world, we believe it is time to bring this type of
+                    conference closer to students in our geographical area.
                   </p>
                   <p>
-                    This is a fully student-led conference, beginning with the person who first came up with this exciting idea, Ioana Tăbușcă, the organizing committee, and finally, our dedicated volunteers. We are all working to help put together and popularize this type of simulation, in the hope of putting Cluj-Napoca on the Model WHO map, alongside more well-known conferences happening in Paris, London, Rotterdam and Sheffield.
+                    This is a fully student-led conference, beginning with the
+                    person who first came up with this exciting idea, Ioana
+                    Tăbușcă, the organizing committee, and finally, our
+                    dedicated volunteers. We are all working to help put
+                    together and popularize this type of simulation, in the hope
+                    of putting Cluj-Napoca on the Model WHO map, alongside more
+                    well-known conferences happening in Paris, London, Rotterdam
+                    and Sheffield.
                   </p>
                 </div>
               </div>
@@ -153,13 +171,27 @@ export function AboutUs(props: any): JSX.Element {
                     in Geneva.
                   </p>
                   <p>
-                    For the first time in our part of the continent, students have the opportunity to embody a country's WHO Ambassador and see for themselves how crucial global public health decisions are discussed, assessed and ultimately taken. Similar to MUNs, our participants have the chance to take part in engaging debates, expand their knowledge and better their team-work, diplomacy and negotiating skills.
+                    For the first time in our part of the continent, students
+                    have the opportunity to embody a country's WHO Ambassador
+                    and see for themselves how crucial global public health
+                    decisions are discussed, assessed and ultimately taken.
+                    Similar to MUNs, our participants have the chance to take
+                    part in engaging debates, expand their knowledge and better
+                    their team-work, diplomacy and negotiating skills.
                   </p>
                   <p>
-                  Moreover, they are able to meet new like-minded people, make connections and learn from new experiences. The conference has a well-established schedule, consisting of debate sessions (Regional Office Sessions and Plenaries), coffee and lunch breaks, and Speaker Sessions in order for them to better understand the year's theme and how the issues they discuss can be solved in the real world.
+                    Moreover, they are able to meet new like-minded people, make
+                    connections and learn from new experiences. The conference
+                    has a well-established schedule, consisting of debate
+                    sessions (Regional Office Sessions and Plenaries), coffee
+                    and lunch breaks, and Speaker Sessions in order for them to
+                    better understand the year's theme and how the issues they
+                    discuss can be solved in the real world.
                   </p>
                   <p>
-                  If you need any clarification on the aforementioned terms, check our Instagram page. We encourage everyone to participate, even if it sounds intimidating at first glance!
+                    If you need any clarification on the aforementioned terms,
+                    check our Instagram page. We encourage everyone to
+                    participate, even if it sounds intimidating at first glance!
                   </p>
                 </div>
               </div>

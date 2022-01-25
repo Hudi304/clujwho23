@@ -110,7 +110,7 @@ export function NavBarComponent(props: any): JSX.Element {
             </IconButton>
           </div>
           <div className="nav-bar-mobile-title "> ClujWHO</div>
-          <div className=""> asd</div>
+          <div className=""></div>
         </div>
 
         <div>

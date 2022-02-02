@@ -3,7 +3,7 @@ import { NavBarComponent } from '../login/components/navbar/navbar-component'
 
 import './committees.scss'
 import { WorldMap, WorldMapNewColors } from './world-map'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import { EURODescriptionNew } from './descriptions/Euro/Euro'
 import { AFRODescriptionNew } from './descriptions/Afro/Afro'
@@ -22,15 +22,18 @@ import WorldMapWpro from './descriptions/Wpro/WproMap'
 import { Helmet } from 'react-helmet'
 
 export function Committees(props: any): JSX.Element {
-  const [ref, inView] = useInView({
-    threshold: 0.5
-  })
-
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight
   })
   const [mobile, setMobile] = useState(false)
+
+  const AFRO_desc_ref = useRef<any>(null)
+  const EMRO_desc_ref = useRef<any>(null)
+  const EURO_desc_ref = useRef<any>(null)
+  const AMRO_desc_ref = useRef<any>(null)
+  const WPRO_desc_ref = useRef<any>(null)
+  const SEARO_desc_ref = useRef<any>(null)
 
   useEffect(() => {
     if (dimensions.width < 600) {
@@ -40,11 +43,31 @@ export function Committees(props: any): JSX.Element {
     }
   }, [dimensions])
 
-  console.log(mobile)
-
-  const [ref1, inView1] = useInView({
-    threshold: 0.99
-  })
+  function handleMapClick(comm: string) {
+    const scrollOptions = { behavior: 'smooth', block: 'center' }
+    switch (comm) {
+      case 'AFRO':
+        AFRO_desc_ref.current.scrollIntoView(scrollOptions)
+        break
+      case 'EMRO':
+        EMRO_desc_ref.current.scrollIntoView(scrollOptions)
+        break
+      case 'EURO':
+        EURO_desc_ref.current.scrollIntoView(scrollOptions)
+        break
+      case 'AMRO':
+        AMRO_desc_ref.current.scrollIntoView(scrollOptions)
+        break
+      case 'WPRO':
+        WPRO_desc_ref.current.scrollIntoView(scrollOptions)
+        break
+      case 'SEARO':
+        SEARO_desc_ref.current.scrollIntoView(scrollOptions)
+        break
+      default:
+        break
+    }
+  }
 
   if (mobile) {
     return (
@@ -85,181 +108,200 @@ export function Committees(props: any): JSX.Element {
           <div className="committees-web-page-grid">
             <div className="map-container-container ">
               <div className="map-container">
-                <WorldMap />
+                <WorldMap onCommitteeClick={handleMapClick} />
               </div>
             </div>
 
             <div className="descriptions-list-container ">
               <div className="descriptions-list">
-                <EuroCard mobile={mobile} />
+                <EuroCard refCont={EURO_desc_ref} mobile={mobile} />
 
-                <AfroCard mobile={mobile} />
+                <AfroCard refCont={AFRO_desc_ref} mobile={mobile} />
 
-                <EmroCard mobile={mobile} />
+                <EmroCard refCont={EMRO_desc_ref} mobile={mobile} />
 
-                <AmroCard mobile={mobile} />
+                <AmroCard refCont={AMRO_desc_ref} mobile={mobile} />
 
-                <SearoCard mobile={mobile} />
+                <SearoCard refCont={SEARO_desc_ref} mobile={mobile} />
 
-                <WproCard mobile={mobile} />
+                <WproCard refCont={WPRO_desc_ref} mobile={mobile} />
               </div>
             </div>
           </div>
         </div>
 
         <div className={`nav-bar-container`}>
-          <NavBarComponent inView={inView} mobile={mobile} />
+          <NavBarComponent inView={false} mobile={mobile} />
         </div>
       </div>
     )
   }
 }
 
-function EuroCard(props: { mobile: any }) {
+function EuroCard(props: { mobile: any; refCont: any }) {
   const [ref, inView] = useInView({
     threshold: 0.99
   })
 
+  const { refCont } = props
+
   return (
-    <div className="description-list-item" ref={ref}>
-      <div
-        className={`description-map-container ${
-          inView ? 'description-map-container-left' : null
-        }`}
-      >
-        <WorldMapEuro />
-      </div>
-      <div
-        className={`description-container ${
-          inView ? 'description-container-right' : null
-        }`}
-      >
-        <EURODescriptionNew mobile={props.mobile} />
+    <div ref={refCont}>
+      <div className="description-list-item" ref={ref}>
+        <div
+          className={`description-map-container ${
+            inView ? 'description-map-container-left' : null
+          }`}
+        >
+          <WorldMapEuro />
+        </div>
+        <div
+          className={`description-container ${
+            inView ? 'description-container-right' : null
+          }`}
+        >
+          <EURODescriptionNew mobile={props.mobile} />
+        </div>
       </div>
     </div>
   )
 }
 
-function EmroCard(props: { mobile: any }) {
+function EmroCard(props: { mobile: any; refCont: any }) {
   const [ref, inView] = useInView({
     threshold: 0.99
   })
+  const { refCont } = props
 
   return (
-    <div className="description-list-item" ref={ref}>
-      <div
-        className={`description-map-container ${
-          inView ? 'description-map-container-left' : null
-        }`}
-      >
-        <WorldMapEmro />
-      </div>
-      <div
-        className={`description-container ${
-          inView ? 'description-container-right' : null
-        }`}
-      >
-        <EMRODescriptionNew mobile={props.mobile} />
+    <div ref={refCont}>
+      <div className="description-list-item" ref={ref}>
+        <div
+          className={`description-map-container ${
+            inView ? 'description-map-container-left' : null
+          }`}
+        >
+          <WorldMapEmro />
+        </div>
+        <div
+          className={`description-container ${
+            inView ? 'description-container-right' : null
+          }`}
+        >
+          <EMRODescriptionNew mobile={props.mobile} />
+        </div>
       </div>
     </div>
   )
 }
 
-function AfroCard(props: { mobile: any }) {
+function AfroCard(props: { mobile: any; refCont: any }) {
   const [ref, inView] = useInView({
     threshold: 0.99
   })
+  const { refCont } = props
 
   return (
-    <div className="description-list-item" ref={ref}>
-      <div
-        className={`description-map-container ${
-          inView ? 'description-map-container-left' : null
-        }`}
-      >
-        <WorldMapAfro />
-      </div>
-      <div
-        className={`description-container ${
-          inView ? 'description-container-right' : null
-        }`}
-      >
-        <AFRODescriptionNew mobile={props.mobile} />
+    <div ref={refCont}>
+      <div className="description-list-item" ref={ref}>
+        <div
+          className={`description-map-container ${
+            inView ? 'description-map-container-left' : null
+          }`}
+        >
+          <WorldMapAfro />
+        </div>
+        <div
+          className={`description-container ${
+            inView ? 'description-container-right' : null
+          }`}
+        >
+          <AFRODescriptionNew mobile={props.mobile} />
+        </div>
       </div>
     </div>
   )
 }
 
-function AmroCard(props: { mobile: any }) {
+function AmroCard(props: { mobile: any; refCont: any }) {
   const [ref, inView] = useInView({
     threshold: 0.99
   })
+  const { refCont } = props
 
   return (
-    <div className="description-list-item" ref={ref}>
-      <div
-        className={`description-map-container ${
-          inView ? 'description-map-container-left' : null
-        }`}
-      >
-        <WorldMapAmro />
-      </div>
-      <div
-        className={`description-container ${
-          inView ? 'description-container-right' : null
-        }`}
-      >
-        <AMRODescriptionNew mobile={props.mobile} />
+    <div ref={refCont}>
+      <div className="description-list-item" ref={ref}>
+        <div
+          className={`description-map-container ${
+            inView ? 'description-map-container-left' : null
+          }`}
+        >
+          <WorldMapAmro />
+        </div>
+        <div
+          className={`description-container ${
+            inView ? 'description-container-right' : null
+          }`}
+        >
+          <AMRODescriptionNew mobile={props.mobile} />
+        </div>
       </div>
     </div>
   )
 }
 
-function SearoCard(props: { mobile: any }) {
+function SearoCard(props: { mobile: any; refCont: any }) {
   const [ref, inView] = useInView({
     threshold: 0.99
   })
+  const { refCont } = props
 
   return (
-    <div className="description-list-item" ref={ref}>
-      <div
-        className={`description-map-container ${
-          inView ? 'description-map-container-left' : null
-        }`}
-      >
-        <WorldMapSearo />
-      </div>
-      <div
-        className={`description-container ${
-          inView ? 'description-container-right' : null
-        }`}
-      >
-        <SEARODescriptionNew mobile={props.mobile} />
+    <div ref={refCont}>
+      <div className="description-list-item" ref={ref}>
+        <div
+          className={`description-map-container ${
+            inView ? 'description-map-container-left' : null
+          }`}
+        >
+          <WorldMapSearo />
+        </div>
+        <div
+          className={`description-container ${
+            inView ? 'description-container-right' : null
+          }`}
+        >
+          <SEARODescriptionNew mobile={props.mobile} />
+        </div>
       </div>
     </div>
   )
 }
 
-function WproCard(props: { mobile: any }) {
+function WproCard(props: { mobile: any; refCont: any }) {
   const [ref, inView] = useInView({
     threshold: 0.99
   })
+  const { refCont } = props
 
   return (
-    <div className="description-list-item" ref={ref}>
-      <div
-        className={`description-map-container ${
-          inView ? 'description-map-container-left' : null
-        }`}
-      >
-        <WorldMapWpro />
-      </div>
-      <div
-        className={`description-container ${
-          inView ? 'description-container-right' : null
-        }`}
-      >
-        <WPROescriptionNew mobile={props.mobile} />
+    <div ref={refCont}>
+      <div className="description-list-item" ref={ref}>
+        <div
+          className={`description-map-container ${
+            inView ? 'description-map-container-left' : null
+          }`}
+        >
+          <WorldMapWpro />
+        </div>
+        <div
+          className={`description-container ${
+            inView ? 'description-container-right' : null
+          }`}
+        >
+          <WPROescriptionNew mobile={props.mobile} />
+        </div>
       </div>
     </div>
   )

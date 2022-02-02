@@ -131,7 +131,7 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={() => {
-                    history.push('/')
+                    history.push('/home')
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -270,7 +270,7 @@ export function NavBarComponent(props: any): JSX.Element {
             <NavBarButton
               text={'Home'}
               onClick={(e: any) => {
-                redirect('/', e)
+                redirect('/home', e)
               }}
             />
             <NavBarButton

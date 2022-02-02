@@ -351,6 +351,10 @@ function Home2(props: any): JSX.Element {
             name="description"
             content="Cluj World Health Organization is the first student-led organisation in Eastern Europe whose mission is to educate students and professionals on health issues."
           />
+          <meta
+            name="google-site-verification"
+            content="79cXqfnHwQNmbh_rsrixFkX5fIgPbfFbhjsqvQ16VxM"
+          />
         </Helmet>
         <div className="desktopBackGround " id="desktopBackGround">
           <div className="firstImageContainer">

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import { useInView } from 'react-intersection-observer'
 import { Footer } from '../../common-components/components/footer/footer'
 import { CustomPaper } from '../../components/custom-paper/paper-component'
@@ -129,6 +130,13 @@ export function AboutUs(props: any): JSX.Element {
   } else {
     return (
       <div>
+        <Helmet>
+          <title>About Us | ClujWHO</title>
+          <meta
+            name="description"
+            content="ClujWHO was started by a group of students from Cluj-Napoca to organise the first WHO event in Eastern Europe. Learn about the team and their objectives here."
+          />
+        </Helmet>
         <div className="aboutUsPageContainer">
           <div className="aboutUsPageGrid">
             <div className="about-us-content">

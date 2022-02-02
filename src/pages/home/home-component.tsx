@@ -1,5 +1,7 @@
 import './home.scss'
 
+import React from 'react'
+
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { useEffect, useState } from 'react'
@@ -8,7 +10,6 @@ import { NavBarComponent } from '../login/components/navbar/navbar-component'
 import { login } from '../login/login.actions'
 import Catedrala1080p_logo from '../../assets/ClujWho/Catedrala.jpg'
 import OSM_Logo from '../../assets/ClujWho/siglaosmbuna_400.png'
-import AddCircleIcon from '@mui/icons-material/AddCircle'
 import { Orbit } from './orbit'
 import { LGBT } from '../../assets/ClujWho/icons/LGBT'
 import Condom from '../../assets/ClujWho/icons/Condom'
@@ -30,9 +31,11 @@ import Email from '../../assets/ClujWho/icons/Email'
 import { WebFooter } from '../../common-components/components/footer/web-footer'
 import Wave_6_7 from '../../assets/ClujWho/waves/Wave_6_7'
 import WavesGlobe from '../../assets/ClujWho/waves/WavesGlobe'
+import { Helmet } from 'react-helmet'
 
 export const FaceBookUrl = 'https://www.facebook.com/clujwho'
 export const InstaUrl = 'https://www.instagram.com/clujwho/'
+
 function Home2(props: any): JSX.Element {
   const [ref, inView] = useInView({
     threshold: 0.1
@@ -106,8 +109,8 @@ function Home2(props: any): JSX.Element {
           <div className="mobile-thirdContainer " ref={ref}>
             <div className="mobile-homePageTitleGridContainer">
               <div className="mobile-homePageTitleContainer ">
-                <h2 className="mobile-homePageTitle1 ">Cluj World Health</h2>
-                <h2 className="mobile-homePageTitle2 ">Organisation Model</h2>
+                <h1 className="mobile-homePageTitle1 ">Cluj World Health</h1>
+                <h1 className="mobile-homePageTitle2 ">Organisation Model</h1>
               </div>
               {/* //?MESSAGE */}
               <div className="mobile-homePageMessageContainer ">
@@ -342,6 +345,13 @@ function Home2(props: any): JSX.Element {
   } else {
     return (
       <>
+        <Helmet>
+          <title>ClujWHO | World Health Organisation Model</title>
+          <meta
+            name="description"
+            content="Cluj World Health Organization is the first student-led organisation in Eastern Europe whose mission is to educate students and professionals on health issues."
+          />
+        </Helmet>
         <div className="desktopBackGround " id="desktopBackGround">
           <div className="firstImageContainer">
             <img className="web-firstImage" src={Catedrala1080p_logo} />
@@ -354,9 +364,9 @@ function Home2(props: any): JSX.Element {
           <div className="thirdContainer " ref={ref}>
             <div className="homePageTitleGridContainer">
               <div className="homePageTitleContainer ">
-                <h2 className="homePageTitle">
+                <h1 className="homePageTitle">
                   Cluj World Health Organisation Model
-                </h2>
+                </h1>
               </div>
               <div className="homePageMessageContainer ">
                 <div className="homePageMessage ">

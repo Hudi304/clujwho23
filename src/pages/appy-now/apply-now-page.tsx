@@ -5,6 +5,7 @@ import './appy-now.scss'
 import { CustomPaper } from '../../components/custom-paper/paper-component'
 import { useEffect, useState } from 'react'
 import { Timer } from './timer/timer'
+import { Helmet } from 'react-helmet'
 /* eslint-disable */
 
 function monthToDays(month: number, year: number): number {
@@ -168,8 +169,6 @@ export function ApplyNow(props: any): JSX.Element {
       <div>
         <div className="apply-now-container OxCenter">
           <div className="apply-now-grid">
-            
-
             {!chair && !delegate ? (
               <div>
                 <p className="titleContainerMobile xOyCenter">
@@ -291,11 +290,15 @@ export function ApplyNow(props: any): JSX.Element {
   } else {
     return (
       <div>
+        <Helmet>
+          <title>Apply Now | ClujWHO</title>
+          <meta
+            name="description"
+            content="Do you want to be a part of the ClujWHO Model? Apply now to join us to chair or delegate. For any questions please contact us today at clujwho@osmcluj.ro."
+          />
+        </Helmet>
         <div className="applyNowPageGridContainer OxCenter backgroud-image ">
           <div className="applyNowPageGrid ">
-            {/* <p className="titleContainer xOyCenter">
-              The experience of your studenthood starts in:
-            </p> */}
 
             {!chair && !delegate ? (
               <>

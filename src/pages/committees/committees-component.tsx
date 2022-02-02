@@ -19,6 +19,7 @@ import WorldMapEmro from './descriptions/Emro/EmroMap'
 import WorldMapAmro from './descriptions/Amro/AmroMap'
 import WorldMapSearo from './descriptions/Searo/SearoMap'
 import WorldMapWpro from './descriptions/Wpro/WproMap'
+import { Helmet } from 'react-helmet'
 
 export function Committees(props: any): JSX.Element {
   const [ref, inView] = useInView({
@@ -73,6 +74,13 @@ export function Committees(props: any): JSX.Element {
   } else {
     return (
       <div>
+        <Helmet>
+          <title>Comittees | ClujWHO</title>
+          <meta
+            name="description"
+            content="ClujWHO is formed out of six committees. Learn more about each committee, their challenges and some of their plans to combat the issues they are facing."
+          />
+        </Helmet>
         <div className="committees-web-backgroud ">
           <div className="committees-web-page-grid">
             <div className="map-container-container ">

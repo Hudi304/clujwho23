@@ -36,17 +36,11 @@ import { Helmet } from 'react-helmet'
 export const FaceBookUrl = 'https://www.facebook.com/clujwho'
 export const InstaUrl = 'https://www.instagram.com/clujwho/'
 
+//! 13/15 mai
+
 function Home2(props: any): JSX.Element {
   const [ref, inView] = useInView({
     threshold: 0.1
-  })
-
-  const [ref1, inView1] = useInView({
-    threshold: 0.2
-  })
-
-  const [ref2, inView2] = useInView({
-    threshold: 0.5
   })
 
   const [ref5, inView5] = useInView({
@@ -120,7 +114,7 @@ function Home2(props: any): JSX.Element {
               </div>
 
               <div className="mobile-homePageDateContainer">
-                <b> March 4-6, 2022</b>
+                <b> May 13-15, 2022</b>
               </div>
             </div>
           </div>
@@ -379,7 +373,7 @@ function Home2(props: any): JSX.Element {
               </div>
 
               <div className="home-page-date">
-                <b>March 4-6, 2022</b>
+                <b>May 13-15, 2022</b>
               </div>
             </div>
           </div>

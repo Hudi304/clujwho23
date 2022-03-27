@@ -6,7 +6,6 @@ import ClujWhoLogo from '../../../../assets/ClujWHOLogo.png'
 import ClujWhoLogoBar from '../../../../assets/ClujWHOLogoBar.png'
 
 import { useState, useEffect, Fragment } from 'react'
-import { useHistory } from 'react-router'
 import {
   AccountBalance,
   AddModerator,
@@ -37,6 +36,7 @@ import {
 } from '@mui/material'
 import { blue, pink } from '@mui/material/colors'
 import { minWidth } from '@mui/system'
+import { useNavigate } from 'react-router-dom'
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right'
 
@@ -53,7 +53,8 @@ export function NavBarComponent(props: any): JSX.Element {
 
   const [drawerOpen, setDrawerOpen] = useState(false)
 
-  const history = useHistory()
+  // const history = useHistory()
+  const navigate = useNavigate()
 
   useEffect(() => {
     console.log('IN VIEW', inView)
@@ -85,8 +86,8 @@ export function NavBarComponent(props: any): JSX.Element {
     }
 
   function redirect(path: string, e: any) {
-    console.log('REDIRECT TO ', path)
-    history.push(path)
+    // console.log('REDIRECT TO ', path)
+    navigate(path)
   }
 
   if (props.mobile) {
@@ -97,7 +98,7 @@ export function NavBarComponent(props: any): JSX.Element {
             <IconButton
               className="hamburger-menu"
               onClick={() => {
-                console.log('dsadas')
+                // console.log('dsadas')
                 toggleDrawer('left', true)
                 setDrawerOpen(true)
               }}
@@ -130,8 +131,9 @@ export function NavBarComponent(props: any): JSX.Element {
               <div className="menu-list-item">
                 <IconButton
                   className="menu-icon-btn"
-                  onClick={() => {
-                    history.push('/home')
+                  onClick={e => {
+                    // history.push('/home')
+                    redirect('/home', e)
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -143,8 +145,9 @@ export function NavBarComponent(props: any): JSX.Element {
               <div className="menu-list-item">
                 <IconButton
                   className="menu-icon-btn"
-                  onClick={() => {
-                    history.push('/apply_now')
+                  onClick={e => {
+                    // history.push('/apply_now')
+                    redirect('/apply_now', e)
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -156,8 +159,9 @@ export function NavBarComponent(props: any): JSX.Element {
               <div className="menu-list-item">
                 <IconButton
                   className="menu-icon-btn"
-                  onClick={() => {
-                    history.push('/about_us')
+                  onClick={e => {
+                    // history.push('/about_us')
+                    redirect('/about_us', e)
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -169,8 +173,9 @@ export function NavBarComponent(props: any): JSX.Element {
               <div className="menu-list-item">
                 <IconButton
                   className="menu-icon-btn"
-                  onClick={() => {
-                    history.push('/schedule')
+                  onClick={e => {
+                    // history.push('/schedule')
+                    redirect('/schedule', e)
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -182,8 +187,10 @@ export function NavBarComponent(props: any): JSX.Element {
               <div className="menu-list-item">
                 <IconButton
                   className="menu-icon-btn"
-                  onClick={() => {
-                    history.push('/committees')
+                  onClick={e => {
+                    // history.push('/committees')
+                    redirect('/committees', e)
+
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"

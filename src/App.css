@@ -28,4 +28,12 @@ body::-webkit-scrollbar {
 
 body{
   overflow: visible;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
+}
+
+@-moz-document url-prefix() { /* Disable scrollbar Firefox */
+  html{
+    scrollbar-width: none;
+  }
 }

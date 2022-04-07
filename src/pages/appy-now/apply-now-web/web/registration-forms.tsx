@@ -1,14 +1,16 @@
 type RegistrationFormsProps = {
   chair: boolean
   delegate: boolean
+  className?: string
 }
 
 export function WebRegistrationForms({
   chair,
-  delegate
+  delegate,
+  className
 }: RegistrationFormsProps): JSX.Element {
   return (
-    <div className="paperContainer OxCenter">
+    <div className={`paperContainer OxCenter ${className}`}>
       <div className="iframeContainer OxCenter">
         {chair ? (
           <div className="container-form-mobile OxCenter">

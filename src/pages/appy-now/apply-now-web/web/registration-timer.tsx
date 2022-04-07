@@ -6,6 +6,7 @@ type RegistrationFormsProps = {
   timeToConferenceStart: TimerType
   timeToDelegateRegistrationEnd: TimerType
   timeToChaiRegistrationEnd: TimerType
+  className?: string
 }
 
 export function WebApplyNowTimer({
@@ -13,10 +14,11 @@ export function WebApplyNowTimer({
   delegate,
   timeToConferenceStart,
   timeToDelegateRegistrationEnd,
-  timeToChaiRegistrationEnd
+  timeToChaiRegistrationEnd,
+  className
 }: RegistrationFormsProps): JSX.Element {
   return (
-    <>
+    <div className={className}>
       {!chair && !delegate ? (
         <div className="countDownContainer xOyCenter">
           <div className="counterContainer">
@@ -116,6 +118,6 @@ export function WebApplyNowTimer({
           </div>
         </div>
       ) : null}
-    </>
+    </div>
   )
 }

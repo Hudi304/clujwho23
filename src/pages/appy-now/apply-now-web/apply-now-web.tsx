@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import {
-  getTimerTypeUntil,
-  TimerType
-} from '../apply-now-utils'
+import { getTimerTypeUntil, TimerType } from '../apply-now-utils'
 import './apply-now-web.scss'
 import { ApplyNowButtonBar } from './web/registration-button-bar'
 import { ApplyNowExplanation } from './web/registration-explanation'
@@ -60,9 +57,14 @@ export function ApplyNowWeb({
       </Helmet>
       <div className="applyNowPageGridContainer OxCenter backgroud-image ">
         <div className="applyNowPageGrid ">
-          <WebApplyNowTitle chair={chair} delegate={delegate} />
+          <WebApplyNowTitle
+            // className="debug"
+            chair={chair}
+            delegate={delegate}
+          />
 
           <WebApplyNowTimer
+            // className="debug"
             chair={chair}
             delegate={delegate}
             timeToConferenceStart={timeLeft}
@@ -70,11 +72,21 @@ export function ApplyNowWeb({
             timeToDelegateRegistrationEnd={timeLeftDel}
           />
 
-          <ApplyNowExplanation />
+          <ApplyNowExplanation
+          //  className="debug"
+          />
 
-          <ApplyNowButtonBar setChair={setChair} setDelegate={setDelegate} />
+          <ApplyNowButtonBar
+            // className="debug"
+            setChair={setChair}
+            setDelegate={setDelegate}
+          />
 
-          <WebRegistrationForms chair={chair} delegate={delegate} />
+          <WebRegistrationForms
+            // className="debug"
+            chair={chair}
+            delegate={delegate}
+          />
         </div>
       </div>
     </>

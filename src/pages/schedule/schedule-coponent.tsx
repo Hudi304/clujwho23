@@ -55,11 +55,21 @@ export function Schedule(props: any): JSX.Element {
   useEffect(() => {
     const timer = setTimeout(() => {
       const now = new Date()
+
+      console.log(now.getDate())
+      console.log(now.getMonth())
+
       if (now.getMinutes() % 15 == 0 && now.getSeconds() % 10 == 0) {
-        console.log('dsadas')
-        setSundayBubbleOpt(getSundayBubbleOptions(now))
-        setFridayBubbleOpt(getFridayBubbleOptions(now))
-        setSaturdayBubbleOpt(getSaturdayBubbleOptions(now))
+        if (now.getMonth() > 3) {
+          setSundayBubbleOpt(getSundayBubbleOptions(now))
+          setFridayBubbleOpt(getFridayBubbleOptions(now))
+          setSaturdayBubbleOpt(getSaturdayBubbleOptions(now))
+        }
+        if (now.getDate() > 15) {
+          setFridayBubbleOpt(bubbleOptionsArrayFriday)
+          setSaturdayBubbleOpt(bubbleOptionsArraySaturday)
+          setSundayBubbleOpt(bubbleOptionsArraySunday)
+        }
       }
 
       setTimeLeft(!timeLeft)

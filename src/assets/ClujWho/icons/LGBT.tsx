@@ -7,7 +7,6 @@ export function LGBT() {
       enableBackground="new 0 0 400 316"
       viewBox="0 0 400 316"
       preserveAspectRatio="none"
-
     >
       <path
         d="M50 100C50 90.7953 57.462 83.3333 66.6667 83.3333H216.667V116.667H50V100Z"
@@ -38,7 +37,7 @@ export function LGBT() {
       <path
         d="M216.667 300H166.667L216.667 316.667V300Z"
         fill="#262525"
-        fill-opacity="0.24"
+        fillOpacity="0.24"
       />
     </svg>
   )

@@ -1,39 +1,14 @@
 import './navbar-component.scss'
-import Typography from '@mui/material/Typography'
-
-import logo from '../../../../assets/LEGO_logo.svg.png'
 import ClujWhoLogo from '../../../../assets/ClujWHOLogo.png'
-import ClujWhoLogoBar from '../../../../assets/ClujWHOLogoBar.png'
-
-import { useState, useEffect, Fragment } from 'react'
+import { useState, useEffect } from 'react'
 import {
   AccountBalance,
-  AddModerator,
-  AddModeratorOutlined,
-  AppRegistration,
   CalendarToday,
-  ContactPage,
-  Delete,
-  DriveFileMove,
-  Group,
   Home,
-  Inbox,
   Info,
-  Mail,
   Menu
 } from '@mui/icons-material'
-import {
-  Box,
-  Button,
-  Divider,
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  SwipeableDrawer
-} from '@mui/material'
+import { IconButton, List, SwipeableDrawer } from '@mui/material'
 import { blue, pink } from '@mui/material/colors'
 import { minWidth } from '@mui/system'
 import { useNavigate } from 'react-router-dom'
@@ -53,16 +28,12 @@ export function NavBarComponent(props: any): JSX.Element {
 
   const [drawerOpen, setDrawerOpen] = useState(false)
 
-  // const history = useHistory()
   const navigate = useNavigate()
 
   useEffect(() => {
-    console.log('IN VIEW', inView)
     if (!props.mobile) {
       if (inView) {
         setNavBarClasses('nav-bar-active')
-
-        // setNavBarClasses('')
       } else {
         setNavBarClasses('nav-bar-active')
       }
@@ -86,7 +57,6 @@ export function NavBarComponent(props: any): JSX.Element {
     }
 
   function redirect(path: string, e: any) {
-    // console.log('REDIRECT TO ', path)
     navigate(path)
   }
 
@@ -98,7 +68,6 @@ export function NavBarComponent(props: any): JSX.Element {
             <IconButton
               className="hamburger-menu"
               onClick={() => {
-                // console.log('dsadas')
                 toggleDrawer('left', true)
                 setDrawerOpen(true)
               }}
@@ -132,7 +101,6 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={e => {
-                    // history.push('/home')
                     redirect('/home', e)
                     setDrawerOpen(false)
                   }}
@@ -142,25 +110,11 @@ export function NavBarComponent(props: any): JSX.Element {
                   Home
                 </IconButton>
               </div>
+
               <div className="menu-list-item">
                 <IconButton
                   className="menu-icon-btn"
                   onClick={e => {
-                    // history.push('/apply_now')
-                    redirect('/apply_now', e)
-                    setDrawerOpen(false)
-                  }}
-                  aria-label="delete"
-                >
-                  <AppRegistration sx={{ color: blue[500], fontSize: '4vh' }} />
-                  Apply now
-                </IconButton>
-              </div>
-              <div className="menu-list-item">
-                <IconButton
-                  className="menu-icon-btn"
-                  onClick={e => {
-                    // history.push('/about_us')
                     redirect('/about_us', e)
                     setDrawerOpen(false)
                   }}
@@ -174,7 +128,6 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={e => {
-                    // history.push('/schedule')
                     redirect('/schedule', e)
                     setDrawerOpen(false)
                   }}
@@ -188,9 +141,7 @@ export function NavBarComponent(props: any): JSX.Element {
                 <IconButton
                   className="menu-icon-btn"
                   onClick={e => {
-                    // history.push('/committees')
                     redirect('/committees', e)
-
                     setDrawerOpen(false)
                   }}
                   aria-label="delete"
@@ -199,58 +150,6 @@ export function NavBarComponent(props: any): JSX.Element {
                   Committees
                 </IconButton>
               </div>
-              {/* <div className="menu-list-item">
-                <IconButton
-                  className="menu-icon-btn"
-                  onClick={() => {
-                    history.push('/our_team')
-                    setDrawerOpen(false)
-                  }}
-                  aria-label="delete"
-                >
-                  <Group sx={{ color: blue[500], fontSize: '4vh' }} />
-                  Our Team
-                </IconButton>
-              </div>
-              <div className="menu-list-item">
-                <IconButton
-                  className="menu-icon-btn"
-                  onClick={() => {
-                    history.push('/resources')
-                    setDrawerOpen(false)
-                  }}
-                  aria-label="delete"
-                >
-                  <DriveFileMove sx={{ color: blue[500], fontSize: '4vh' }} />
-                  Resources
-                </IconButton>
-              </div>
-              <div className="menu-list-item">
-                <IconButton
-                  className="menu-icon-btn"
-                  onClick={() => {
-                    history.push('/contact')
-                    setDrawerOpen(false)
-                  }}
-                  aria-label="delete"
-                >
-                  <ContactPage sx={{ color: blue[500], fontSize: '4vh' }} />
-                  Contact
-                </IconButton>
-              </div>
-              <div className="menu-list-item">
-                <IconButton
-                  className="menu-icon-btn"
-                  onClick={() => {
-                    history.push('/sponsors')
-                    setDrawerOpen(false)
-                  }}
-                  aria-label="delete"
-                >
-                  <AddModerator sx={{ color: blue[500], fontSize: '4vh' }} />
-                  Sponsors
-                </IconButton>
-              </div> */}
             </List>
           </SwipeableDrawer>
         </div>
@@ -268,23 +167,10 @@ export function NavBarComponent(props: any): JSX.Element {
           </div>
 
           <div className="nav-bar-buttons-container">
-            {/* <NavBarButton
-              text={'Home2'}
-              onClick={(e: any) => {
-                redirect('/home2', e)
-              }}
-            /> */}
             <NavBarButton
               text={'Home'}
               onClick={(e: any) => {
                 redirect('/home', e)
-              }}
-            />
-            <NavBarButton
-              style={{ minWidth: '124px' }}
-              text={'Apply now'}
-              onClick={(e: any) => {
-                redirect('/apply_now', e)
               }}
             />
             <NavBarButton
@@ -306,31 +192,6 @@ export function NavBarComponent(props: any): JSX.Element {
                 redirect('/committees', e)
               }}
             />
-            {/* <NavBarButton
-              style={{ minWidth: '112px' }}
-              text={'Our Team'}
-              onClick={(e: any) => {
-                redirect('/our_team', e)
-              }}
-            />
-            <NavBarButton
-              text={'Resources'}
-              onClick={(e: any) => {
-                redirect('/resources', e)
-              }}
-            />
-            <NavBarButton
-              text={'Contact'}
-              onClick={(e: any) => {
-                redirect('/contact', e)
-              }}
-            />
-            <NavBarButton
-              text={'Sponsors'}
-              onClick={(e: any) => {
-                redirect('/sponsors', e)
-              }}
-            /> */}
           </div>
         </div>
       </div>

@@ -7,20 +7,16 @@ import './account.scss'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { LoginData } from '../login/login.types'
-// import { useHistory } from 'react-router-dom'
 import { saveChanges } from './account.actions'
 
 function Account(props: any): JSX.Element {
-  // const history = useHistory()
 
   function handleClick() {
-    console.log('handle Click ACC')
     // props.getMovieListAct();
     const user: LoginData = {
       username: 'Itachi',
       password: '1234'
     }
-    // props.saveChanges(user, history)
   }
 
   return (

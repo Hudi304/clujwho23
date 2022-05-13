@@ -14,7 +14,6 @@ export function NavBarComponent(props: any): JSX.Element {
   const navigate = useNavigate()
 
   useEffect(() => {
-    console.log('IN VIEW', inView)
     if (inView) {
       setNavBarClasses('')
     } else {
@@ -23,7 +22,6 @@ export function NavBarComponent(props: any): JSX.Element {
   }, [inView])
 
   function redirect(path: string, e: any) {
-    console.log('REDIRECT TO ', path)
     navigate(path)
   }
 
@@ -45,12 +43,12 @@ export function NavBarComponent(props: any): JSX.Element {
                   redirect('/DevClujWho/home', e)
                 }}
               />
-              <NavBarButton
+              {/* <NavBarButton
                 text={'Apply now'}
                 onClick={(e: any) => {
                   redirect('/DevClujWho/apply_now', e)
                 }}
-              />
+              /> */}
               <NavBarButton
                 text={'About us'}
                 onClick={(e: any) => {

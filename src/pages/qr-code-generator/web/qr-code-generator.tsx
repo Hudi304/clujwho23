@@ -34,7 +34,6 @@ export function QrCodeGeneratorToolWeb(props: any) {
 
   const downloadQR = () => {
     const svg = svgRef.current?.innerHTML
-    console.log('svgRef : ', svgRef.current?.innerHTML)
     const blob = new Blob([svg], { type: 'image/svg+xml' })
     downloadBlob(blob, `qr_code.svg`)
   }
